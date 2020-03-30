@@ -1,5 +1,5 @@
-from backend.global_logger import logger
-from backend.config import Config, local
+from backend.global_logger import logger, local
+from backend.config import Config
 from pynamodb.models import Model
 from pynamodb.attributes import UnicodeAttribute, UTCDateTimeAttribute, NumberAttribute, \
     BooleanAttribute
@@ -29,12 +29,13 @@ class Beer(Model):
     # Optional Attributes
     date_added = UTCDateTimeAttribute(null=True)
     style = UnicodeAttribute(null=True)
-    substyle = UnicodeAttribute(null=True)
+    specific_style = UnicodeAttribute(null=True)
     qty = NumberAttribute(null=True)
     untappd = UnicodeAttribute(null=True)
     aging_potential = UnicodeAttribute(null=True)
     trade_value = UnicodeAttribute(null=True)
     for_trade = BooleanAttribute(default=True)
+    note = UnicodeAttribute(null=True)
 
     def to_dict(self) -> dict:
         """Returns a python dictionary with all attributes of this Beer."""
@@ -49,12 +50,13 @@ class Beer(Model):
             "location":        self.location.__str__(),
             "date_added":      self.date_added.__str__(),
             "style":           self.style.__str__(),
-            "substyle":        self.substyle.__str__(),
+            "specific_style":  self.specific_style.__str__(),
             "qty":             int(self.qty),
             "untappd":         self.untappd.__str__(),
             "aging_potential": self.aging_potential.__str__(),
             "trade_value":     self.trade_value.__str__(),
-            "for_trade":       self.for_trade.__str__()
+            "for_trade":       self.for_trade.__str__(),
+            "note":            self.note.__str__()
         }
 
     def to_json(self) -> str:
@@ -63,8 +65,8 @@ class Beer(Model):
 
     def __init__(self, id=id, name=name, brewery=brewery, year=year, batch=batch, size=size,
                  bottle_date=bottle_date, location=location, date_added=date_added, style=style,
-                 substyle=substyle, qty=qty, untappd=untappd, aging_potential=aging_potential,
-                 trade_value=trade_value, for_trade=for_trade, **attrs):
+                 substyle=specific_style, qty=qty, untappd=untappd, aging_potential=aging_potential,
+                 trade_value=trade_value, for_trade=for_trade, note=note, **attrs):
         super().__init__(**attrs)
         logger.debug("Initializing a new instance of the Beer model.")
 
@@ -88,12 +90,13 @@ class Beer(Model):
         self.location = location
         self.date_added = date_added
         self.style = style
-        self.substyle = substyle
+        self.specific_style = substyle
         self.qty = qty
         self.untappd = untappd
         self.aging_potential = aging_potential
         self.trade_value = trade_value
         self.for_trade = for_trade
+        self.note = note
 
     def __repr__(self) -> str:
         return f'<Beer | id: {self.id}, name: {self.name}, brewery: {self.brewery}, ' \

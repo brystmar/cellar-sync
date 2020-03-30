@@ -10,6 +10,7 @@ __pycache__/
 *.env
 .env
 env_variables.yaml
+gcp_creds.json
 .aws/*
 .boto
 .boto/*
@@ -17,7 +18,6 @@ env_variables.yaml
 .pytest_cache/**
 **/.pytest_cache
 **/.pytest_cache/**
-ui/
 
 # Created by https://www.gitignore.io/api/venv,macos,pycharm
 # Edit at https://www.gitignore.io/?templates=venv,macos,pycharm
