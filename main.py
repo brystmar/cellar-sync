@@ -1,11 +1,27 @@
+# Global logger
+from backend.global_logger import logger
+from backend.config import Config
+
+# External packages
 from flask import Flask
+from flask_cors import CORS
+from flask_restful import Api
+
+# App components
+from backend.cellar_routes import CellarApi
+
 app = Flask(__name__)
+logger.info("Created the Flask app.")
 
+app.config.from_object(Config)
+logger.info("Applied config parameters to the app.")
 
-@app.route('/')
-def hello_world():
-    return 'Hello World!'
+# Enable CORS for the app to ensure our UI can call the backend API
+#   https://flask-cors.readthedocs.io/en/latest/
+CORS(app, resources={r"/api/*": {"origins": Config.whitelisted_origins}})
 
+api = Api(app)
+logger.info("Flask-RESTful API initialized.")
 
-if __name__ == '__main__':
-    app.run()
+# Define the functional endpoints
+api.add_resource(CellarApi, '/api/v1/cellar')
