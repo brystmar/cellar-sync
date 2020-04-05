@@ -9,6 +9,7 @@ backend/creds.py
 __pycache__/
 *.env
 .env
+*.csv
 env_variables.yaml
 gcp_creds.json
 .aws/*
@@ -18,6 +19,7 @@ gcp_creds.json
 .pytest_cache/**
 **/.pytest_cache
 **/.pytest_cache/**
+**/*example_data*.*
 
 # Created by https://www.gitignore.io/api/venv,macos,pycharm
 # Edit at https://www.gitignore.io/?templates=venv,macos,pycharm

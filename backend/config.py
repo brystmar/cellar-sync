@@ -13,14 +13,14 @@ class Config(object):
         apply_env()
         logger.info("Local .env variables applied.")
 
-    # AWS credentials
+    # Load AWS credentials
     aws_account_id = environ.get('AWS_ACCOUNT_ID')
     aws_access_key = environ.get('AWS_ACCESS_KEY_ID')
     aws_secret_access_key = environ.get('AWS_SECRET_ACCESS_KEY')
     aws_user = environ.get('AWS_USER')
     aws_region = environ.get('AWS_REGION')
 
-    # App-related
+    # Load app-related credentials
     bound_port = 5000
     domain_url = environ.get('DOMAIN_URL')
     whitelisted_origins = environ.get('WHITELISTED_ORIGINS')

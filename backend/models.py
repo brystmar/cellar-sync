@@ -22,6 +22,7 @@ class Beer(Model):
     brewery = UnicodeAttribute()
     year = NumberAttribute()
     batch = NumberAttribute(null=True)
+    batch_str = UnicodeAttribute(null=True)
     size = UnicodeAttribute()
     bottle_date = UTCDateTimeAttribute(null=True)
     location = UnicodeAttribute(range_key=True)
@@ -45,6 +46,7 @@ class Beer(Model):
             "brewery":         self.brewery.__str__(),
             "year":            int(self.year),
             "batch":           int(self.batch),
+            "batch_str":       self.batch.__str__(),
             "size":            self.size.__str__(),
             "bottle_date":     self.bottle_date.__str__(),
             "location":        self.location.__str__(),
@@ -63,7 +65,7 @@ class Beer(Model):
         """Serializes the output from Beer.to_dict() to JSON."""
         return json.dumps(self.to_dict(), ensure_ascii=True)
 
-    def __init__(self, id=id, name=name, brewery=brewery, year=year, batch=batch, size=size,
+    def __init__(self, id=id, name=name, brewery=brewery, year=year, batch=batch, batch_str=batch_str, size=size,
                  bottle_date=bottle_date, location=location, date_added=date_added, style=style,
                  substyle=specific_style, qty=qty, untappd=untappd, aging_potential=aging_potential,
                  trade_value=trade_value, for_trade=for_trade, note=note, **attrs):
@@ -85,6 +87,7 @@ class Beer(Model):
         self.brewery = brewery
         self.year = year
         self.batch = batch
+        self.batch_str = batch_str
         self.size = size
         self.bottle_date = bottle_date
         self.location = location
