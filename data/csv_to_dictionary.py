@@ -15,6 +15,10 @@ with open('TPB & RAK Cellar 2020-03-31.csv', mode='r') as csv_file:
             header = row
         else:
             while item < len(row):
+                # Remove any leading/trailing spaces
+                if isinstance(header[item], str):
+                    header[item] = header[item].strip()
+
                 if header[item] not in ['ignore_bottle_date', 'is_cold', 'sell']:
                     if header[item] in ['year', 'qty']:
                         if '?' in row[item]:

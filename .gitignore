@@ -20,6 +20,7 @@ gcp_creds.json
 **/.pytest_cache
 **/.pytest_cache/**
 **/*example_data*.*
+data/example_data.py
 
 # Created by https://www.gitignore.io/api/venv,macos,pycharm
 # Edit at https://www.gitignore.io/?templates=venv,macos,pycharm

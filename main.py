@@ -25,5 +25,3 @@ logger.info("Flask-RESTful API initialized.")
 
 # Define the functional endpoints
 api.add_resource(CellarApi, '/api/v1/cellar')
-
-import data.migrate_exampledata_to_ddb
