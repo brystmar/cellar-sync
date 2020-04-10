@@ -18,10 +18,12 @@ logger.info("Applied config parameters to the app.")
 
 # Enable CORS for the app to ensure our UI can call the backend API
 #   See: https://flask-cors.readthedocs.io/en/latest/
-CORS(app, resources={r"/api/*": {"origins": Config.whitelisted_origins}})
+CORS(app, resources={r"/api/*": {"origins": Config.WHITELISTED_ORIGINS}})
 
 api = Api(app)
 logger.info("Flask-RESTful API initialized.")
 
 # Define the functional endpoints
 api.add_resource(CellarApi, '/api/v1/cellar')
+
+import data.migrate_exampledata_to_ddb

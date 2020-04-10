@@ -147,3 +147,13 @@ pip-selfcheck.json
 
 # End of https://www.gitignore.io/api/venv,macos,pycharm
 /.aws/*
+.idea/$CACHE_FILE$
+.idea/cellar-sync.iml
+.idea/codeStyles/
+.idea/inspectionProfiles/
+.idea/misc.xml
+.idea/modules.xml
+.idea/terminal.xml
+.idea/vagrant.xml
+.idea/vcs.xml
+templates/
