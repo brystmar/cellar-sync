@@ -19,13 +19,13 @@ class Beer(Model):
     beer_id = UnicodeAttribute(hash_key=True)
 
     # Required Attributes
-    name = UnicodeAttribute()
     brewery = UnicodeAttribute()
+    name = UnicodeAttribute()
     year = NumberAttribute()
     size = UnicodeAttribute()
+    location = UnicodeAttribute(range_key=True)
     batch = NumberAttribute(null=True)
     bottle_date = UnicodeAttribute(null=True)
-    location = UnicodeAttribute(range_key=True)
 
     # Optional Attributes
     qty = NumberAttribute(null=True)
@@ -35,9 +35,11 @@ class Beer(Model):
     aging_potential = UnicodeAttribute(null=True)
     trade_value = UnicodeAttribute(null=True)
     for_trade = BooleanAttribute(default=True)
+    note = UnicodeAttribute(null=True)
+
+    # date_added should always be <= last_modified
     date_added = UTCDateTimeAttribute(null=True, default=datetime.utcnow())
     last_modified = UTCDateTimeAttribute(null=True, default=datetime.utcnow())
-    note = UnicodeAttribute(null=True)
 
     def to_dict(self) -> dict:
         """
@@ -60,8 +62,8 @@ class Beer(Model):
             "aging_potential": self.aging_potential.__str__() if self.aging_potential else None,
             "trade_value":     self.trade_value.__str__() if self.trade_value else None,
             "for_trade":       self.for_trade.__str__() if self.for_trade else None,
-            "date_added":      datetime.timestamp(self.date_added),
             "last_modified":   datetime.timestamp(self.last_modified),
+            "date_added":      datetime.timestamp(self.date_added),
             "note":            self.note.__str__() if self.note else None
         }
 
@@ -72,29 +74,6 @@ class Beer(Model):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         logger.debug(f"Initializing a new instance of the Beer model for {kwargs}.")
-
-        # Type check: Year
-        try:
-            self.year = int(kwargs['year'])
-        except ValueError as e:
-            logger.debug("Year must be an integer.")
-            raise e
-
-        # Type check: Batch
-        if 'batch' in kwargs.keys():
-            try:
-                self.batch = int(kwargs['batch'])
-            except ValueError as e:
-                logger.debug("Batch number must be an integer.")
-                raise e
-
-        # Type check: Qty
-        if 'qty' in kwargs.keys():
-            try:
-                self.qty = int(kwargs['qty'])
-            except ValueError as e:
-                logger.debug("Qty must be an integer.")
-                raise e
 
         # Construct the concatenated beer_id when not provided:
         #  brewery, beer name, year, size, {bottle date or batch}.  Bottle date preferred.
@@ -119,9 +98,60 @@ class Beer(Model):
                 # Use batch when bottle_date isn't provided
                 self.beer_id += f"_{kwargs['batch']}"
             logger.debug(f"Created a beer_id for this new Beer: {self.beer_id}.")
+
+        # Must provide a location
+        if 'location' not in kwargs.keys() or kwargs['location'] is None:
+            logger.debug(f"No value for location provided, raising KeyError.")
+            raise KeyError("Location is required.")
+
+        # Type check: Year
+        try:
+            self.year = int(kwargs['year'])
+        except ValueError as e:
+            logger.debug(f"Year must be an integer.\n{e}")
+            raise ValueError(f"Year must be an integer.\n{e}")
+
+        # Type check: Batch
+        if 'batch' in kwargs.keys():
+            try:
+                self.batch = int(kwargs['batch'])
+            except ValueError as e:
+                logger.debug(f"Batch number must be an integer.\n{e}")
+                raise ValueError(f"Batch number must be an integer.\n{e}")
+
+        # Type check: Qty
+        if 'qty' in kwargs.keys():
+            try:
+                self.qty = int(kwargs['qty'])
+            except ValueError as e:
+                logger.debug(f"Qty must be an integer.\n{e}")
+                raise ValueError(f"Qty must be an integer.\n{e}")
+
+        # Ignore any provided value for last_modified
+        self.last_modified = datetime.utcnow()
+
+        # Type & value checks for date_added
+        if 'date_added' in kwargs.keys():
+            # Accept an epoch (`float` or `int`) for date_added
+            if isinstance(self.date_added, (float, int)):
+                self.date_added = datetime.utcfromtimestamp(kwargs['date_added'])
+                datetime.fromtimestamp(1586631578.640012)
+            else:
+                # Assume a string was provided and parse a datetime object from that
+                try:
+                    self.date_added = datetime.fromisoformat(str(self.date_added))
+                except (TypeError, ValueError) as e:
+                    logger.debug(f"Provided value for date_added: {self.date_added}, "
+                                 f"{type(self.date_added)} cannot be converted to datetime.")
+                    raise ValueError(f"Value for date_added must be an epoch (float/int) or "
+                                     f"an iso-formatted string. {e}")
+
+            # Ensure date_added is always <= last_modified
+            if self.date_added > self.last_modified:
+                self.date_added = self.last_modified
         else:
-            logger.debug(f"Beer already has an id: {kwargs['beer_id']}")
-            self.beer_id = kwargs['beer_id']
+            # When date_added is not provided...
+            self.date_added = self.last_modified
 
     def __repr__(self) -> str:
         return f'<Beer | beer_id: {self.beer_id}, qty: {self.qty}, location: {self.location}>'
