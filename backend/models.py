@@ -2,7 +2,8 @@ from backend.global_logger import logger, local
 from backend.config import Config
 from datetime import datetime
 from pynamodb.models import Model
-from pynamodb.attributes import UnicodeAttribute, NumberAttribute, BooleanAttribute
+from pynamodb.attributes import UnicodeAttribute, NumberAttribute, BooleanAttribute, \
+    UTCDateTimeAttribute
 import json
 
 
@@ -14,7 +15,7 @@ class Beer(Model):
             host = 'http://localhost:8008'
 
     # Primary Attributes
-    # `id`: A concatenation of brewery, beer name, year, size, and {batch or bottle date}.
+    # `beer_id`: A concatenation of brewery, beer name, year, size, and {batch or bottle date}.
     beer_id = UnicodeAttribute(hash_key=True)
 
     # Required Attributes
@@ -34,12 +35,15 @@ class Beer(Model):
     aging_potential = UnicodeAttribute(null=True)
     trade_value = UnicodeAttribute(null=True)
     for_trade = BooleanAttribute(default=True)
-    date_added = NumberAttribute(null=True, default=datetime.timestamp(datetime.utcnow()))
-    last_modified = NumberAttribute(null=True, default=datetime.timestamp(datetime.utcnow()))
+    date_added = UTCDateTimeAttribute(null=True, default=datetime.utcnow())
+    last_modified = UTCDateTimeAttribute(null=True, default=datetime.utcnow())
     note = UnicodeAttribute(null=True)
 
     def to_dict(self) -> dict:
-        """Returns a python dictionary with all attributes of this Beer."""
+        """
+        Returns a dictionary with all attributes, converting all datetime attributes to epoch.
+        """
+
         return {
             "beer_id":         self.beer_id.__str__(),
             "name":            self.name.__str__(),
@@ -56,8 +60,8 @@ class Beer(Model):
             "aging_potential": self.aging_potential.__str__() if self.aging_potential else None,
             "trade_value":     self.trade_value.__str__() if self.trade_value else None,
             "for_trade":       self.for_trade.__str__() if self.for_trade else None,
-            "date_added":      self.date_added,
-            "last_modified":   self.last_modified,
+            "date_added":      datetime.timestamp(self.date_added),
+            "last_modified":   datetime.timestamp(self.last_modified),
             "note":            self.note.__str__() if self.note else None
         }
 
@@ -69,19 +73,50 @@ class Beer(Model):
         super().__init__(**kwargs)
         logger.debug(f"Initializing a new instance of the Beer model for {kwargs}.")
 
+        # Type check: Year
+        try:
+            self.year = int(kwargs['year'])
+        except ValueError as e:
+            logger.debug("Year must be an integer.")
+            raise e
+
+        # Type check: Batch
+        if 'batch' in kwargs.keys():
+            try:
+                self.batch = int(kwargs['batch'])
+            except ValueError as e:
+                logger.debug("Batch number must be an integer.")
+                raise e
+
+        # Type check: Qty
+        if 'qty' in kwargs.keys():
+            try:
+                self.qty = int(kwargs['qty'])
+            except ValueError as e:
+                logger.debug("Qty must be an integer.")
+                raise e
+
         # Construct the concatenated beer_id when not provided:
         #  brewery, beer name, year, size, {bottle date or batch}.  Bottle date preferred.
         if 'beer_id' not in kwargs.keys():
+            # Need to create a beer_id for this beer
             self.beer_id = f"{kwargs['brewery']}_{kwargs['name']}_{kwargs['year']}_{kwargs['size']}"
-            if 'batch' not in kwargs.keys() or kwargs['batch'] == '':
+            if 'batch' in kwargs.keys() and 'bottle_date' in kwargs.keys():
+                # If both bottle_date and batch are provided, prefer bottle_date
+                self.beer_id += f"_{kwargs['bottle_date']}"
+
+            elif 'batch' not in kwargs.keys() or kwargs['batch'] == '':
+                # Batch is not provided
                 self.batch = None
                 if 'bottle_date' not in kwargs.keys() or kwargs['bottle_date'] == '':
-                    # No batch or bottle date
+                    # When no batch or bottle_date is provided, append "_None"
                     self.beer_id += "_None"
                     self.bottle_date = None
                 else:
+                    # Bottle_date is provided
                     self.beer_id += f"_{kwargs['bottle_date']}"
             else:
+                # Use batch when bottle_date isn't provided
                 self.beer_id += f"_{kwargs['batch']}"
             logger.debug(f"Created a beer_id for this new Beer: {self.beer_id}.")
         else:

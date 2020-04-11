@@ -24,6 +24,7 @@ python-dateutil==2.8.1
 python-dotenv==0.12.0
 pytz==2019.3
 six==1.14.0
+testfixtures==6.14.0
 tini==3.0.1
 urllib3==1.25.8
 wcwidth==0.1.9

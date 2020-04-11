@@ -1,12 +1,12 @@
 example_data = [
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2011-02-17',
         'brewery':        '3 Fonteinen',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Armand & Tomme',
-        'note':           '',
+        'note':           'asdfs',
         'qty':            1,
         'size':           '750 mL',
         'specific_style': 'Lambic',
@@ -15,7 +15,7 @@ example_data = [
         'year':           2013
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2010-04-02',
         'brewery':        '3 Fonteinen',
         'for_trade':      True,
@@ -30,7 +30,7 @@ example_data = [
         'year':           2011
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2010-03-19',
         'brewery':        '3 Fonteinen',
         'for_trade':      True,
@@ -45,7 +45,7 @@ example_data = [
         'year':           2011
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2010-03-26',
         'brewery':        '3 Fonteinen',
         'for_trade':      True,
@@ -60,7 +60,7 @@ example_data = [
         'year':           2011
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2014-06-18',
         'brewery':        '3 Fonteinen',
         'for_trade':      True,
@@ -75,7 +75,7 @@ example_data = [
         'year':           2014
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2013-05-02',
         'brewery':        '3 Fonteinen',
         'for_trade':      True,
@@ -90,7 +90,7 @@ example_data = [
         'year':           2013
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2016-12-20',
         'brewery':        '3 Fonteinen',
         'for_trade':      True,
@@ -105,7 +105,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2012-11-13',
         'brewery':        '3 Fonteinen',
         'for_trade':      True,
@@ -120,7 +120,7 @@ example_data = [
         'year':           2012
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2012-05-22',
         'brewery':        '3 Fonteinen',
         'for_trade':      True,
@@ -135,7 +135,7 @@ example_data = [
         'year':           2012
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2013-01-28',
         'brewery':        '3 Fonteinen',
         'for_trade':      True,
@@ -150,7 +150,7 @@ example_data = [
         'year':           2013
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2013-02-27',
         'brewery':        '3 Fonteinen',
         'for_trade':      True,
@@ -165,7 +165,7 @@ example_data = [
         'year':           2013
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2013-10-17',
         'brewery':        '3 Fonteinen',
         'for_trade':      True,
@@ -180,7 +180,7 @@ example_data = [
         'year':           2013
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2013-10-24',
         'brewery':        '3 Fonteinen',
         'for_trade':      True,
@@ -195,7 +195,7 @@ example_data = [
         'year':           2013
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2013-11-27',
         'brewery':        '3 Fonteinen',
         'for_trade':      True,
@@ -210,7 +210,7 @@ example_data = [
         'year':           2013
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2015-10-30',
         'brewery':        '3 Fonteinen',
         'for_trade':      True,
@@ -225,7 +225,7 @@ example_data = [
         'year':           2013
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2015-12-12',
         'brewery':        '3 Fonteinen',
         'for_trade':      True,
@@ -240,7 +240,7 @@ example_data = [
         'year':           2015
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2016-04-19',
         'brewery':        '3 Fonteinen',
         'for_trade':      True,
@@ -255,7 +255,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2017-01-19',
         'brewery':        '3 Fonteinen',
         'for_trade':      True,
@@ -270,7 +270,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      'Blend 9',
+        'batch':          9,
         'bottle_date':    '2016-12-05',
         'brewery':        '3 Fonteinen',
         'for_trade':      True,
@@ -285,7 +285,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      'Blend 18',
+        'batch':          18,
         'bottle_date':    '2017-01-27',
         'brewery':        '3 Fonteinen',
         'for_trade':      True,
@@ -300,7 +300,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      'Blend 22',
+        'batch':          22,
         'bottle_date':    '2017-03-07',
         'brewery':        '3 Fonteinen',
         'for_trade':      True,
@@ -315,7 +315,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2011-04-25',
         'brewery':        '3 Fonteinen',
         'for_trade':      True,
@@ -330,7 +330,7 @@ example_data = [
         'year':           2011
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2014-04-14',
         'brewery':        '3 Fonteinen',
         'for_trade':      True,
@@ -345,7 +345,7 @@ example_data = [
         'year':           2014
     },
     {
-        'batch_str':      'Batch 2',
+        'batch':          2,
         'bottle_date':    '2016-03-26',
         'brewery':        '3 Fonteinen',
         'for_trade':      True,
@@ -360,7 +360,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Anchorage',
         'for_trade':      True,
@@ -375,7 +375,7 @@ example_data = [
         'year':           2018
     },
     {
-        'batch_str':      'Batch 2',
+        'batch':          2,
         'bottle_date':    'Batch 2',
         'brewery':        'Anchorage',
         'for_trade':      True,
@@ -390,7 +390,7 @@ example_data = [
         'year':           2014
     },
     {
-        'batch_str':      'Batch 4',
+        'batch':          4,
         'bottle_date':    'Batch 4',
         'brewery':        'Anchorage',
         'for_trade':      True,
@@ -405,7 +405,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      'Batch 3',
+        'batch':          3,
         'bottle_date':    'Batch 3',
         'brewery':        'Anchorage',
         'for_trade':      True,
@@ -420,7 +420,7 @@ example_data = [
         'year':           2018
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Anchorage',
         'for_trade':      True,
@@ -435,7 +435,7 @@ example_data = [
         'year':           2018
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Avery',
         'for_trade':      True,
@@ -450,7 +450,7 @@ example_data = [
         'year':           2013
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Avery',
         'for_trade':      True,
@@ -465,7 +465,7 @@ example_data = [
         'year':           2014
     },
     {
-        'batch_str':      'Batch 5',
+        'batch':          5,
         'bottle_date':    '',
         'brewery':        'Avery',
         'for_trade':      True,
@@ -480,7 +480,7 @@ example_data = [
         'year':           2015
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Avery',
         'for_trade':      True,
@@ -495,7 +495,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Avery',
         'for_trade':      True,
@@ -510,7 +510,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'B. Nektar',
         'for_trade':      True,
@@ -525,7 +525,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'B. Nektar',
         'for_trade':      True,
@@ -540,7 +540,7 @@ example_data = [
         'year':           2015
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Block 15',
         'for_trade':      True,
@@ -555,7 +555,7 @@ example_data = [
         'year':           2018
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Block 15',
         'for_trade':      True,
@@ -570,7 +570,7 @@ example_data = [
         'year':           2018
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2018-03',
         'brewery':        'Block 15',
         'for_trade':      True,
@@ -585,7 +585,7 @@ example_data = [
         'year':           2018
     },
     {
-        'batch_str':      'Batch 3',
+        'batch':          3,
         'bottle_date':    '',
         'brewery':        'Bottle Logic',
         'for_trade':      True,
@@ -600,7 +600,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      'Batch 4',
+        'batch':          4,
         'bottle_date':    '',
         'brewery':        'Bottle Logic',
         'for_trade':      True,
@@ -615,7 +615,7 @@ example_data = [
         'year':           2018
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Bottle Logic',
         'for_trade':      True,
@@ -630,7 +630,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Bottle Logic',
         'for_trade':      True,
@@ -645,7 +645,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      'Batch 1',
+        'batch':          1,
         'bottle_date':    '',
         'brewery':        'Braindead Brewing',
         'for_trade':      True,
@@ -660,7 +660,7 @@ example_data = [
         'year':           2015
     },
     {
-        'batch_str':      'Batch 1',
+        'batch':          1,
         'bottle_date':    '',
         'brewery':        'Braindead Brewing',
         'for_trade':      True,
@@ -675,7 +675,7 @@ example_data = [
         'year':           2015
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Brew Gentlemen',
         'for_trade':      True,
@@ -690,7 +690,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2014-02-11',
         'brewery':        'Cantillon',
         'for_trade':      True,
@@ -705,7 +705,7 @@ example_data = [
         'year':           2014
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2014-02-17',
         'brewery':        'Cantillon',
         'for_trade':      True,
@@ -720,7 +720,7 @@ example_data = [
         'year':           2014
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2014-08-21',
         'brewery':        'Cantillon',
         'for_trade':      True,
@@ -735,13 +735,13 @@ example_data = [
         'year':           2014
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2017-08-24',
         'brewery':        'Cantillon',
         'for_trade':      True,
         'location':       'Home',
         'name':           "Fou'Foune",
-        'note':           '',
+        'note':           "4 total Fou'17 in WS, unsure about qty per bottle date",
         'qty':            2,
         'size':           '750 mL',
         'specific_style': 'Lambic (Fruit)',
@@ -750,44 +750,14 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
-        'bottle_date':    '2017-08-24',
-        'brewery':        'Cantillon',
-        'for_trade':      True,
-        'location':       'Wine Storage',
-        'name':           "Fou'Foune",
-        'note':           "4 total Fou'17 in WS",
-        'qty':            0,
-        'size':           '750 mL',
-        'specific_style': 'Lambic (Fruit)',
-        'style':          '',
-        'untappd':        '',
-        'year':           2017
-    },
-    {
-        'batch_str':      '',
-        'bottle_date':    '2017-09-01',
-        'brewery':        'Cantillon',
-        'for_trade':      True,
-        'location':       'Home',
-        'name':           "Fou'Foune",
-        'note':           '',
-        'qty':            4,
-        'size':           '750 mL',
-        'specific_style': 'Lambic (Fruit)',
-        'style':          '',
-        'untappd':        '',
-        'year':           2017
-    },
-    {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2017-09-01',
         'brewery':        'Cantillon',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           "Fou'Foune",
-        'note':           "4 total Fou'17 in WS",
-        'qty':            0,
+        'note':           "4 total Fou'17 in WS, unsure about qty per bottle date",
+        'qty':            2,
         'size':           '750 mL',
         'specific_style': 'Lambic (Fruit)',
         'style':          '',
@@ -795,7 +765,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2012-09-07',
         'brewery':        'Cantillon',
         'for_trade':      True,
@@ -810,7 +780,7 @@ example_data = [
         'year':           2012
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2016-10-13',
         'brewery':        'Cantillon',
         'for_trade':      True,
@@ -825,7 +795,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2008-10-03',
         'brewery':        'Cantillon',
         'for_trade':      True,
@@ -840,7 +810,7 @@ example_data = [
         'year':           2008
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2010-12-03',
         'brewery':        'Cantillon',
         'for_trade':      True,
@@ -855,7 +825,7 @@ example_data = [
         'year':           2010
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2011-03-04',
         'brewery':        'Cantillon',
         'for_trade':      True,
@@ -870,7 +840,7 @@ example_data = [
         'year':           2011
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2012-10-16',
         'brewery':        'Cantillon',
         'for_trade':      True,
@@ -885,7 +855,7 @@ example_data = [
         'year':           2012
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2013-01-31',
         'brewery':        'Cantillon',
         'for_trade':      True,
@@ -900,7 +870,7 @@ example_data = [
         'year':           2013
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2013-10-04',
         'brewery':        'Cantillon',
         'for_trade':      True,
@@ -915,7 +885,7 @@ example_data = [
         'year':           2013
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2014-01-31',
         'brewery':        'Cantillon',
         'for_trade':      True,
@@ -930,7 +900,7 @@ example_data = [
         'year':           2014
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2014-04-23',
         'brewery':        'Cantillon',
         'for_trade':      True,
@@ -945,7 +915,7 @@ example_data = [
         'year':           2014
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2014-06-03',
         'brewery':        'Cantillon',
         'for_trade':      True,
@@ -960,7 +930,7 @@ example_data = [
         'year':           2014
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2014-09-10',
         'brewery':        'Cantillon',
         'for_trade':      True,
@@ -975,7 +945,7 @@ example_data = [
         'year':           2014
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2014-09-29',
         'brewery':        'Cantillon',
         'for_trade':      True,
@@ -990,7 +960,7 @@ example_data = [
         'year':           2014
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2014-11-27',
         'brewery':        'Cantillon',
         'for_trade':      True,
@@ -1005,7 +975,7 @@ example_data = [
         'year':           2014
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2014-12-01',
         'brewery':        'Cantillon',
         'for_trade':      True,
@@ -1020,8 +990,8 @@ example_data = [
         'year':           2014
     },
     {
-        'batch_str':      '',
-        'bottle_date':    '2015',
+        'batch':          '',
+        'bottle_date':    '2022-03-18',
         'brewery':        'Cantillon',
         'for_trade':      True,
         'location':       'Wine Storage',
@@ -1035,8 +1005,8 @@ example_data = [
         'year':           2015
     },
     {
-        'batch_str':      '',
-        'bottle_date':    '2015',
+        'batch':          '',
+        'bottle_date':    '2027-03-18',
         'brewery':        'Cantillon',
         'for_trade':      True,
         'location':       'Wine Storage',
@@ -1050,8 +1020,8 @@ example_data = [
         'year':           2015
     },
     {
-        'batch_str':      '',
-        'bottle_date':    '2015',
+        'batch':          '',
+        'bottle_date':    '2034-09-18',
         'brewery':        'Cantillon',
         'for_trade':      True,
         'location':       'Wine Storage',
@@ -1065,7 +1035,7 @@ example_data = [
         'year':           2015
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2015-09-01',
         'brewery':        'Cantillon',
         'for_trade':      True,
@@ -1080,7 +1050,7 @@ example_data = [
         'year':           2015
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2016-05-17',
         'brewery':        'Cantillon',
         'for_trade':      True,
@@ -1095,7 +1065,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2016-06-08',
         'brewery':        'Cantillon',
         'for_trade':      True,
@@ -1110,7 +1080,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2016-10-08',
         'brewery':        'Cantillon',
         'for_trade':      True,
@@ -1125,7 +1095,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2016-12-20',
         'brewery':        'Cantillon',
         'for_trade':      True,
@@ -1140,7 +1110,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2017-03-16',
         'brewery':        'Cantillon',
         'for_trade':      True,
@@ -1156,7 +1126,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2017-06-16',
         'brewery':        'Cantillon',
         'for_trade':      True,
@@ -1171,7 +1141,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Cantillon',
         'for_trade':      True,
@@ -1186,7 +1156,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Cantillon',
         'for_trade':      True,
@@ -1201,7 +1171,7 @@ example_data = [
         'year':           2014
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Cantillon',
         'for_trade':      True,
@@ -1216,7 +1186,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2008-10-24',
         'brewery':        'Cantillon',
         'for_trade':      True,
@@ -1231,7 +1201,7 @@ example_data = [
         'year':           2008
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2014-06-19',
         'brewery':        'Cantillon',
         'for_trade':      True,
@@ -1246,7 +1216,7 @@ example_data = [
         'year':           2014
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2014-11-27',
         'brewery':        'Cantillon',
         'for_trade':      True,
@@ -1261,7 +1231,7 @@ example_data = [
         'year':           2014
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2016-01-11',
         'brewery':        'Cantillon',
         'for_trade':      True,
@@ -1276,7 +1246,7 @@ example_data = [
         'year':           2014
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2016-06-27',
         'brewery':        'Cantillon',
         'for_trade':      True,
@@ -1291,7 +1261,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2017-04-28',
         'brewery':        'Cantillon',
         'for_trade':      True,
@@ -1306,13 +1276,13 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '2011 sticker',
+        'batch':          '',
         'bottle_date':    '2014-01-27',
         'brewery':        'Cantillon',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Lou Pepe Gueuze',
-        'note':           '2014 cork',
+        'note':           '2011 sticker, 2014 cork',
         'qty':            1,
         'size':           '750 mL',
         'specific_style': 'Lambic',
@@ -1321,13 +1291,13 @@ example_data = [
         'year':           2011
     },
     {
-        'batch_str':      '2012 sticker',
+        'batch':          '',
         'bottle_date':    '2014-08-28',
         'brewery':        'Cantillon',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Lou Pepe Kriek',
-        'note':           '2014 cork',
+        'note':           '2012 sticker, 2014 cork',
         'qty':            2,
         'size':           '750 mL',
         'specific_style': 'Lambic (Fruit)',
@@ -1336,7 +1306,7 @@ example_data = [
         'year':           2012
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Cantillon',
         'for_trade':      True,
@@ -1351,7 +1321,7 @@ example_data = [
         'year':           2014
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2017-07-04',
         'brewery':        'Cantillon',
         'for_trade':      True,
@@ -1366,7 +1336,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2011-10-18',
         'brewery':        'Cantillon',
         'for_trade':      True,
@@ -1381,7 +1351,7 @@ example_data = [
         'year':           2011
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2013-10-31',
         'brewery':        'Cantillon',
         'for_trade':      True,
@@ -1396,7 +1366,7 @@ example_data = [
         'year':           2013
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2014-10-21',
         'brewery':        'Cantillon',
         'for_trade':      True,
@@ -1411,7 +1381,7 @@ example_data = [
         'year':           2014
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2016-11-14',
         'brewery':        'Cantillon',
         'for_trade':      True,
@@ -1426,7 +1396,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2013-10-22',
         'brewery':        'Cantillon',
         'for_trade':      True,
@@ -1441,7 +1411,7 @@ example_data = [
         'year':           2013
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2014-10-29',
         'brewery':        'Cantillon',
         'for_trade':      True,
@@ -1456,7 +1426,7 @@ example_data = [
         'year':           2014
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2016-10-25',
         'brewery':        'Cantillon',
         'for_trade':      True,
@@ -1471,7 +1441,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Casey',
         'for_trade':      True,
@@ -1486,7 +1456,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Casey',
         'for_trade':      True,
@@ -1501,7 +1471,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      'Batch 2',
+        'batch':          2,
         'bottle_date':    '',
         'brewery':        'Cigar City',
         'for_trade':      True,
@@ -1516,7 +1486,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Cigar City',
         'for_trade':      True,
@@ -1531,7 +1501,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Cigar City',
         'for_trade':      True,
@@ -1546,7 +1516,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Cigar City',
         'for_trade':      True,
@@ -1561,7 +1531,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Cigar City',
         'for_trade':      True,
@@ -1576,7 +1546,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Cigar City',
         'for_trade':      True,
@@ -1591,7 +1561,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Cigar City',
         'for_trade':      True,
@@ -1606,7 +1576,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Cigar City',
         'for_trade':      True,
@@ -1621,7 +1591,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Cigar City',
         'for_trade':      True,
@@ -1636,7 +1606,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Cigar City',
         'for_trade':      True,
@@ -1651,7 +1621,7 @@ example_data = [
         'year':           2013
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Cigar City',
         'for_trade':      True,
@@ -1666,7 +1636,7 @@ example_data = [
         'year':           2013
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Cigar City',
         'for_trade':      True,
@@ -1681,7 +1651,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Cigar City',
         'for_trade':      True,
@@ -1696,7 +1666,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Cigar City',
         'for_trade':      True,
@@ -1711,7 +1681,7 @@ example_data = [
         'year':           2014
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Cigar City',
         'for_trade':      True,
@@ -1726,7 +1696,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Cigar City',
         'for_trade':      True,
@@ -1741,7 +1711,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Cigar City',
         'for_trade':      True,
@@ -1756,7 +1726,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Cigar City',
         'for_trade':      True,
@@ -1771,7 +1741,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Cigar City',
         'for_trade':      True,
@@ -1786,7 +1756,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Collective',
         'for_trade':      True,
@@ -1801,7 +1771,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Collective',
         'for_trade':      True,
@@ -1816,7 +1786,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Collective',
         'for_trade':      True,
@@ -1831,7 +1801,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Collective',
         'for_trade':      True,
@@ -1846,7 +1816,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Collective',
         'for_trade':      True,
@@ -1861,7 +1831,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Collective',
         'for_trade':      True,
@@ -1876,7 +1846,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Collective',
         'for_trade':      True,
@@ -1891,7 +1861,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Council',
         'for_trade':      True,
@@ -1906,7 +1876,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Crafted Artisan Meadery',
         'for_trade':      True,
@@ -1921,7 +1891,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Crafted Artisan Meadery',
         'for_trade':      True,
@@ -1936,7 +1906,7 @@ example_data = [
         'year':           2015
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Crafted Artisan Meadery',
         'for_trade':      True,
@@ -1951,7 +1921,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Crafted Artisan Meadery',
         'for_trade':      True,
@@ -1966,7 +1936,7 @@ example_data = [
         'year':           2018
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Crafted Artisan Meadery',
         'for_trade':      True,
@@ -1981,7 +1951,7 @@ example_data = [
         'year':           2015
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Crafted Artisan Meadery',
         'for_trade':      True,
@@ -1996,7 +1966,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Crafted Artisan Meadery',
         'for_trade':      True,
@@ -2011,7 +1981,7 @@ example_data = [
         'year':           2015
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Crafted Artisan Meadery',
         'for_trade':      True,
@@ -2026,7 +1996,7 @@ example_data = [
         'year':           2015
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Crooked Stave',
         'for_trade':      True,
@@ -2041,7 +2011,7 @@ example_data = [
         'year':           2014
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Crooked Stave',
         'for_trade':      True,
@@ -2056,7 +2026,7 @@ example_data = [
         'year':           2014
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Crooked Stave',
         'for_trade':      True,
@@ -2071,7 +2041,7 @@ example_data = [
         'year':           2014
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Crooked Stave',
         'for_trade':      True,
@@ -2086,7 +2056,7 @@ example_data = [
         'year':           2014
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'De Cam',
         'for_trade':      True,
@@ -2101,7 +2071,7 @@ example_data = [
         'year':           2015
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'De Cam',
         'for_trade':      True,
@@ -2116,7 +2086,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'De Cam',
         'for_trade':      True,
@@ -2131,7 +2101,7 @@ example_data = [
         'year':           2015
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'De Cam',
         'for_trade':      True,
@@ -2146,7 +2116,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'De Cam',
         'for_trade':      True,
@@ -2161,7 +2131,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2176,7 +2146,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2191,7 +2161,7 @@ example_data = [
         'year':           2018
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2206,7 +2176,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2221,7 +2191,7 @@ example_data = [
         'year':           2018
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2236,7 +2206,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2251,7 +2221,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2266,7 +2236,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      'Batch 2',
+        'batch':          2,
         'bottle_date':    '',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2281,7 +2251,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2296,7 +2266,7 @@ example_data = [
         'year':           2018
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2311,7 +2281,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2326,7 +2296,7 @@ example_data = [
         'year':           2015
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2341,7 +2311,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2356,7 +2326,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2371,7 +2341,7 @@ example_data = [
         'year':           2015
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2386,7 +2356,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2401,7 +2371,7 @@ example_data = [
         'year':           2015
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2416,7 +2386,7 @@ example_data = [
         'year':           2018
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2431,7 +2401,7 @@ example_data = [
         'year':           2015
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2446,7 +2416,7 @@ example_data = [
         'year':           2018
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2018-04',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2461,7 +2431,7 @@ example_data = [
         'year':           2018
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2476,7 +2446,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      'Batch 4',
+        'batch':          4,
         'bottle_date':    '2018-01',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2491,7 +2461,7 @@ example_data = [
         'year':           2018
     },
     {
-        'batch_str':      'Batch 2',
+        'batch':          2,
         'bottle_date':    '',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2506,7 +2476,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      'Batch 3',
+        'batch':          3,
         'bottle_date':    '',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2521,7 +2491,7 @@ example_data = [
         'year':           2018
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2018-01',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2536,7 +2506,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2551,7 +2521,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2019-05',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2566,7 +2536,7 @@ example_data = [
         'year':           2019
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2019-06',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2581,7 +2551,7 @@ example_data = [
         'year':           2019
     },
     {
-        'batch_str':      'Blend 2',
+        'batch':          2,
         'bottle_date':    '',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2596,7 +2566,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2019-03',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2611,7 +2581,7 @@ example_data = [
         'year':           2019
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2019-03',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2626,7 +2596,7 @@ example_data = [
         'year':           2019
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2019-06',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2641,7 +2611,7 @@ example_data = [
         'year':           2019
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2019-07',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2656,7 +2626,7 @@ example_data = [
         'year':           2019
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2019-08',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2671,7 +2641,7 @@ example_data = [
         'year':           2019
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2019-01',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2686,7 +2656,7 @@ example_data = [
         'year':           2019
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2018-06',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2701,7 +2671,7 @@ example_data = [
         'year':           2018
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2017-11',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2716,7 +2686,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2731,7 +2701,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2746,7 +2716,7 @@ example_data = [
         'year':           2015
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2761,7 +2731,7 @@ example_data = [
         'year':           2018
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2018-01',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2776,7 +2746,7 @@ example_data = [
         'year':           2018
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2018-02',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2791,7 +2761,7 @@ example_data = [
         'year':           2018
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2806,7 +2776,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2821,7 +2791,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2019-10',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2836,7 +2806,7 @@ example_data = [
         'year':           2018
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2018-09',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2851,7 +2821,7 @@ example_data = [
         'year':           2018
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2866,7 +2836,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2019-01',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2881,7 +2851,7 @@ example_data = [
         'year':           2019
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2019-09',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2896,7 +2866,7 @@ example_data = [
         'year':           2019
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2018-08',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2911,7 +2881,7 @@ example_data = [
         'year':           2018
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2019-06',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2926,7 +2896,7 @@ example_data = [
         'year':           2019
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2019-05',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2941,7 +2911,7 @@ example_data = [
         'year':           2019
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2956,7 +2926,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2971,7 +2941,7 @@ example_data = [
         'year':           2018
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -2986,7 +2956,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'De Garde',
         'for_trade':      True,
@@ -3001,7 +2971,7 @@ example_data = [
         'year':           2018
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Deschutes',
         'for_trade':      True,
@@ -3016,7 +2986,7 @@ example_data = [
         'year':           2011
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Deschutes',
         'for_trade':      True,
@@ -3031,7 +3001,7 @@ example_data = [
         'year':           2012
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Dogfish Head',
         'for_trade':      True,
@@ -3046,7 +3016,7 @@ example_data = [
         'year':           2012
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Fifty Fifty',
         'for_trade':      True,
@@ -3061,7 +3031,7 @@ example_data = [
         'year':           2014
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Fifty Fifty',
         'for_trade':      True,
@@ -3076,7 +3046,7 @@ example_data = [
         'year':           2014
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Firestone',
         'for_trade':      True,
@@ -3091,12 +3061,12 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Firestone',
         'for_trade':      True,
         'location':       'Home',
-        'name':           'Sucuba',
+        'name':           'Sucaba',
         'note':           '',
         'qty':            1,
         'size':           '22 oz',
@@ -3106,7 +3076,7 @@ example_data = [
         'year':           2015
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Floodland',
         'for_trade':      True,
@@ -3121,7 +3091,7 @@ example_data = [
         'year':           2018
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Frederiksdal',
         'for_trade':      True,
@@ -3136,7 +3106,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Frederiksdal',
         'for_trade':      True,
@@ -3151,7 +3121,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Fremont',
         'for_trade':      True,
@@ -3166,7 +3136,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Fremont',
         'for_trade':      True,
@@ -3181,7 +3151,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Fremont',
         'for_trade':      True,
@@ -3196,7 +3166,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Fremont',
         'for_trade':      True,
@@ -3211,7 +3181,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Fremont',
         'for_trade':      True,
@@ -3226,7 +3196,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Fremont',
         'for_trade':      True,
@@ -3241,7 +3211,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Fremont',
         'for_trade':      True,
@@ -3256,7 +3226,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Fremont',
         'for_trade':      True,
@@ -3271,7 +3241,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Funky Buddha',
         'for_trade':      True,
@@ -3286,7 +3256,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Funky Buddha',
         'for_trade':      True,
@@ -3301,7 +3271,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Good Beer Company',
         'for_trade':      True,
@@ -3316,7 +3286,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2012-09-20',
         'brewery':        'Goose Island',
         'for_trade':      True,
@@ -3331,7 +3301,7 @@ example_data = [
         'year':           2012
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2013-11-08',
         'brewery':        'Goose Island',
         'for_trade':      True,
@@ -3346,7 +3316,7 @@ example_data = [
         'year':           2013
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2014-08-08',
         'brewery':        'Goose Island',
         'for_trade':      True,
@@ -3361,7 +3331,7 @@ example_data = [
         'year':           2014
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2014-09-11',
         'brewery':        'Goose Island',
         'for_trade':      True,
@@ -3376,7 +3346,7 @@ example_data = [
         'year':           2014
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2015-11-12',
         'brewery':        'Goose Island',
         'for_trade':      True,
@@ -3391,7 +3361,7 @@ example_data = [
         'year':           2015
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Goose Island',
         'for_trade':      True,
@@ -3406,7 +3376,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Goose Island',
         'for_trade':      True,
@@ -3421,7 +3391,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Goose Island',
         'for_trade':      True,
@@ -3436,7 +3406,7 @@ example_data = [
         'year':           2013
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Goose Island',
         'for_trade':      True,
@@ -3451,7 +3421,7 @@ example_data = [
         'year':           2014
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Goose Island',
         'for_trade':      True,
@@ -3466,7 +3436,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Goose Island',
         'for_trade':      True,
@@ -3481,7 +3451,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Goose Island',
         'for_trade':      True,
@@ -3496,7 +3466,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2014-10-31',
         'brewery':        'Goose Island',
         'for_trade':      True,
@@ -3511,7 +3481,7 @@ example_data = [
         'year':           2014
     },
     {
-        'batch_str':      'Batch 24',
+        'batch':          4,
         'bottle_date':    '1997-03-04',
         'brewery':        'Hair of the Dog',
         'for_trade':      True,
@@ -3526,7 +3496,7 @@ example_data = [
         'year':           1997
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Hair of the Dog',
         'for_trade':      True,
@@ -3541,7 +3511,7 @@ example_data = [
         'year':           2011
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Hair of the Dog',
         'for_trade':      True,
@@ -3556,7 +3526,7 @@ example_data = [
         'year':           2014
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Hair of the Dog',
         'for_trade':      True,
@@ -3571,7 +3541,7 @@ example_data = [
         'year':           2011
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Hair of the Dog',
         'for_trade':      True,
@@ -3586,7 +3556,7 @@ example_data = [
         'year':           2014
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Hair of the Dog',
         'for_trade':      True,
@@ -3601,7 +3571,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Hair of the Dog',
         'for_trade':      True,
@@ -3616,7 +3586,7 @@ example_data = [
         'year':           2013
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Hair of the Dog',
         'for_trade':      True,
@@ -3631,7 +3601,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Hardywood',
         'for_trade':      True,
@@ -3646,7 +3616,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Hardywood',
         'for_trade':      True,
@@ -3661,7 +3631,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2015-08-20',
         'brewery':        'Hill Farmstead',
         'for_trade':      True,
@@ -3676,7 +3646,7 @@ example_data = [
         'year':           2015
     },
     {
-        'batch_str':      'Batch 19',
+        'batch':          9,
         'bottle_date':    '2016-10-28',
         'brewery':        'Hill Farmstead',
         'for_trade':      True,
@@ -3691,7 +3661,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Hill Farmstead',
         'for_trade':      True,
@@ -3706,7 +3676,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      'Batch 2',
+        'batch':          2,
         'bottle_date':    '',
         'brewery':        'Holy Mountain',
         'for_trade':      True,
@@ -3721,7 +3691,7 @@ example_data = [
         'year':           2018
     },
     {
-        'batch_str':      'Batch 3',
+        'batch':          3,
         'bottle_date':    '',
         'brewery':        'Holy Mountain',
         'for_trade':      True,
@@ -3736,7 +3706,7 @@ example_data = [
         'year':           2018
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Holy Mountain',
         'for_trade':      True,
@@ -3751,7 +3721,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Holy Mountain',
         'for_trade':      True,
@@ -3766,7 +3736,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Holy Mountain',
         'for_trade':      True,
@@ -3781,7 +3751,7 @@ example_data = [
         'year':           2018
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Holy Mountain',
         'for_trade':      True,
@@ -3796,7 +3766,7 @@ example_data = [
         'year':           2018
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Holy Mountain',
         'for_trade':      True,
@@ -3811,7 +3781,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Holy Mountain',
         'for_trade':      True,
@@ -3826,7 +3796,7 @@ example_data = [
         'year':           2018
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Horals',
         'for_trade':      True,
@@ -3841,7 +3811,7 @@ example_data = [
         'year':           2009
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Horals',
         'for_trade':      True,
@@ -3856,7 +3826,7 @@ example_data = [
         'year':           2011
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Horals',
         'for_trade':      True,
@@ -3871,7 +3841,7 @@ example_data = [
         'year':           2013
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Horals',
         'for_trade':      True,
@@ -3886,7 +3856,7 @@ example_data = [
         'year':           2015
     },
     {
-        'batch_str':      'Blend 1',
+        'batch':          1,
         'bottle_date':    '2013-03',
         'brewery':        'Jester King',
         'for_trade':      True,
@@ -3901,7 +3871,7 @@ example_data = [
         'year':           2013
     },
     {
-        'batch_str':      'Blend 2',
+        'batch':          2,
         'bottle_date':    '2013-08',
         'brewery':        'Jester King',
         'for_trade':      True,
@@ -3916,7 +3886,7 @@ example_data = [
         'year':           2013
     },
     {
-        'batch_str':      'Blend 6',
+        'batch':          6,
         'bottle_date':    '2016-06',
         'brewery':        'Jester King',
         'for_trade':      True,
@@ -3931,7 +3901,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      'Blend 7',
+        'batch':          7,
         'bottle_date':    '2017-06',
         'brewery':        'Jester King',
         'for_trade':      True,
@@ -3946,7 +3916,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      'Blend 8',
+        'batch':          8,
         'bottle_date':    '2018-06',
         'brewery':        'Jester King',
         'for_trade':      True,
@@ -3961,7 +3931,7 @@ example_data = [
         'year':           2018
     },
     {
-        'batch_str':      'Blend 3',
+        'batch':          3,
         'bottle_date':    '2015-08',
         'brewery':        'Jester King',
         'for_trade':      True,
@@ -3976,7 +3946,7 @@ example_data = [
         'year':           2015
     },
     {
-        'batch_str':      'Blend 2',
+        'batch':          2,
         'bottle_date':    '2015-09',
         'brewery':        'Jester King',
         'for_trade':      True,
@@ -3991,7 +3961,7 @@ example_data = [
         'year':           2015
     },
     {
-        'batch_str':      'Blend 3',
+        'batch':          3,
         'bottle_date':    '2016-09',
         'brewery':        'Jester King',
         'for_trade':      True,
@@ -4006,7 +3976,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Jester King',
         'for_trade':      True,
@@ -4021,7 +3991,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Jester King',
         'for_trade':      True,
@@ -4036,7 +4006,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Jester King',
         'for_trade':      True,
@@ -4051,7 +4021,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Jester King',
         'for_trade':      True,
@@ -4066,7 +4036,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      'Blend 2',
+        'batch':          2,
         'bottle_date':    '2015-11',
         'brewery':        'Jester King',
         'for_trade':      True,
@@ -4081,7 +4051,7 @@ example_data = [
         'year':           2015
     },
     {
-        'batch_str':      'Batch 3',
+        'batch':          3,
         'bottle_date':    '',
         'brewery':        'Jester King',
         'for_trade':      True,
@@ -4096,7 +4066,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Jester King',
         'for_trade':      True,
@@ -4111,7 +4081,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      'Blend 5',
+        'batch':          5,
         'bottle_date':    '2018-05',
         'brewery':        'Jester King',
         'for_trade':      True,
@@ -4126,7 +4096,7 @@ example_data = [
         'year':           2018
     },
     {
-        'batch_str':      'Batch 19',
+        'batch':          9,
         'bottle_date':    '',
         'brewery':        'Jester King',
         'for_trade':      True,
@@ -4141,7 +4111,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Jester King',
         'for_trade':      True,
@@ -4156,7 +4126,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Jester King',
         'for_trade':      True,
@@ -4171,7 +4141,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Jester King',
         'for_trade':      True,
@@ -4186,7 +4156,7 @@ example_data = [
         'year':           2015
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Jester King',
         'for_trade':      True,
@@ -4201,7 +4171,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Jester King',
         'for_trade':      True,
@@ -4216,7 +4186,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Jester King',
         'for_trade':      True,
@@ -4231,7 +4201,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Jester King',
         'for_trade':      True,
@@ -4246,7 +4216,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Jester King',
         'for_trade':      True,
@@ -4261,7 +4231,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Jester King',
         'for_trade':      True,
@@ -4276,7 +4246,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Jester King',
         'for_trade':      True,
@@ -4291,7 +4261,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Jester King',
         'for_trade':      True,
@@ -4306,7 +4276,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Jester King',
         'for_trade':      True,
@@ -4321,7 +4291,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Jester King',
         'for_trade':      True,
@@ -4336,12 +4306,12 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Kuhnhenn',
         'for_trade':      True,
         'location':       'Home',
-        'name':           'BB French Toast ',
+        'name':           'BB French Toast',
         'note':           '',
         'qty':            1,
         'size':           '375 mL',
@@ -4351,7 +4321,7 @@ example_data = [
         'year':           2015
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Kuhnhenn',
         'for_trade':      True,
@@ -4366,7 +4336,7 @@ example_data = [
         'year':           2015
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Kuhnhenn',
         'for_trade':      True,
@@ -4381,7 +4351,7 @@ example_data = [
         'year':           2015
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2011-05-17',
         'brewery':        'Lindemans',
         'for_trade':      True,
@@ -4396,7 +4366,7 @@ example_data = [
         'year':           2011
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Lost Abbey',
         'for_trade':      True,
@@ -4411,7 +4381,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Lost Abbey',
         'for_trade':      True,
@@ -4426,7 +4396,7 @@ example_data = [
         'year':           2013
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Lost Abbey',
         'for_trade':      True,
@@ -4441,7 +4411,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Mad Fritz',
         'for_trade':      True,
@@ -4456,7 +4426,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Monkish',
         'for_trade':      True,
@@ -4471,7 +4441,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'New Glarus',
         'for_trade':      True,
@@ -4486,7 +4456,7 @@ example_data = [
         'year':           2015
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Oddwood',
         'for_trade':      True,
@@ -4501,7 +4471,7 @@ example_data = [
         'year':           2015
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Olde Hickory',
         'for_trade':      True,
@@ -4516,7 +4486,7 @@ example_data = [
         'year':           2011
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Olde Hickory',
         'for_trade':      True,
@@ -4531,7 +4501,7 @@ example_data = [
         'year':           2012
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Oskar Blues',
         'for_trade':      True,
@@ -4546,7 +4516,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'OWA',
         'for_trade':      True,
@@ -4561,7 +4531,7 @@ example_data = [
         'year':           2015
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Perennial',
         'for_trade':      True,
@@ -4576,7 +4546,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Perennial',
         'for_trade':      True,
@@ -4591,7 +4561,7 @@ example_data = [
         'year':           2018
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Perennial',
         'for_trade':      True,
@@ -4606,7 +4576,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Perennial',
         'for_trade':      True,
@@ -4621,7 +4591,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Perennial',
         'for_trade':      True,
@@ -4636,7 +4606,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Perennial',
         'for_trade':      True,
@@ -4651,7 +4621,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Perennial',
         'for_trade':      True,
@@ -4666,7 +4636,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Perennial',
         'for_trade':      True,
@@ -4681,7 +4651,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Perennial',
         'for_trade':      True,
@@ -4696,7 +4666,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Perennial',
         'for_trade':      True,
@@ -4711,7 +4681,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Perennial',
         'for_trade':      True,
@@ -4726,7 +4696,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Perennial',
         'for_trade':      True,
@@ -4741,7 +4711,7 @@ example_data = [
         'year':           2015
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Perennial',
         'for_trade':      True,
@@ -4756,7 +4726,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Perennial',
         'for_trade':      True,
@@ -4771,7 +4741,7 @@ example_data = [
         'year':           2018
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Prairie',
         'for_trade':      True,
@@ -4786,7 +4756,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Prairie',
         'for_trade':      True,
@@ -4801,7 +4771,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        "Rev Nat's Cider",
         'for_trade':      True,
@@ -4816,7 +4786,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        "Rev Nat's Cider",
         'for_trade':      True,
@@ -4831,7 +4801,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        "Rev Nat's Cider",
         'for_trade':      True,
@@ -4846,7 +4816,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        "Rev Nat's Cider",
         'for_trade':      True,
@@ -4861,7 +4831,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        "Rev Nat's Cider",
         'for_trade':      True,
@@ -4876,7 +4846,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        "Rev Nat's Cider",
         'for_trade':      True,
@@ -4891,7 +4861,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        "Rev Nat's Cider",
         'for_trade':      True,
@@ -4906,7 +4876,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Revolution Brewing',
         'for_trade':      True,
@@ -4921,7 +4891,7 @@ example_data = [
         'year':           2015
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Rivertown',
         'for_trade':      True,
@@ -4936,7 +4906,7 @@ example_data = [
         'year':           2014
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Saint Arnold',
         'for_trade':      True,
@@ -4951,7 +4921,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Sam Adams',
         'for_trade':      True,
@@ -4966,7 +4936,7 @@ example_data = [
         'year':           2015
     },
     {
-        'batch_str':      'Batch 4',
+        'batch':          4,
         'bottle_date':    '',
         'brewery':        'Sante Adairius',
         'for_trade':      True,
@@ -4981,7 +4951,7 @@ example_data = [
         'year':           2015
     },
     {
-        'batch_str':      'Blend 13',
+        'batch':          13,
         'bottle_date':    '',
         'brewery':        'Sante Adairius',
         'for_trade':      True,
@@ -4996,7 +4966,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Sante Adairius',
         'for_trade':      True,
@@ -5011,7 +4981,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Sante Adairius',
         'for_trade':      True,
@@ -5026,7 +4996,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2016-04',
         'brewery':        'Sante Adairius',
         'for_trade':      True,
@@ -5041,7 +5011,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      'Batch 4',
+        'batch':          4,
         'bottle_date':    '',
         'brewery':        "Schramm's",
         'for_trade':      True,
@@ -5056,7 +5026,7 @@ example_data = [
         'year':           2014
     },
     {
-        'batch_str':      'Batch 6',
+        'batch':          6,
         'bottle_date':    '',
         'brewery':        "Schramm's",
         'for_trade':      True,
@@ -5071,7 +5041,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      'Batch 8',
+        'batch':          8,
         'bottle_date':    '2017-10-25',
         'brewery':        "Schramm's",
         'for_trade':      True,
@@ -5086,7 +5056,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        "Schramm's",
         'for_trade':      True,
@@ -5101,7 +5071,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        "Schramm's",
         'for_trade':      True,
@@ -5116,9 +5086,9 @@ example_data = [
         'year':           2015
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
-        'brewery':        "Schramm's ",
+        'brewery':        "Schramm's",
         'for_trade':      True,
         'location':       'Home',
         'name':           'Marionberry',
@@ -5131,7 +5101,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Shared',
         'for_trade':      True,
@@ -5146,7 +5116,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Shared',
         'for_trade':      True,
@@ -5161,7 +5131,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Shared',
         'for_trade':      True,
@@ -5176,7 +5146,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      'Blend 1',
+        'batch':          1,
         'bottle_date':    '',
         'brewery':        'Side Project',
         'for_trade':      True,
@@ -5191,7 +5161,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      'Blend 2',
+        'batch':          2,
         'bottle_date':    '',
         'brewery':        'Side Project',
         'for_trade':      True,
@@ -5206,7 +5176,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Side Project',
         'for_trade':      True,
@@ -5221,7 +5191,7 @@ example_data = [
         'year':           2018
     },
     {
-        'batch_str':      'Blend 3',
+        'batch':          3,
         'bottle_date':    '',
         'brewery':        'Side Project',
         'for_trade':      True,
@@ -5236,7 +5206,7 @@ example_data = [
         'year':           2018
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Side Project',
         'for_trade':      True,
@@ -5251,7 +5221,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      'Blend 1',
+        'batch':          1,
         'bottle_date':    '',
         'brewery':        'Side Project',
         'for_trade':      True,
@@ -5266,7 +5236,7 @@ example_data = [
         'year':           2018
     },
     {
-        'batch_str':      'Blend 8',
+        'batch':          8,
         'bottle_date':    '',
         'brewery':        'Side Project',
         'for_trade':      True,
@@ -5281,7 +5251,7 @@ example_data = [
         'year':           2018
     },
     {
-        'batch_str':      'Blend 2',
+        'batch':          2,
         'bottle_date':    '',
         'brewery':        'Side Project',
         'for_trade':      True,
@@ -5296,7 +5266,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      'Batch 4',
+        'batch':          4,
         'bottle_date':    '',
         'brewery':        'Superstition Meadery',
         'for_trade':      True,
@@ -5311,7 +5281,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Superstition Meadery',
         'for_trade':      True,
@@ -5326,7 +5296,7 @@ example_data = [
         'year':           2015
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Superstition Meadery',
         'for_trade':      True,
@@ -5341,7 +5311,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Superstition Meadery',
         'for_trade':      True,
@@ -5356,7 +5326,7 @@ example_data = [
         'year':           2015
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'The Bruery',
         'for_trade':      True,
@@ -5371,7 +5341,7 @@ example_data = [
         'year':           2014
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'The Bruery',
         'for_trade':      True,
@@ -5386,7 +5356,7 @@ example_data = [
         'year':           2013
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'The Bruery',
         'for_trade':      True,
@@ -5401,7 +5371,7 @@ example_data = [
         'year':           2013
     },
     {
-        'batch_str':      'Batch 4',
+        'batch':          4,
         'bottle_date':    '2013-12-05',
         'brewery':        'The Bruery',
         'for_trade':      True,
@@ -5416,7 +5386,7 @@ example_data = [
         'year':           2014
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'The Bruery',
         'for_trade':      True,
@@ -5431,7 +5401,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'The Bruery',
         'for_trade':      True,
@@ -5446,7 +5416,7 @@ example_data = [
         'year':           2014
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'The Bruery',
         'for_trade':      True,
@@ -5461,7 +5431,7 @@ example_data = [
         'year':           2014
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2011-02-15',
         'brewery':        'Tilquin',
         'for_trade':      True,
@@ -5476,7 +5446,7 @@ example_data = [
         'year':           2011
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2012-03-05',
         'brewery':        'Tilquin',
         'for_trade':      True,
@@ -5491,7 +5461,7 @@ example_data = [
         'year':           2012
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2013-03-11',
         'brewery':        'Tilquin',
         'for_trade':      True,
@@ -5506,7 +5476,7 @@ example_data = [
         'year':           2013
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2016-11-09',
         'brewery':        'Tilquin',
         'for_trade':      True,
@@ -5521,7 +5491,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2017-02-14',
         'brewery':        'Tilquin',
         'for_trade':      True,
@@ -5536,7 +5506,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2014-01-14',
         'brewery':        'Tilquin',
         'for_trade':      True,
@@ -5551,7 +5521,7 @@ example_data = [
         'year':           2013
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2016-03-14',
         'brewery':        'Tilquin',
         'for_trade':      True,
@@ -5566,7 +5536,7 @@ example_data = [
         'year':           2014
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2015-11-23',
         'brewery':        'Tilquin',
         'for_trade':      True,
@@ -5581,7 +5551,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2017-01-19',
         'brewery':        'Tilquin',
         'for_trade':      True,
@@ -5596,7 +5566,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2016-12-21',
         'brewery':        'Tilquin',
         'for_trade':      True,
@@ -5611,7 +5581,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2013-01-24',
         'brewery':        'Tilquin',
         'for_trade':      True,
@@ -5626,7 +5596,7 @@ example_data = [
         'year':           2013
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2014-02-06',
         'brewery':        'Tilquin',
         'for_trade':      True,
@@ -5641,7 +5611,7 @@ example_data = [
         'year':           2014
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '2014-02-12',
         'brewery':        'Tilquin',
         'for_trade':      True,
@@ -5656,7 +5626,7 @@ example_data = [
         'year':           2014
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Toolbox',
         'for_trade':      True,
@@ -5671,7 +5641,7 @@ example_data = [
         'year':           2016
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Toolbox',
         'for_trade':      True,
@@ -5686,7 +5656,7 @@ example_data = [
         'year':           2015
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Toolbox',
         'for_trade':      True,
@@ -5701,7 +5671,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Upright',
         'for_trade':      True,
@@ -5716,7 +5686,7 @@ example_data = [
         'year':           2017
     },
     {
-        'batch_str':      '',
+        'batch':          '',
         'bottle_date':    '',
         'brewery':        'Westbrook',
         'for_trade':      True,
