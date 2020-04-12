@@ -61,9 +61,9 @@ class Beer(Model):
             "untappd":         self.untappd.__str__() if self.untappd else None,
             "aging_potential": self.aging_potential.__str__() if self.aging_potential else None,
             "trade_value":     self.trade_value.__str__() if self.trade_value else None,
-            "for_trade":       self.for_trade.__str__() if self.for_trade else None,
-            "last_modified":   datetime.timestamp(self.last_modified),
+            "for_trade":       self.for_trade if self.for_trade else True,
             "date_added":      datetime.timestamp(self.date_added),
+            "last_modified":   datetime.timestamp(self.last_modified),
             "note":            self.note.__str__() if self.note else None
         }
 
