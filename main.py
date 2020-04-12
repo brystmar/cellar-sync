@@ -8,7 +8,7 @@ from flask_cors import CORS
 from flask_restful import Api
 
 # App components
-from backend.cellar_routes import CellarApi
+from backend.cellar_routes import CellarCollectionApi, BeerApi
 
 app = Flask("cellar-sync-backend")
 logger.info(f"Flask app {app.name} created!")
@@ -25,4 +25,5 @@ api = Api(app)
 logger.info("Flask-RESTful API initialized.")
 
 # Define the functional endpoints
-api.add_resource(CellarApi, '/api/v1/cellar')
+api.add_resource(CellarCollectionApi, '/api/v1/cellar')
+api.add_resource(BeerApi, '/api/v1/cellar/<beer_id>')
