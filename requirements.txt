@@ -1,6 +1,7 @@
 aniso8601==8.0.0
 attrs==19.3.0
-botocore==1.15.31
+boto3==1.13.6
+botocore==1.16.6
 click==7.1.1
 configparser==5.0.0
 docutils==0.15.2
@@ -23,6 +24,7 @@ pytest==5.4.1
 python-dateutil==2.8.1
 python-dotenv==0.12.0
 pytz==2019.3
+s3transfer==0.3.3
 six==1.14.0
 testfixtures==6.14.0
 tini==3.0.1

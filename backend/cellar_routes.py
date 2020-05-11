@@ -1,14 +1,17 @@
+import time
+
 from backend.global_logger import logger
 from backend.models import Beer
 from flask import request
 from flask_restful import Resource
 from pynamodb.exceptions import PynamoDBException
+from datetime import datetime
 import json
 
 
 class CellarCollectionApi(Resource):
-    """For requesting the entire cellar inventory and submitting brand new beers.
-
+    """
+    For requesting the entire cellar inventory and submitting brand new beers.
     Endpoint: /api/v1/cellar
     """
     def get(self) -> json:
@@ -17,12 +20,15 @@ class CellarCollectionApi(Resource):
 
         try:
             # Read from the database
+            logger.debug("Here goes nothing...")
             beers = Beer.scan()
+            # beers = Beer.query("Side Project_Fuzzy_2018_375 mL_3", Beer.location.startswith("Hom"))
 
             # Convert each record to a dictionary, compile into a list
             output = []
             for beer in beers:
-                output.append(beer.to_dict())
+                # print(f"Saving beer #{count}: {beer}")
+                output.append(beer.to_dict(dates_as_epoch=True))
 
             logger.debug(f"End of CellarCollectionApi.GET")
             return {'message': 'Success', 'data': output}, 200
@@ -70,11 +76,12 @@ class CellarCollectionApi(Resource):
 
         # Write this Beer to the database
         try:
+            logger.debug(f"Attempting to save Beer {new_beer} to the database.")
             new_beer.save()
-            logger.info(f"Successfully saved new Beer {new_beer}.")
+            logger.info(f"Successfully saved {new_beer}.")
             logger.debug(f"End of CellarCollectionApi.POST")
 
-            return {'message': 'Created', 'data': new_beer.to_json()}, 201
+            return {'message': 'Created', 'data': new_beer.to_dict(dates_as_epoch=True)}, 201
         except PynamoDBException as e:
             error_msg = f"Error attempting to save new beer."
             logger.debug(f"{error_msg}\n{new_beer}: {e}.")
@@ -82,8 +89,8 @@ class CellarCollectionApi(Resource):
 
 
 class BeerApi(Resource):
-    """For requesting, updating, or deleting a single beer from the database.
-
+    """
+    For requesting, updating, or deleting a single beer from the database.
     Endpoint: /api/v1/cellar/<beer_id>
     """
     def get(self, beer_id) -> json:
@@ -94,7 +101,7 @@ class BeerApi(Resource):
         try:
             beer = Beer.get(beer_id)
             logger.debug(f"Retrieved beer: {beer}")
-            return {'message': 'Success', 'data': beer.to_json()}, 200
+            return {'message': 'Success', 'data': beer.to_dict(dates_as_epoch=True)}, 200
 
         except Beer.DoesNotExist:
             logger.debug(f"Beer {beer_id} not found.")
@@ -136,6 +143,7 @@ class BeerApi(Resource):
         # Create a Beer instance from the provided data
         try:
             beer = Beer(**data)
+            beer.last_modified = datetime.utcnow()
             logger.debug(f"Beer instance created: {beer}")
 
         except PynamoDBException as e:
@@ -149,7 +157,7 @@ class BeerApi(Resource):
             beer.save()
             logger.info(f"Beer updated: {beer})")
             logger.debug(f"End of BeerApi.PUT")
-            return {'message': 'Success', 'data': beer.to_json()}, 200
+            return {'message': 'Success', 'data': beer.to_dict(dates_as_epoch=True)}, 200
         except Beer.DoesNotExist:
             logger.debug(f"Beer {beer_id} not found.")
             return {'message': 'Not Found', 'data': f'Beer {beer_id} not found.'}, 404

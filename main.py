@@ -12,7 +12,6 @@ from backend.cellar_routes import CellarCollectionApi, BeerApi
 
 app = Flask("cellar-sync-backend")
 logger.info(f"Flask app {app.name} created!")
-print(f"Flask app {app.name} created!")
 
 app.config.from_object(Config)
 logger.info("Applied config parameters to the app.")

@@ -9,7 +9,8 @@ import json
 
 class Beer(Model):
     class Meta:
-        table_name = 'CellarTest'
+        # table_name = 'CellarTest'
+        table_name = 'Cellar'
         region = Config.AWS_REGION
         if local:  # Use the local DynamoDB instance when running locally
             host = 'http://localhost:8008'
@@ -38,15 +39,15 @@ class Beer(Model):
     note = UnicodeAttribute(null=True)
 
     # date_added should always be <= last_modified
-    date_added = UTCDateTimeAttribute(null=True, default=datetime.utcnow())
-    last_modified = UTCDateTimeAttribute(null=True, default=datetime.utcnow())
+    date_added = UTCDateTimeAttribute(default=datetime.utcnow())
+    last_modified = UTCDateTimeAttribute(default=datetime.utcnow())
 
-    def to_dict(self) -> dict:
+    def to_dict(self, dates_as_epoch=False) -> dict:
         """
-        Returns a dictionary with all attributes, converting all datetime attributes to epoch.
+        Returns a dictionary with all attributes.  Dates return as epoch (default) or in ISO format.
         """
 
-        return {
+        output = {
             "beer_id":         self.beer_id.__str__(),
             "name":            self.name.__str__(),
             "brewery":         self.brewery.__str__(),
@@ -62,19 +63,24 @@ class Beer(Model):
             "aging_potential": self.aging_potential.__str__() if self.aging_potential else None,
             "trade_value":     self.trade_value.__str__() if self.trade_value else None,
             "for_trade":       self.for_trade if self.for_trade else True,
-            "date_added":      datetime.timestamp(self.date_added),
-            "last_modified":   datetime.timestamp(self.last_modified),
+            "date_added":      self.date_added.timestamp() * 1000,  # JS timestamps are in ms
+            "last_modified":   self.last_modified.timestamp() * 1000,
             "note":            self.note.__str__() if self.note else None
         }
 
-    def to_json(self) -> str:
+        if not dates_as_epoch:
+            output['date_added'] = self.date_added.__str__()
+            output['last_modified'] = self.last_modified.__str__()
+
+        return output
+
+    def to_json(self, dates_as_epoch=True) -> str:
         """Serializes the output from Beer.to_dict() to JSON."""
-        return json.dumps(self.to_dict(), ensure_ascii=True)
+        return json.dumps(self.to_dict(dates_as_epoch=dates_as_epoch))
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         logger.debug(f"Initializing a new instance of the Beer model for {kwargs}.")
-
         # Construct the concatenated beer_id when not provided:
         #  brewery, beer name, year, size, {bottle date or batch}.  Bottle date preferred.
         if 'beer_id' not in kwargs.keys():
@@ -127,15 +133,15 @@ class Beer(Model):
                 logger.debug(f"Qty must be an integer.\n{e}")
                 raise ValueError(f"Qty must be an integer.\n{e}")
 
-        # Ignore any provided value for last_modified
-        self.last_modified = datetime.utcnow()
+        # Set last_modified if it's not included
+        if 'last_modified' not in kwargs.keys():
+            self.last_modified = datetime.utcnow()
 
-        # Type & value checks for date_added
+        # # Type & value checks for date_added
         if 'date_added' in kwargs.keys():
             # Accept an epoch (`float` or `int`) for date_added
             if isinstance(self.date_added, (float, int)):
                 self.date_added = datetime.utcfromtimestamp(kwargs['date_added'])
-                datetime.fromtimestamp(1586631578.640012)
             else:
                 # Assume a string was provided and parse a datetime object from that
                 try:
@@ -148,10 +154,10 @@ class Beer(Model):
 
             # Ensure date_added is always <= last_modified
             if self.date_added > self.last_modified:
-                self.date_added = self.last_modified
+                self.last_modified = self.date_added
         else:
-            # When date_added is not provided...
-            self.date_added = self.last_modified
+            # When date_added is not provided
+            self.date_added = self.last_modified or datetime.utcnow()
 
     def __repr__(self) -> str:
         return f'<Beer | beer_id: {self.beer_id}, qty: {self.qty}, location: {self.location}>'
