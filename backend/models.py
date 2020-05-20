@@ -9,7 +9,6 @@ import json
 
 class Beer(Model):
     class Meta:
-        # table_name = 'CellarTest'
         table_name = 'Cellar'
         region = Config.AWS_REGION
         if local:  # Use the local DynamoDB instance when running locally
@@ -33,9 +32,9 @@ class Beer(Model):
     style = UnicodeAttribute(null=True)
     specific_style = UnicodeAttribute(null=True)
     untappd = UnicodeAttribute(null=True)
-    aging_potential = UnicodeAttribute(null=True)
-    trade_value = UnicodeAttribute(null=True)
-    for_trade = BooleanAttribute(default=True)
+    aging_potential = NumberAttribute(default=2)
+    trade_value = NumberAttribute(default=0)
+    for_trade = BooleanAttribute(null=True)
     note = UnicodeAttribute(null=True)
 
     # date_added should always be <= last_modified
@@ -60,12 +59,12 @@ class Beer(Model):
             "specific_style":  self.specific_style.__str__() if self.specific_style else None,
             "qty":             int(self.qty) if self.qty else None,
             "untappd":         self.untappd.__str__() if self.untappd else None,
-            "aging_potential": self.aging_potential.__str__() if self.aging_potential else None,
-            "trade_value":     self.trade_value.__str__() if self.trade_value else None,
-            "for_trade":       self.for_trade if self.for_trade else True,
+            "aging_potential": int(self.aging_potential) if self.aging_potential else None,
+            "trade_value":     int(self.trade_value) if self.trade_value else None,
+            "for_trade":       self.for_trade.__str__(),
+            "note":            self.note.__str__() if self.note else None,
             "date_added":      self.date_added.timestamp() * 1000,  # JS timestamps are in ms
-            "last_modified":   self.last_modified.timestamp() * 1000,
-            "note":            self.note.__str__() if self.note else None
+            "last_modified":   self.last_modified.timestamp() * 1000
         }
 
         if not dates_as_epoch:
@@ -80,7 +79,7 @@ class Beer(Model):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        logger.debug(f"Initializing a new instance of the Beer model for {kwargs}.")
+        # logger.debug(f"Initializing a new instance of the Beer model for {kwargs}.")
         # Construct the concatenated beer_id when not provided:
         #  brewery, beer name, year, size, {bottle date or batch}.  Bottle date preferred.
         if 'beer_id' not in kwargs.keys():

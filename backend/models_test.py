@@ -1,7 +1,7 @@
 from backend.models import Beer
 from datetime import datetime
 import pytest
-import json
+# import json
 
 default_beer = {
     "beer_id":         "This Is My #4 BeerId",
@@ -16,12 +16,12 @@ default_beer = {
     "style":           "Sour",
     "specific_style":  "Gose",
     "untappd":         "https://untappd.com/b/westbrook-brewing-co-gose/155824",
-    "aging_potential": "Poor",
-    "trade_value":     "Low",
+    "aging_potential": 3,
+    "trade_value":     3,
     "for_trade":       True,
     "note":            "My go-to when mowing the lawn.",
-    "date_added":      "2020-04-10",
-    "last_modified":   "2020-04-11"
+    "date_added":      datetime.fromisoformat("2020-04-10"),
+    "last_modified":   datetime.fromisoformat("2020-04-11")
 }
 
 
@@ -237,6 +237,52 @@ class TestBeerModel:
         assert (now - beer.date_added).total_seconds() < 1
         assert beer.date_added == beer.last_modified
 
+    def test_boolean_attributes(self):
+        # Create without specifying a bool value
+        beer = Beer(brewery="Westbrook",
+                    name="Gose",
+                    year=2013,
+                    size="12 oz",
+                    location="Home",
+                    bottle_date="2013-06-24")
+
+        assert beer.for_trade is None
+        assert beer.to_dict()['for_trade'] == 'None'
+
+        # Set the bool
+        beer.for_trade = True
+        assert beer.for_trade is True
+        assert beer.to_dict()['for_trade'] == 'True'
+
+        # Flip the bool
+        beer.for_trade = False
+        assert beer.for_trade is False
+        assert beer.to_dict()['for_trade'] == 'False'
+
+        # Create w/bool = True
+        beer = Beer(brewery="Westbrook",
+                    name="Gose",
+                    year=2013,
+                    size="12 oz",
+                    location="Home",
+                    bottle_date="2013-06-24",
+                    for_trade=True)
+
+        assert beer.for_trade is True
+        assert beer.to_dict()['for_trade'] == 'True'
+
+        # Create w/bool = False
+        beer = Beer(brewery="Westbrook",
+                    name="Gose",
+                    year=2013,
+                    size="12 oz",
+                    location="Home",
+                    bottle_date="2013-06-24",
+                    for_trade=False)
+
+        assert beer.for_trade is False
+        assert beer.to_dict()['for_trade'] == 'False'
+
     def test_attribute_changes(self):
         # Create with all available attributes
         beer = Beer(beer_id="This Is My #2 BeerId",
@@ -264,8 +310,8 @@ class TestBeerModel:
                     style="Sour",
                     specific_style="Gose",
                     untappd="https://untappd.com/b/westbrook-brewing-co-gose/155824",
-                    aging_potential="Poor",
-                    trade_value="Low",
+                    aging_potential=3,
+                    trade_value=3,
                     for_trade=True,
                     note="My go-to when mowing the lawn.",
                     date_added="2020-04-10",
@@ -283,8 +329,8 @@ class TestBeerModel:
         assert beer.style == "Sour"
         assert beer.specific_style == "Gose"
         assert beer.untappd == "https://untappd.com/b/westbrook-brewing-co-gose/155824"
-        assert beer.aging_potential == "Poor"
-        assert beer.trade_value == "Low"
+        assert beer.aging_potential == 3
+        assert beer.trade_value == 3
         assert beer.for_trade is True
         assert beer.note == "My go-to when mowing the lawn."
         assert beer.date_added == datetime.fromisoformat("2020-04-10")
@@ -305,8 +351,8 @@ class TestBeerModel:
         assert beer.style == "Sour"
         assert beer.specific_style == "Gose"
         assert beer.untappd == "https://untappd.com/b/westbrook-brewing-co-gose/155824"
-        assert beer.aging_potential == "Poor"
-        assert beer.trade_value == "Low"
+        assert beer.aging_potential == 3
+        assert beer.trade_value == 3
         assert beer.for_trade is True
         assert beer.note == "My go-to when mowing the lawn."
         assert beer.date_added == datetime.fromisoformat("2020-04-10")
@@ -330,15 +376,15 @@ class TestBeerModel:
         assert beer_dict['style'] == "Sour"
         assert beer_dict['specific_style'] == "Gose"
         assert beer_dict['untappd'] == "https://untappd.com/b/westbrook-brewing-co-gose/155824"
-        assert beer_dict['aging_potential'] == "Poor"
-        assert beer_dict['trade_value'] == "Low"
-        assert beer_dict['for_trade'] is True
+        assert beer_dict['aging_potential'] == 3
+        assert beer_dict['trade_value'] == 3
+        assert beer_dict['for_trade'] == "True"
         assert beer_dict['note'] == "My go-to when mowing the lawn."
 
         # The .to_dict() method returns the datetime fields as a `float` epoch
-        assert beer_dict['date_added'] == 1586502000.0
+        assert beer_dict['date_added'] == datetime.fromisoformat("2020-04-10")
         assert isinstance(beer_dict['last_modified'], float)
-        
+
         # When providing the minimum required fields, the optional fields return as None
         beer = Beer(brewery="Westbrook",
                     name="Gose",
@@ -346,7 +392,7 @@ class TestBeerModel:
                     size="12 oz",
                     location="Home")
         beer_dict = beer.to_dict()
-        
+
         assert beer_dict['beer_id'] == "Westbrook_Gose_2013_12 oz_None"
         assert beer_dict['brewery'] == "Westbrook"
         assert beer_dict['name'] == "Gose"
@@ -359,8 +405,8 @@ class TestBeerModel:
         assert beer_dict['style'] is None
         assert beer_dict['specific_style'] is None
         assert beer_dict['untappd'] is None
-        assert beer_dict['aging_potential'] is None
-        assert beer_dict['trade_value'] is None
+        assert beer_dict['aging_potential'] == 0
+        assert beer_dict['trade_value'] == 0
         assert beer_dict['for_trade'] is True  # Defaults to True
         assert beer_dict['note'] is None
 
@@ -369,10 +415,10 @@ class TestBeerModel:
         assert abs(now - beer_dict['date_added']) < 1
         assert abs(now - beer_dict['last_modified']) < 1
 
-    def test_to_json(self):
-        # Verify the output is json by calling json.loads() without raising an exception
-        beer_json = Beer(**default_beer).to_json()
-        assert isinstance(json.loads(beer_json), dict)
+    # def test_to_json(self):
+    #     # Verify the output is json by calling json.loads() without raising an exception
+    #     beer_json = Beer(**default_beer).to_json()
+    #     assert isinstance(json.loads(beer_json), dict)
 
     def test_dunders(self):
         # Test the double-underscore methods

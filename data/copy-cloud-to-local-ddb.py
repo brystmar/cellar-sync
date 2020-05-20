@@ -138,8 +138,8 @@ print("Writing to Primary tables")
 copy_all_table_data(cellar_table_cloud_primary, cellar_table_local)
 print("Primary done")
 
-print("Writing to Secondary tables")
-copy_all_table_data(cellar_table_cloud_primary, cellar_table_cloud_secondary)
-print("Secondary done\n")
+# print("Writing to Secondary tables")
+# copy_all_table_data(cellar_table_cloud_primary, cellar_table_cloud_secondary)
+# print("Secondary done\n")
 
 print("Done writing to tables.")
