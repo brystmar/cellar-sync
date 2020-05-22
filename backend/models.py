@@ -3,7 +3,7 @@ from backend.config import Config
 from datetime import datetime
 from pynamodb.models import Model
 from pynamodb.attributes import UnicodeAttribute, NumberAttribute, BooleanAttribute, \
-    UTCDateTimeAttribute
+    UTCDateTimeAttribute, ListAttribute, MapAttribute
 import json
 
 
@@ -43,7 +43,8 @@ class Beer(Model):
 
     def to_dict(self, dates_as_epoch=False) -> dict:
         """
-        Returns a dictionary with all attributes.  Dates return as epoch (default) or in ISO format.
+        Return a dictionary with all attributes.
+        Dates return as epoch (default) or in ISO format.
         """
 
         output = {
@@ -160,3 +161,42 @@ class Beer(Model):
 
     def __repr__(self) -> str:
         return f'<Beer | beer_id: {self.beer_id}, qty: {self.qty}, location: {self.location}>'
+
+
+class PicklistValue(MapAttribute):
+    """Individual value within each Picklist.values list"""
+    # Primary attributes
+    value = UnicodeAttribute()
+
+    # For nesting a dependent picklist, i.e. `style` --> `specific_style`
+    dependent_values = ListAttribute(null=True)
+
+    # For lists where the order matters but sorting is hard, i.e. `size`
+    display_order = NumberAttribute(null=True)
+
+
+class Picklist(Model):
+    class Meta:
+        table_name = 'Cellar_Picklists'
+        region = Config.AWS_REGION
+        if local:  # Use the local DynamoDB instance when running locally
+            host = 'http://localhost:8008'
+
+    # `list_name`: The attribute whose values this list contains
+    list_name = UnicodeAttribute(hash_key=True)
+    list_values = ListAttribute(of=PicklistValue)
+    last_modified = UnicodeAttribute(default=datetime.utcnow())
+
+    def to_dict(self) -> dict:
+        """Return a dictionary with all attributes."""
+        return {
+            "list_name": self.list_name.__str__(),
+            "values": self.list_values,
+            "last_modified": self.last_modified.timestamp() * 1000  # JS timestamps are in ms
+        }
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+
+    def __repr__(self) -> str:
+        return f'<Picklist values for {self.list_name}>'
