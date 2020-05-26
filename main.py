@@ -8,7 +8,8 @@ from flask_cors import CORS
 from flask_restful import Api
 
 # App components
-from backend.cellar_routes import CellarCollectionApi, BeerApi, PicklistApi
+from backend.cellar_routes import CellarCollectionApi, BeerApi
+from backend.picklist_routes import PicklistApi
 
 app = Flask("cellar-sync-backend")
 logger.info(f"Flask app {app.name} created!")

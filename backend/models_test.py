@@ -1,7 +1,7 @@
 from backend.models import Beer
 from datetime import datetime
 import pytest
-# import json
+
 
 default_beer = {
     "beer_id":         "This Is My #4 BeerId",
@@ -13,6 +13,7 @@ default_beer = {
     "batch":           1,
     "bottle_date":     "2013-06-24",
     "qty":             14,
+    "qty_cold":        9,
     "style":           "Sour",
     "specific_style":  "Gose",
     "untappd":         "https://untappd.com/b/westbrook-brewing-co-gose/155824",
@@ -104,6 +105,16 @@ class TestBeerModel:
                         location="Home",
                         batch=1,
                         qty="Five")
+
+        # Qty_cold must be int (or convert to int)
+        with pytest.raises(ValueError):
+            beer = Beer(brewery="Westbrook",
+                        name="Gose",
+                        year=2013,
+                        size="12 oz",
+                        location="Home",
+                        batch=1,
+                        qty_cold="Five")
 
     def test_beer_id_creation(self):
         # Generate a beer_id when not provided
@@ -307,6 +318,7 @@ class TestBeerModel:
                     batch=1,
                     bottle_date="2013-06-24",
                     qty=14,
+                    qty_cold=6,
                     style="Sour",
                     specific_style="Gose",
                     untappd="https://untappd.com/b/westbrook-brewing-co-gose/155824",
@@ -326,6 +338,7 @@ class TestBeerModel:
         assert beer.batch == 1
         assert beer.bottle_date == "2013-06-24"
         assert beer.qty == 14
+        assert beer.qty_cold == 6
         assert beer.style == "Sour"
         assert beer.specific_style == "Gose"
         assert beer.untappd == "https://untappd.com/b/westbrook-brewing-co-gose/155824"
@@ -348,6 +361,7 @@ class TestBeerModel:
         assert beer.batch == 1
         assert beer.bottle_date == "2013-06-24"
         assert beer.qty == 14
+        assert beer.qty_cold == 9
         assert beer.style == "Sour"
         assert beer.specific_style == "Gose"
         assert beer.untappd == "https://untappd.com/b/westbrook-brewing-co-gose/155824"
@@ -373,6 +387,7 @@ class TestBeerModel:
         assert beer_dict['batch'] == 1
         assert beer_dict['bottle_date'] == "2013-06-24"
         assert beer_dict['qty'] == 14
+        assert beer_dict['qty_cold'] == 9
         assert beer_dict['style'] == "Sour"
         assert beer_dict['specific_style'] == "Gose"
         assert beer_dict['untappd'] == "https://untappd.com/b/westbrook-brewing-co-gose/155824"
@@ -402,6 +417,7 @@ class TestBeerModel:
         assert beer_dict['batch'] is None
         assert beer_dict['bottle_date'] is None
         assert beer_dict['qty'] is None
+        assert beer_dict['qty_cold'] is None
         assert beer_dict['style'] is None
         assert beer_dict['specific_style'] is None
         assert beer_dict['untappd'] is None

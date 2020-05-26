@@ -4,7 +4,6 @@ from datetime import datetime
 from pynamodb.models import Model
 from pynamodb.attributes import UnicodeAttribute, NumberAttribute, BooleanAttribute, \
     UTCDateTimeAttribute, ListAttribute, MapAttribute
-import json
 
 
 class Beer(Model):
@@ -29,6 +28,7 @@ class Beer(Model):
 
     # Optional Attributes
     qty = NumberAttribute(null=True)
+    qty_cold = NumberAttribute(null=True)
     style = UnicodeAttribute(null=True)
     specific_style = UnicodeAttribute(null=True)
     untappd = UnicodeAttribute(null=True)
@@ -59,6 +59,7 @@ class Beer(Model):
             "style":           self.style.__str__() if self.style else None,
             "specific_style":  self.specific_style.__str__() if self.specific_style else None,
             "qty":             int(self.qty) if self.qty else None,
+            "qty_cold":        int(self.qty_cold) if self.qty_cold else None,
             "untappd":         self.untappd.__str__() if self.untappd else None,
             "aging_potential": int(self.aging_potential) if self.aging_potential else None,
             "trade_value":     int(self.trade_value) if self.trade_value else None,
@@ -73,10 +74,6 @@ class Beer(Model):
             output['last_modified'] = self.last_modified.__str__()
 
         return output
-
-    def to_json(self, dates_as_epoch=True) -> str:
-        """Serializes the output from Beer.to_dict() to JSON."""
-        return json.dumps(self.to_dict(dates_as_epoch=dates_as_epoch))
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -125,13 +122,21 @@ class Beer(Model):
                 logger.debug(f"Batch number must be an integer.\n{e}")
                 raise ValueError(f"Batch number must be an integer.\n{e}")
 
-        # Type check: Qty
+        # Type check: qty
         if 'qty' in kwargs.keys():
             try:
                 self.qty = int(kwargs['qty'])
             except ValueError as e:
                 logger.debug(f"Qty must be an integer.\n{e}")
                 raise ValueError(f"Qty must be an integer.\n{e}")
+
+        # Type check: qty_cold
+        if 'qty_cold' in kwargs.keys():
+            try:
+                self.qty_cold = int(kwargs['qty_cold'])
+            except ValueError as e:
+                logger.debug(f"Qty_cold must be an integer.\n{e}")
+                raise ValueError(f"Qty_cold must be an integer.\n{e}")
 
         # Set last_modified if it's not included
         if 'last_modified' not in kwargs.keys():
@@ -174,10 +179,23 @@ class PicklistValue(MapAttribute):
     # For lists where the order matters but sorting is hard, i.e. `size`
     display_order = NumberAttribute(null=True)
 
+    def to_dict(self) -> dict:
+        output = {
+            "value": self.value.__str__()
+        }
+
+        if self.dependent_values:
+            output['dependent_values'] = self.dependent_values
+
+        if self.display_order:
+            output['display_order'] = self.display_order.__str__()
+
+        return output
+
 
 class Picklist(Model):
     class Meta:
-        table_name = 'Cellar_Picklists'
+        table_name = 'CellarPicklists'
         region = Config.AWS_REGION
         if local:  # Use the local DynamoDB instance when running locally
             host = 'http://localhost:8008'
@@ -188,12 +206,26 @@ class Picklist(Model):
     last_modified = UnicodeAttribute(default=datetime.utcnow())
 
     def to_dict(self) -> dict:
-        """Return a dictionary with all attributes."""
-        return {
-            "list_name": self.list_name.__str__(),
-            "values": self.list_values,
+        """Convert this Picklist (and any children) to a python dictionary."""
+
+        value_list = []
+        if self.list_values:
+            for value in self.list_values:
+                if isinstance(value, dict):
+                    value_list.append(value)
+                elif isinstance(value, PicklistValue):
+                    value_list.append(value.to_dict())
+                else:
+                    raise TypeError(f"Invalid type for `list_values` in Picklist.to_dict:"
+                                    f"{type(self.list_values)}, {self.list_values}")
+
+        output = {
+            "list_name":     self.list_name.__str__(),
+            "list_values":   value_list,
             "last_modified": self.last_modified.timestamp() * 1000  # JS timestamps are in ms
         }
+
+        return output
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
