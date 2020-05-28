@@ -180,7 +180,7 @@ print("Primary done")
 # Cloud primary --> cloud secondary
 # print("Writing to Cloud Secondary tables")
 # copy_all_table_data(cellar_table_cloud_primary, cellar_table_cloud_secondary)
-# copy_all_table_data(picklist_table_cloud_primary, picklist_table_cloud_secondary)
+copy_all_table_data(picklist_table_cloud_primary, picklist_table_cloud_secondary)
 # print("Secondary done\n")
 
 print("Done writing to tables.")

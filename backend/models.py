@@ -32,8 +32,8 @@ class Beer(Model):
     style = UnicodeAttribute(null=True)
     specific_style = UnicodeAttribute(null=True)
     untappd = UnicodeAttribute(null=True)
-    aging_potential = NumberAttribute(default=2)
-    trade_value = NumberAttribute(default=0)
+    aging_potential = NumberAttribute(default=2, null=True)
+    trade_value = NumberAttribute(default=0, null=True)
     for_trade = BooleanAttribute(null=True)
     note = UnicodeAttribute(null=True)
 
@@ -117,7 +117,8 @@ class Beer(Model):
         # Type check: Batch
         if 'batch' in kwargs.keys():
             try:
-                self.batch = int(kwargs['batch'])
+                if self.batch:
+                    self.batch = int(kwargs['batch'])
             except ValueError as e:
                 logger.debug(f"Batch number must be an integer.\n{e}")
                 raise ValueError(f"Batch number must be an integer.\n{e}")
@@ -133,20 +134,34 @@ class Beer(Model):
         # Type check: qty_cold
         if 'qty_cold' in kwargs.keys():
             try:
-                self.qty_cold = int(kwargs['qty_cold'])
+                if self.qty_cold:
+                    self.qty_cold = int(kwargs['qty_cold'])
             except ValueError as e:
                 logger.debug(f"Qty_cold must be an integer.\n{e}")
                 raise ValueError(f"Qty_cold must be an integer.\n{e}")
 
-        # Set last_modified if it's not included
-        if 'last_modified' not in kwargs.keys():
+        # Adjust last_modified due to JS working in milliseconds
+        if 'last_modified' in kwargs.keys():
+            # Accept an epoch (`float` or `int`) for date_added
+            if isinstance(self.last_modified, (float, int)):
+                self.last_modified = datetime.utcfromtimestamp(kwargs['last_modified'] / 1000)
+            else:
+                # Assume a string was provided and parse a datetime object from that
+                try:
+                    self.last_modified = datetime.fromisoformat(str(self.last_modified))
+                except (TypeError, ValueError) as e:
+                    logger.debug(f"Provided value for last_modified: {self.last_modified}, "
+                                 f"{type(self.last_modified)} cannot be converted to datetime.")
+                    raise ValueError(f"Value for last_modified must be an epoch (float/int) or "
+                                     f"an ISO-formatted string. {e}")
+        else:
             self.last_modified = datetime.utcnow()
 
-        # # Type & value checks for date_added
+        # Type & value checks for date_added
         if 'date_added' in kwargs.keys():
             # Accept an epoch (`float` or `int`) for date_added
             if isinstance(self.date_added, (float, int)):
-                self.date_added = datetime.utcfromtimestamp(kwargs['date_added'])
+                self.date_added = datetime.utcfromtimestamp(kwargs['date_added'] / 1000)
             else:
                 # Assume a string was provided and parse a datetime object from that
                 try:
@@ -160,9 +175,9 @@ class Beer(Model):
             # Ensure date_added is always <= last_modified
             if self.date_added > self.last_modified:
                 self.last_modified = self.date_added
-        else:
+        # else:
             # When date_added is not provided
-            self.date_added = self.last_modified or datetime.utcnow()
+            # self.date_added = self.last_modified or datetime.utcnow()
 
     def __repr__(self) -> str:
         return f'<Beer | beer_id: {self.beer_id}, qty: {self.qty}, location: {self.location}>'
