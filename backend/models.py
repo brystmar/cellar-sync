@@ -28,12 +28,12 @@ class Beer(Model):
 
     # Optional Attributes
     qty = NumberAttribute(null=True)
-    qty_cold = NumberAttribute(null=True)
+    qty_cold = NumberAttribute(null=True, default=0)
     style = UnicodeAttribute(null=True)
     specific_style = UnicodeAttribute(null=True)
     untappd = UnicodeAttribute(null=True)
-    aging_potential = NumberAttribute(default=2, null=True)
-    trade_value = NumberAttribute(default=0, null=True)
+    aging_potential = NumberAttribute(null=True, default=2)
+    trade_value = NumberAttribute(null=True, default=0)
     for_trade = BooleanAttribute(null=True)
     note = UnicodeAttribute(null=True)
 
@@ -63,7 +63,7 @@ class Beer(Model):
             "untappd":         self.untappd.__str__() if self.untappd else None,
             "aging_potential": int(self.aging_potential) if self.aging_potential else None,
             "trade_value":     int(self.trade_value) if self.trade_value else None,
-            "for_trade":       self.for_trade.__str__(),
+            "for_trade":       self.for_trade,
             "note":            self.note.__str__() if self.note else None,
             "date_added":      self.date_added.timestamp() * 1000,  # JS timestamps are in ms
             "last_modified":   self.last_modified.timestamp() * 1000

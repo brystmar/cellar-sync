@@ -23,26 +23,13 @@ class CellarCollectionApi(Resource):
 
             # Convert each record to a dictionary, compile into a list
             output = []
-            sizes = []
-            locations = []
-            styles = []
-            specific_styles = []
+            count = 0
             for beer in beers:
                 # print(f"Saving beer #{count}: {beer}")
+                # if count <= 60 and beer.brewery in ('Cantillon', 'De Garde', "Schramm's"):
                 output.append(beer.to_dict(dates_as_epoch=True))
-                if beer.size not in sizes:
-                    sizes.append(beer.size)
-                if beer.location not in locations:
-                    locations.append(beer.location)
-                if beer.style not in styles:
-                    styles.append(beer.style)
-                if beer.specific_style not in specific_styles:
-                    specific_styles.append(beer.specific_style)
+                count += 1
 
-            logger.debug(f"All beer sizes: {sizes}")
-            logger.debug(f"All beer locations: {locations}")
-            logger.debug(f"All beer styles: {styles}")
-            logger.debug(f"All beer specific_styles: {specific_styles}")
             logger.debug(f"End of CellarCollectionApi.GET")
             return {'message': 'Success', 'data': output}, 200
 
