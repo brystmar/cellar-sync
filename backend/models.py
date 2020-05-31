@@ -242,8 +242,27 @@ class Picklist(Model):
 
         return output
 
+    def __repr__(self) -> str:
+        return f'<Picklist values for {self.list_name}>'
+
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
-    def __repr__(self) -> str:
-        return f'<Picklist values for {self.list_name}>'
+        # Type check: last_modified
+        # Accept `str` or an epoch (`float`, `int`) for last_modified
+        logger.debug(f"Type check for last_modified of picklist: {self.list_name}")
+        logger.debug(f"{type(self.last_modified)}, {self.last_modified}")
+        # if !isinstance(self.last_modified, datetime):
+        if isinstance(self.last_modified, (float, int)):
+            self.last_modified = datetime.utcfromtimestamp(kwargs['last_modified'] / 1000)
+        else:
+            # Assume a string was provided and parse a datetime object from that
+            try:
+                self.last_modified = datetime.fromisoformat(str(self.last_modified))
+            except (TypeError, ValueError) as e:
+                logger.debug(f"Provided value for last_modified: {self.last_modified}, "
+                             f"{type(self.last_modified)} cannot be converted to datetime.")
+                raise ValueError(f"Value for last_modified must be an epoch (float/int) or "
+                                 f"an iso-formatted string. {e}")
+        logger.debug(f"Picklist class initialized.")
+

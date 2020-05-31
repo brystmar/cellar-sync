@@ -26,7 +26,7 @@ class PicklistApi(Resource):
             output = []
             for picklist in all_picklists:
                 output.append(picklist.to_dict())
-                picklist.save()
+                # picklist.save()
                 # output = picklist.to_dict()
                 # pass
 
