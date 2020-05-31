@@ -27,7 +27,7 @@ class Beer(Model):
     bottle_date = UnicodeAttribute(null=True)
 
     # Optional Attributes
-    qty = NumberAttribute(null=True)
+    qty = NumberAttribute(null=True, default=0)
     qty_cold = NumberAttribute(null=True, default=0)
     style = UnicodeAttribute(null=True)
     specific_style = UnicodeAttribute(null=True)
@@ -58,8 +58,8 @@ class Beer(Model):
             "location":        self.location.__str__(),
             "style":           self.style.__str__() if self.style else None,
             "specific_style":  self.specific_style.__str__() if self.specific_style else None,
-            "qty":             int(self.qty) if self.qty else None,
-            "qty_cold":        int(self.qty_cold) if self.qty_cold else None,
+            "qty":             int(self.qty) if self.qty else 0,
+            "qty_cold":        int(self.qty_cold) if self.qty_cold else 0,
             "untappd":         self.untappd.__str__() if self.untappd else None,
             "aging_potential": int(self.aging_potential) if self.aging_potential else None,
             "trade_value":     int(self.trade_value) if self.trade_value else None,
@@ -134,8 +134,7 @@ class Beer(Model):
         # Type check: qty_cold
         if 'qty_cold' in kwargs.keys():
             try:
-                if self.qty_cold:
-                    self.qty_cold = int(kwargs['qty_cold'])
+                self.qty_cold = int(kwargs['qty_cold'])
             except ValueError as e:
                 logger.debug(f"Qty_cold must be an integer.\n{e}")
                 raise ValueError(f"Qty_cold must be an integer.\n{e}")
@@ -180,7 +179,8 @@ class Beer(Model):
             # self.date_added = self.last_modified or datetime.utcnow()
 
     def __repr__(self) -> str:
-        return f'<Beer | beer_id: {self.beer_id}, qty: {self.qty}, location: {self.location}>'
+        return f'<Beer | beer_id: {self.beer_id}, qty: {self.qty} ({self.qty_cold}),' \
+               f' location: {self.location}>'
 
 
 class PicklistValue(MapAttribute):
