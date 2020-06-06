@@ -30,7 +30,7 @@ with open('TPB & RAK Cellar 2020-03-31.csv', mode='r') as csv_file:
                         try:
                             beer[header[item]] = int(row[item])
                         except ValueError:
-                            if beer['brewery'] != '':
+                            if beer['producer'] != '':
                                 beer[header[item]] = int("20" + row[item].split('-')[1])
                     elif header[item] == 'for_trade':
                         # Convert to bool
@@ -39,7 +39,7 @@ with open('TPB & RAK Cellar 2020-03-31.csv', mode='r') as csv_file:
                         beer[header[item]] = row[item]
                 item += 1
 
-            if beer['brewery'] != '':
+            if beer['producer'] != '':
                 data.append(beer)
 
         row_number += 1

@@ -1,5 +1,5 @@
 from backend.global_logger import logger, local
-from backend.models import Beer
+from backend.models import Beverage
 from data.example_data import example_data
 import time
 
@@ -10,18 +10,18 @@ errors = []
 beerlist = []
 
 # Create table if necessary
-if not Beer.exists():
-    logger.info(f"Creating a new table: {Beer.Meta.table_name}.")
-    Beer.create_table(wait=True,
-                      read_capacity_units=5,
-                      write_capacity_units=5)
+if not Beverage.exists():
+    logger.info(f"Creating a new table: {Beverage.Meta.table_name}.")
+    Beverage.create_table(wait=True,
+                          read_capacity_units=5,
+                          write_capacity_units=5)
     logger.info(f"Table created.")
 
 for item in example_data:
-    logger.debug(f"Initializing a new Beer for: {item}")
-    beer = Beer(**item)
+    logger.debug(f"Initializing a new Beverage for: {item}")
+    beer = Beverage(**item)
     beerlist.append(beer)
-    # logger.debug("Beer initialized.")
+    # logger.debug("Beverage initialized.")
 
 logger.info(f"Starting batch save for {len(beerlist)} beers.")
 print(f"Starting batch save for {len(beerlist)} beers.")

@@ -1,5 +1,5 @@
-from backend.cellar_routes import CellarCollectionApi, BeerApi
-from backend.models import Beer
+from backend.cellar_routes import CellarCollectionApi, BeverageApi
+from backend.models import Beverage
 
 
 class TestCellarCollectionApi:
@@ -11,8 +11,8 @@ class TestCellarCollectionApi:
         pass
 
 
-class TestBeerApi:
-    # TODO: Write BeerApi unit tests!
+class TestBeverageApi:
+    # TODO: Write BeverageApi unit tests!
     def test_get(self):
         pass
 

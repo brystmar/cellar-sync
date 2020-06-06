@@ -2,7 +2,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2011-02-17',
-        'brewery':        '3 Fonteinen',
+        'producer':        '3 Fonteinen',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Armand & Tomme',
@@ -17,7 +17,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2010-04-02',
-        'brewery':        '3 Fonteinen',
+        'producer':        '3 Fonteinen',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           "Armand'4 Herfst",
@@ -32,7 +32,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2010-03-19',
-        'brewery':        '3 Fonteinen',
+        'producer':        '3 Fonteinen',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           "Armand'4 Lente",
@@ -47,7 +47,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2010-03-26',
-        'brewery':        '3 Fonteinen',
+        'producer':        '3 Fonteinen',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           "Armand'4 Zomer",
@@ -62,7 +62,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2014-06-18',
-        'brewery':        '3 Fonteinen',
+        'producer':        '3 Fonteinen',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Framboos',
@@ -77,7 +77,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2013-05-02',
-        'brewery':        '3 Fonteinen',
+        'producer':        '3 Fonteinen',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Golden Doesjel',
@@ -92,7 +92,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2016-12-20',
-        'brewery':        '3 Fonteinen',
+        'producer':        '3 Fonteinen',
         'for_trade':      True,
         'location':       'Home & Wine Storage',
         'name':           'Hommage',
@@ -107,7 +107,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2012-11-13',
-        'brewery':        '3 Fonteinen',
+        'producer':        '3 Fonteinen',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Intense Red Kriek',
@@ -122,7 +122,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2012-05-22',
-        'brewery':        '3 Fonteinen',
+        'producer':        '3 Fonteinen',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Oude Geuze',
@@ -137,7 +137,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2013-01-28',
-        'brewery':        '3 Fonteinen',
+        'producer':        '3 Fonteinen',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Oude Geuze',
@@ -152,7 +152,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2013-02-27',
-        'brewery':        '3 Fonteinen',
+        'producer':        '3 Fonteinen',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Oude Geuze',
@@ -167,7 +167,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2013-10-17',
-        'brewery':        '3 Fonteinen',
+        'producer':        '3 Fonteinen',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Oude Geuze',
@@ -182,7 +182,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2013-10-24',
-        'brewery':        '3 Fonteinen',
+        'producer':        '3 Fonteinen',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Oude Geuze',
@@ -197,7 +197,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2013-11-27',
-        'brewery':        '3 Fonteinen',
+        'producer':        '3 Fonteinen',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Oude Geuze',
@@ -212,7 +212,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2015-10-30',
-        'brewery':        '3 Fonteinen',
+        'producer':        '3 Fonteinen',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Oude Geuze',
@@ -227,7 +227,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2015-12-12',
-        'brewery':        '3 Fonteinen',
+        'producer':        '3 Fonteinen',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Oude Geuze',
@@ -242,7 +242,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2016-04-19',
-        'brewery':        '3 Fonteinen',
+        'producer':        '3 Fonteinen',
         'for_trade':      True,
         'location':       'Home & Wine Storage',
         'name':           'Oude Geuze',
@@ -257,7 +257,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2017-01-19',
-        'brewery':        '3 Fonteinen',
+        'producer':        '3 Fonteinen',
         'for_trade':      True,
         'location':       'Home & Wine Storage',
         'name':           'Oude Geuze',
@@ -272,7 +272,7 @@ example_data = [
     {
         'batch':          9,
         'bottle_date':    '2016-12-05',
-        'brewery':        '3 Fonteinen',
+        'producer':        '3 Fonteinen',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Oude Geuze A&G',
@@ -287,7 +287,7 @@ example_data = [
     {
         'batch':          18,
         'bottle_date':    '2017-01-27',
-        'brewery':        '3 Fonteinen',
+        'producer':        '3 Fonteinen',
         'for_trade':      True,
         'location':       'Home & Wine Storage',
         'name':           'Oude Geuze A&G',
@@ -302,7 +302,7 @@ example_data = [
     {
         'batch':          22,
         'bottle_date':    '2017-03-07',
-        'brewery':        '3 Fonteinen',
+        'producer':        '3 Fonteinen',
         'for_trade':      True,
         'location':       'Home & Wine Storage',
         'name':           'Oude Geuze A&G',
@@ -317,7 +317,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2011-04-25',
-        'brewery':        '3 Fonteinen',
+        'producer':        '3 Fonteinen',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Oude Kriek',
@@ -332,7 +332,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2014-04-14',
-        'brewery':        '3 Fonteinen',
+        'producer':        '3 Fonteinen',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Oude Kriek',
@@ -347,7 +347,7 @@ example_data = [
     {
         'batch':          2,
         'bottle_date':    '2016-03-26',
-        'brewery':        '3 Fonteinen',
+        'producer':        '3 Fonteinen',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Zenne y Frontera',
@@ -362,7 +362,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Anchorage',
+        'producer':        'Anchorage',
         'for_trade':      True,
         'location':       'Home',
         'name':           'A Deal with De Molen',
@@ -377,7 +377,7 @@ example_data = [
     {
         'batch':          2,
         'bottle_date':    'Batch 2',
-        'brewery':        'Anchorage',
+        'producer':        'Anchorage',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'A Deal with the Devil',
@@ -392,7 +392,7 @@ example_data = [
     {
         'batch':          4,
         'bottle_date':    'Batch 4',
-        'brewery':        'Anchorage',
+        'producer':        'Anchorage',
         'for_trade':      True,
         'location':       'Home',
         'name':           'A Deal with the Devil (Double Oak)',
@@ -407,7 +407,7 @@ example_data = [
     {
         'batch':          3,
         'bottle_date':    'Batch 3',
-        'brewery':        'Anchorage',
+        'producer':        'Anchorage',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Time Waits for No One',
@@ -422,7 +422,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Anchorage',
+        'producer':        'Anchorage',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Time Waits for No One (Coffee)',
@@ -437,7 +437,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Avery',
+        'producer':        'Avery',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Rumpkin',
@@ -452,7 +452,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Avery',
+        'producer':        'Avery',
         'for_trade':      True,
         'location':       'Home & Wine Storage',
         'name':           'Rumpkin',
@@ -467,7 +467,7 @@ example_data = [
     {
         'batch':          5,
         'bottle_date':    '',
-        'brewery':        'Avery',
+        'producer':        'Avery',
         'for_trade':      True,
         'location':       'Home & Wine Storage',
         'name':           'Rumpkin',
@@ -482,7 +482,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Avery',
+        'producer':        'Avery',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Rumpkin',
@@ -497,7 +497,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Avery',
+        'producer':        'Avery',
         'for_trade':      True,
         'location':       'Home',
         'name':           "Uncle Jacob's Stout",
@@ -512,7 +512,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'B. Nektar',
+        'producer':        'B. Nektar',
         'for_trade':      True,
         'location':       'Home',
         'name':           'American Maniacs',
@@ -527,7 +527,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'B. Nektar',
+        'producer':        'B. Nektar',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Spiced Date Mead',
@@ -542,7 +542,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Block 15',
+        'producer':        'Block 15',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Breakfast with Woodford',
@@ -557,7 +557,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Block 15',
+        'producer':        'Block 15',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Double Choclate (Black Cherry)',
@@ -572,7 +572,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2018-03',
-        'brewery':        'Block 15',
+        'producer':        'Block 15',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Turbulent Consequence, the 5th',
@@ -587,7 +587,7 @@ example_data = [
     {
         'batch':          3,
         'bottle_date':    '',
-        'brewery':        'Bottle Logic',
+        'producer':        'Bottle Logic',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Fundamental Observation',
@@ -602,7 +602,7 @@ example_data = [
     {
         'batch':          4,
         'bottle_date':    '',
-        'brewery':        'Bottle Logic',
+        'producer':        'Bottle Logic',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Fundamental Observation',
@@ -617,7 +617,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Bottle Logic',
+        'producer':        'Bottle Logic',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Iridium Flare',
@@ -632,7 +632,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Bottle Logic',
+        'producer':        'Bottle Logic',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Jam the Radar',
@@ -647,7 +647,7 @@ example_data = [
     {
         'batch':          1,
         'bottle_date':    '',
-        'brewery':        'Braindead Brewing',
+        'producer':        'Braindead Brewing',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Hammer of the Gods (Bourbon BA)',
@@ -662,7 +662,7 @@ example_data = [
     {
         'batch':          1,
         'bottle_date':    '',
-        'brewery':        'Braindead Brewing',
+        'producer':        'Braindead Brewing',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Bent De Garde (Red Wine BA)',
@@ -677,7 +677,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Brew Gentlemen',
+        'producer':        'Brew Gentlemen',
         'for_trade':      True,
         'location':       'Home',
         'name':           'III',
@@ -692,7 +692,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2014-02-11',
-        'brewery':        'Cantillon',
+        'producer':        'Cantillon',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Cuvee de Saint-Gilloise',
@@ -707,7 +707,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2014-02-17',
-        'brewery':        'Cantillon',
+        'producer':        'Cantillon',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Cuvee de Saint-Gilloise',
@@ -722,7 +722,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2014-08-21',
-        'brewery':        'Cantillon',
+        'producer':        'Cantillon',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           "Fou'Foune",
@@ -737,7 +737,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2017-08-24',
-        'brewery':        'Cantillon',
+        'producer':        'Cantillon',
         'for_trade':      True,
         'location':       'Home',
         'name':           "Fou'Foune",
@@ -752,7 +752,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2017-09-01',
-        'brewery':        'Cantillon',
+        'producer':        'Cantillon',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           "Fou'Foune",
@@ -767,7 +767,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2012-09-07',
-        'brewery':        'Cantillon',
+        'producer':        'Cantillon',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Grand Cru Bruocsella 1900',
@@ -782,7 +782,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2016-10-13',
-        'brewery':        'Cantillon',
+        'producer':        'Cantillon',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Grand Cru Bruocsella 1900',
@@ -797,7 +797,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2008-10-03',
-        'brewery':        'Cantillon',
+        'producer':        'Cantillon',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Gueuze',
@@ -812,7 +812,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2010-12-03',
-        'brewery':        'Cantillon',
+        'producer':        'Cantillon',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Gueuze',
@@ -827,7 +827,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2011-03-04',
-        'brewery':        'Cantillon',
+        'producer':        'Cantillon',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Gueuze',
@@ -842,7 +842,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2012-10-16',
-        'brewery':        'Cantillon',
+        'producer':        'Cantillon',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Gueuze',
@@ -857,7 +857,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2013-01-31',
-        'brewery':        'Cantillon',
+        'producer':        'Cantillon',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Gueuze',
@@ -872,7 +872,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2013-10-04',
-        'brewery':        'Cantillon',
+        'producer':        'Cantillon',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Gueuze',
@@ -887,7 +887,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2014-01-31',
-        'brewery':        'Cantillon',
+        'producer':        'Cantillon',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Gueuze',
@@ -902,7 +902,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2014-04-23',
-        'brewery':        'Cantillon',
+        'producer':        'Cantillon',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Gueuze',
@@ -917,7 +917,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2014-06-03',
-        'brewery':        'Cantillon',
+        'producer':        'Cantillon',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Gueuze',
@@ -932,7 +932,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2014-09-10',
-        'brewery':        'Cantillon',
+        'producer':        'Cantillon',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Gueuze',
@@ -947,7 +947,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2014-09-29',
-        'brewery':        'Cantillon',
+        'producer':        'Cantillon',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Gueuze',
@@ -962,7 +962,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2014-11-27',
-        'brewery':        'Cantillon',
+        'producer':        'Cantillon',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Gueuze',
@@ -977,7 +977,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2014-12-01',
-        'brewery':        'Cantillon',
+        'producer':        'Cantillon',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Gueuze',
@@ -992,7 +992,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2022-03-18',
-        'brewery':        'Cantillon',
+        'producer':        'Cantillon',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Gueuze',
@@ -1007,7 +1007,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2027-03-18',
-        'brewery':        'Cantillon',
+        'producer':        'Cantillon',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Gueuze',
@@ -1022,7 +1022,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2034-09-18',
-        'brewery':        'Cantillon',
+        'producer':        'Cantillon',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Gueuze',
@@ -1037,7 +1037,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2015-09-01',
-        'brewery':        'Cantillon',
+        'producer':        'Cantillon',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Gueuze',
@@ -1052,7 +1052,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2016-05-17',
-        'brewery':        'Cantillon',
+        'producer':        'Cantillon',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Gueuze',
@@ -1067,7 +1067,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2016-06-08',
-        'brewery':        'Cantillon',
+        'producer':        'Cantillon',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Gueuze',
@@ -1082,7 +1082,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2016-10-08',
-        'brewery':        'Cantillon',
+        'producer':        'Cantillon',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Gueuze',
@@ -1097,7 +1097,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2016-12-20',
-        'brewery':        'Cantillon',
+        'producer':        'Cantillon',
         'for_trade':      True,
         'location':       'Home & Wine Storage',
         'name':           'Gueuze',
@@ -1112,7 +1112,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2017-03-16',
-        'brewery':        'Cantillon',
+        'producer':        'Cantillon',
         'for_trade':      True,
         'location':       'Home & Wine Storage',
         'name':           'Gueuze',
@@ -1128,7 +1128,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2017-06-16',
-        'brewery':        'Cantillon',
+        'producer':        'Cantillon',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Gueuze',
@@ -1143,7 +1143,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Cantillon',
+        'producer':        'Cantillon',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Gueuze',
@@ -1158,7 +1158,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Cantillon',
+        'producer':        'Cantillon',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Iris',
@@ -1173,7 +1173,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Cantillon',
+        'producer':        'Cantillon',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Iris',
@@ -1188,7 +1188,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2008-10-24',
-        'brewery':        'Cantillon',
+        'producer':        'Cantillon',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Kriek',
@@ -1203,7 +1203,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2014-06-19',
-        'brewery':        'Cantillon',
+        'producer':        'Cantillon',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Kriek',
@@ -1218,7 +1218,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2014-11-27',
-        'brewery':        'Cantillon',
+        'producer':        'Cantillon',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Kriek',
@@ -1233,7 +1233,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2016-01-11',
-        'brewery':        'Cantillon',
+        'producer':        'Cantillon',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Kriek',
@@ -1248,7 +1248,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2016-06-27',
-        'brewery':        'Cantillon',
+        'producer':        'Cantillon',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Kriek',
@@ -1263,7 +1263,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2017-04-28',
-        'brewery':        'Cantillon',
+        'producer':        'Cantillon',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Kriek',
@@ -1278,7 +1278,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2014-01-27',
-        'brewery':        'Cantillon',
+        'producer':        'Cantillon',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Lou Pepe Gueuze',
@@ -1293,7 +1293,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2014-08-28',
-        'brewery':        'Cantillon',
+        'producer':        'Cantillon',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Lou Pepe Kriek',
@@ -1308,7 +1308,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Cantillon',
+        'producer':        'Cantillon',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Mamouche',
@@ -1323,7 +1323,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2017-07-04',
-        'brewery':        'Cantillon',
+        'producer':        'Cantillon',
         'for_trade':      True,
         'location':       'Home & Wine Storage',
         'name':           'Nath',
@@ -1338,7 +1338,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2011-10-18',
-        'brewery':        'Cantillon',
+        'producer':        'Cantillon',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'St. Lamvinus',
@@ -1353,7 +1353,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2013-10-31',
-        'brewery':        'Cantillon',
+        'producer':        'Cantillon',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'St. Lamvinus',
@@ -1368,7 +1368,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2014-10-21',
-        'brewery':        'Cantillon',
+        'producer':        'Cantillon',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'St. Lamvinus',
@@ -1383,7 +1383,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2016-11-14',
-        'brewery':        'Cantillon',
+        'producer':        'Cantillon',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'St. Lamvinus',
@@ -1398,7 +1398,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2013-10-22',
-        'brewery':        'Cantillon',
+        'producer':        'Cantillon',
         'for_trade':      True,
         'location':       'Home & Wine Storage',
         'name':           'Vigneronne',
@@ -1413,7 +1413,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2014-10-29',
-        'brewery':        'Cantillon',
+        'producer':        'Cantillon',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Vigneronne',
@@ -1428,7 +1428,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2016-10-25',
-        'brewery':        'Cantillon',
+        'producer':        'Cantillon',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Vigneronne',
@@ -1443,7 +1443,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Casey',
+        'producer':        'Casey',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Apricot Family Preserves',
@@ -1458,7 +1458,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Casey',
+        'producer':        'Casey',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Oak Theory',
@@ -1473,7 +1473,7 @@ example_data = [
     {
         'batch':          2,
         'bottle_date':    '',
-        'brewery':        'Cigar City',
+        'producer':        'Cigar City',
         'for_trade':      True,
         'location':       'Home',
         'name':           '110K + OT #6',
@@ -1488,7 +1488,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Cigar City',
+        'producer':        'Cigar City',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Absolutely Okay',
@@ -1503,7 +1503,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Cigar City',
+        'producer':        'Cigar City',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Argmentum Populum',
@@ -1518,7 +1518,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Cigar City',
+        'producer':        'Cigar City',
         'for_trade':      True,
         'location':       'Home',
         'name':           'BA Imperial Milk Porter',
@@ -1533,7 +1533,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Cigar City',
+        'producer':        'Cigar City',
         'for_trade':      True,
         'location':       'Home',
         'name':           'BA Warmer Winter',
@@ -1548,7 +1548,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Cigar City',
+        'producer':        'Cigar City',
         'for_trade':      True,
         'location':       'Home',
         'name':           'BBA Hunahpu',
@@ -1563,7 +1563,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Cigar City',
+        'producer':        'Cigar City',
         'for_trade':      True,
         'location':       'Home',
         'name':           'BBA Raspberry Halo',
@@ -1578,7 +1578,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Cigar City',
+        'producer':        'Cigar City',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Dioscorides',
@@ -1593,14 +1593,14 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Cigar City',
+        'producer':        'Cigar City',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Dis Legomenon',
         'note':           '',
         'qty':            1,
         'size':           '750 mL',
-        'specific_style': 'Weirdass Beer',
+        'specific_style': 'Weirdass Beverage',
         'style':          '',
         'untappd':        '',
         'year':           2017
@@ -1608,7 +1608,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Cigar City',
+        'producer':        'Cigar City',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Forgotten Island',
@@ -1623,7 +1623,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Cigar City',
+        'producer':        'Cigar City',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Gates of Hell',
@@ -1638,7 +1638,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Cigar City',
+        'producer':        'Cigar City',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Good Gourd Almighty',
@@ -1653,7 +1653,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Cigar City',
+        'producer':        'Cigar City',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Good Gourd Have Mercy',
@@ -1668,7 +1668,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Cigar City',
+        'producer':        'Cigar City',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Hunahpu',
@@ -1683,7 +1683,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Cigar City',
+        'producer':        'Cigar City',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Hunahpu',
@@ -1698,7 +1698,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Cigar City',
+        'producer':        'Cigar City',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Hunahpu',
@@ -1713,7 +1713,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Cigar City',
+        'producer':        'Cigar City',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Life is Like',
@@ -1728,7 +1728,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Cigar City',
+        'producer':        'Cigar City',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Look to the Cookie',
@@ -1743,7 +1743,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Cigar City',
+        'producer':        'Cigar City',
         'for_trade':      True,
         'location':       'Home',
         'name':           "Marshal Zhukov's Pentultimate Push",
@@ -1758,7 +1758,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Collective',
+        'producer':        'Collective',
         'for_trade':      True,
         'location':       'Home',
         'name':           'American Sour Red',
@@ -1773,7 +1773,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Collective',
+        'producer':        'Collective',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Blueberry Peach',
@@ -1788,7 +1788,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Collective',
+        'producer':        'Collective',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Dream Folk',
@@ -1803,7 +1803,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Collective',
+        'producer':        'Collective',
         'for_trade':      True,
         'location':       'Home',
         'name':           'PGS (Apricot)',
@@ -1818,7 +1818,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Collective',
+        'producer':        'Collective',
         'for_trade':      True,
         'location':       'Home',
         'name':           'PGS (Blackberry)',
@@ -1833,7 +1833,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Collective',
+        'producer':        'Collective',
         'for_trade':      True,
         'location':       'Home',
         'name':           'PGS (Raspberry)',
@@ -1848,7 +1848,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Collective',
+        'producer':        'Collective',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Spontaneous Coolship',
@@ -1863,7 +1863,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Council',
+        'producer':        'Council',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Vienne',
@@ -1878,7 +1878,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Crafted Artisan Meadery',
+        'producer':        'Crafted Artisan Meadery',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Belgian Meadjito',
@@ -1893,7 +1893,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Crafted Artisan Meadery',
+        'producer':        'Crafted Artisan Meadery',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Criminal KLP',
@@ -1908,7 +1908,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Crafted Artisan Meadery',
+        'producer':        'Crafted Artisan Meadery',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Gose Project: Watermelon',
@@ -1923,7 +1923,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Crafted Artisan Meadery',
+        'producer':        'Crafted Artisan Meadery',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Imperial Criminal KLP (Rum BA)',
@@ -1938,7 +1938,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Crafted Artisan Meadery',
+        'producer':        'Crafted Artisan Meadery',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Jinja Dragon',
@@ -1953,7 +1953,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Crafted Artisan Meadery',
+        'producer':        'Crafted Artisan Meadery',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Magnum Peach Inferno',
@@ -1968,7 +1968,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Crafted Artisan Meadery',
+        'producer':        'Crafted Artisan Meadery',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Maple Harvest',
@@ -1983,7 +1983,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Crafted Artisan Meadery',
+        'producer':        'Crafted Artisan Meadery',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Pollen-Nation',
@@ -1998,7 +1998,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Crooked Stave',
+        'producer':        'Crooked Stave',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Dark Origins (Blackberry)',
@@ -2013,7 +2013,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Crooked Stave',
+        'producer':        'Crooked Stave',
         'for_trade':      True,
         'location':       'Home',
         'name':           "L'Brett d'Or Grand Cru",
@@ -2028,7 +2028,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Crooked Stave',
+        'producer':        'Crooked Stave',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Nightcap',
@@ -2043,7 +2043,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Crooked Stave',
+        'producer':        'Crooked Stave',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Nightmare on Brett (Port)',
@@ -2058,7 +2058,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'De Cam',
+        'producer':        'De Cam',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Framboise',
@@ -2073,7 +2073,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'De Cam',
+        'producer':        'De Cam',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Framboise',
@@ -2088,7 +2088,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'De Cam',
+        'producer':        'De Cam',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Lambiek Special',
@@ -2103,7 +2103,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'De Cam',
+        'producer':        'De Cam',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Nectarine Lambiek',
@@ -2118,7 +2118,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'De Cam',
+        'producer':        'De Cam',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Oude Lambiek',
@@ -2133,7 +2133,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Autre Grand Rouge',
@@ -2148,7 +2148,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Deutsche Hose',
@@ -2163,7 +2163,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Framiscus',
@@ -2178,7 +2178,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Hose',
@@ -2193,7 +2193,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Houblon Melange',
@@ -2208,7 +2208,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Imperial Hose',
@@ -2223,7 +2223,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Kriek Premiere',
@@ -2238,7 +2238,7 @@ example_data = [
     {
         'batch':          2,
         'bottle_date':    '',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Nectarine Premiere',
@@ -2253,7 +2253,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Nelson Hose',
@@ -2268,7 +2268,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Oude Desay',
@@ -2283,7 +2283,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Petit Desay',
@@ -2298,7 +2298,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Roseberry',
@@ -2313,7 +2313,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Saison Melange',
@@ -2328,7 +2328,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Saison Premiere',
@@ -2343,7 +2343,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Special Noir',
@@ -2358,7 +2358,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Special Rouge',
@@ -2373,7 +2373,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'The Apricot',
@@ -2388,7 +2388,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'The Archer',
@@ -2403,7 +2403,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'The Archer',
@@ -2418,7 +2418,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2018-04',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'The Archer Reserve Cuvee',
@@ -2433,7 +2433,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'The Boysenberry',
@@ -2448,7 +2448,7 @@ example_data = [
     {
         'batch':          4,
         'bottle_date':    '2018-01',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home & Wine Storage',
         'name':           'The Broken Truck',
@@ -2463,7 +2463,7 @@ example_data = [
     {
         'batch':          2,
         'bottle_date':    '',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'The Duo',
@@ -2478,7 +2478,7 @@ example_data = [
     {
         'batch':          3,
         'bottle_date':    '',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'The Duo',
@@ -2493,7 +2493,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2018-01',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'The Trio: Anniversary Blend',
@@ -2508,7 +2508,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'The Grenadier',
@@ -2523,7 +2523,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2019-05',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'The Archer',
@@ -2538,7 +2538,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2019-06',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'The Vigne',
@@ -2553,7 +2553,7 @@ example_data = [
     {
         'batch':          2,
         'bottle_date':    '',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'The Lucy',
@@ -2568,7 +2568,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2019-03',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'The Serine',
@@ -2583,7 +2583,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2019-03',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'The Petria',
@@ -2598,7 +2598,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2019-06',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Nectarine Premiere',
@@ -2613,7 +2613,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2019-07',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'The BessenKriek',
@@ -2628,7 +2628,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2019-08',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'The Kriek',
@@ -2643,7 +2643,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2019-01',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'The Kriek',
@@ -2658,7 +2658,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2018-06',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'The Kriek',
@@ -2673,7 +2673,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2017-11',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'The Kriek',
@@ -2688,7 +2688,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'The Law of Motion',
@@ -2703,7 +2703,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home & Wine Storage',
         'name':           'The Lily',
@@ -2718,7 +2718,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'The Little Peach',
@@ -2733,7 +2733,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2018-01',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'The Lucy',
@@ -2748,7 +2748,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2018-02',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'The Lucy Reserve',
@@ -2763,7 +2763,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'The Maison',
@@ -2778,7 +2778,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'The Nord',
@@ -2793,7 +2793,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2019-10',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'The Orchard',
@@ -2808,7 +2808,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2018-09',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'The Orchard',
@@ -2823,7 +2823,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'The Peach',
@@ -2838,7 +2838,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2019-01',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'The Purple Kriek',
@@ -2853,7 +2853,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2019-09',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'The Purple',
@@ -2868,7 +2868,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2018-08',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'The Purple',
@@ -2883,7 +2883,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2019-06',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'The Cervigne',
@@ -2898,7 +2898,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2019-05',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'The Kriekenmaak',
@@ -2913,7 +2913,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'The Rougess',
@@ -2928,7 +2928,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'The Truffle',
@@ -2943,7 +2943,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'With Friends Like These',
@@ -2958,7 +2958,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'De Garde',
+        'producer':        'De Garde',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Zwei Hose',
@@ -2973,7 +2973,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Deschutes',
+        'producer':        'Deschutes',
         'for_trade':      True,
         'location':       'Home',
         'name':           'The Abyss',
@@ -2988,7 +2988,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Deschutes',
+        'producer':        'Deschutes',
         'for_trade':      True,
         'location':       'Home',
         'name':           'The Abyss',
@@ -3003,7 +3003,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Dogfish Head',
+        'producer':        'Dogfish Head',
         'for_trade':      True,
         'location':       'Home',
         'name':           '120-minute IPA',
@@ -3018,7 +3018,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Fifty Fifty',
+        'producer':        'Fifty Fifty',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Eclipse (30yr Spanish Rum)',
@@ -3033,7 +3033,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Fifty Fifty',
+        'producer':        'Fifty Fifty',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Eclipse (Elijah Craig 12-year)',
@@ -3048,7 +3048,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Firestone',
+        'producer':        'Firestone',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Helldorado',
@@ -3063,7 +3063,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Firestone',
+        'producer':        'Firestone',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Sucaba',
@@ -3078,7 +3078,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Floodland',
+        'producer':        'Floodland',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Protection Spells',
@@ -3093,7 +3093,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Frederiksdal',
+        'producer':        'Frederiksdal',
         'for_trade':      True,
         'location':       'Home & Wine Storage',
         'name':           'Sur Lie',
@@ -3108,7 +3108,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Frederiksdal',
+        'producer':        'Frederiksdal',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Vin Af Kirsebaer',
@@ -3123,7 +3123,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Fremont',
+        'producer':        'Fremont',
         'for_trade':      True,
         'location':       'Home',
         'name':           'BBomb',
@@ -3138,7 +3138,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Fremont',
+        'producer':        'Fremont',
         'for_trade':      True,
         'location':       'Home',
         'name':           'BBomb (Coconut)',
@@ -3153,7 +3153,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Fremont',
+        'producer':        'Fremont',
         'for_trade':      True,
         'location':       'Home',
         'name':           'BBomb (Coffee Cinnamon)',
@@ -3168,7 +3168,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Fremont',
+        'producer':        'Fremont',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Brew 2000',
@@ -3183,7 +3183,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Fremont',
+        'producer':        'Fremont',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Dark Star',
@@ -3198,7 +3198,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Fremont',
+        'producer':        'Fremont',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Dark Star',
@@ -3213,7 +3213,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Fremont',
+        'producer':        'Fremont',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Dark Star (Coffee)',
@@ -3228,7 +3228,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Fremont',
+        'producer':        'Fremont',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Dark Star (Spice Wars)',
@@ -3243,7 +3243,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Funky Buddha',
+        'producer':        'Funky Buddha',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Last Buffalo',
@@ -3258,7 +3258,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Funky Buddha',
+        'producer':        'Funky Buddha',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Morning Wood',
@@ -3273,7 +3273,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Good Beer Company',
+        'producer':        'Good Beverage Company',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Hot Totty',
@@ -3288,7 +3288,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2012-09-20',
-        'brewery':        'Goose Island',
+        'producer':        'Goose Island',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Bourbon County Stout',
@@ -3303,7 +3303,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2013-11-08',
-        'brewery':        'Goose Island',
+        'producer':        'Goose Island',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Bourbon County Stout',
@@ -3318,7 +3318,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2014-08-08',
-        'brewery':        'Goose Island',
+        'producer':        'Goose Island',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Bourbon County Stout',
@@ -3333,7 +3333,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2014-09-11',
-        'brewery':        'Goose Island',
+        'producer':        'Goose Island',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Bourbon County Stout',
@@ -3348,7 +3348,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2015-11-12',
-        'brewery':        'Goose Island',
+        'producer':        'Goose Island',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Bourbon County Stout',
@@ -3363,7 +3363,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Goose Island',
+        'producer':        'Goose Island',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Bourbon County Stout',
@@ -3378,7 +3378,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Goose Island',
+        'producer':        'Goose Island',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Bourbon County Stout',
@@ -3393,7 +3393,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Goose Island',
+        'producer':        'Goose Island',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Bourbon County Stout (Barleywine)',
@@ -3408,7 +3408,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Goose Island',
+        'producer':        'Goose Island',
         'for_trade':      True,
         'location':       'Home & Wine Storage',
         'name':           'Bourbon County Stout (Barleywine)',
@@ -3423,7 +3423,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Goose Island',
+        'producer':        'Goose Island',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Bourbon County Stout (Barleywine)',
@@ -3438,7 +3438,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Goose Island',
+        'producer':        'Goose Island',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Bourbon County Stout (Barleywine)',
@@ -3453,7 +3453,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Goose Island',
+        'producer':        'Goose Island',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Bourbon County Stout (Coffee)',
@@ -3468,7 +3468,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2014-10-31',
-        'brewery':        'Goose Island',
+        'producer':        'Goose Island',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Bourbon County Stout (Vanilla Rye)',
@@ -3483,7 +3483,7 @@ example_data = [
     {
         'batch':          4,
         'bottle_date':    '1997-03-04',
-        'brewery':        'Hair of the Dog',
+        'producer':        'Hair of the Dog',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Adam',
@@ -3498,7 +3498,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Hair of the Dog',
+        'producer':        'Hair of the Dog',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Adam from the Wood',
@@ -3513,7 +3513,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Hair of the Dog',
+        'producer':        'Hair of the Dog',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Adam from the Wood',
@@ -3528,7 +3528,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Hair of the Dog',
+        'producer':        'Hair of the Dog',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Cherry AftW',
@@ -3543,7 +3543,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Hair of the Dog',
+        'producer':        'Hair of the Dog',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Cherry AftW',
@@ -3558,7 +3558,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Hair of the Dog',
+        'producer':        'Hair of the Dog',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Matt',
@@ -3573,7 +3573,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Hair of the Dog',
+        'producer':        'Hair of the Dog',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Otto from the Wood',
@@ -3588,7 +3588,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Hair of the Dog',
+        'producer':        'Hair of the Dog',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Otto from the Wood',
@@ -3603,7 +3603,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Hardywood',
+        'producer':        'Hardywood',
         'for_trade':      True,
         'location':       'Home',
         'name':           'GBS (Apple Brandy)',
@@ -3618,7 +3618,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Hardywood',
+        'producer':        'Hardywood',
         'for_trade':      True,
         'location':       'Home',
         'name':           'GBS (Rye)',
@@ -3633,7 +3633,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2015-08-20',
-        'brewery':        'Hill Farmstead',
+        'producer':        'Hill Farmstead',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Brother Soigne',
@@ -3648,7 +3648,7 @@ example_data = [
     {
         'batch':          9,
         'bottle_date':    '2016-10-28',
-        'brewery':        'Hill Farmstead',
+        'producer':        'Hill Farmstead',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Civil Disobedience 19',
@@ -3663,7 +3663,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Hill Farmstead',
+        'producer':        'Hill Farmstead',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Elaborative Four',
@@ -3678,7 +3678,7 @@ example_data = [
     {
         'batch':          2,
         'bottle_date':    '',
-        'brewery':        'Holy Mountain',
+        'producer':        'Holy Mountain',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Anareta',
@@ -3693,7 +3693,7 @@ example_data = [
     {
         'batch':          3,
         'bottle_date':    '',
-        'brewery':        'Holy Mountain',
+        'producer':        'Holy Mountain',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Deadfall',
@@ -3708,7 +3708,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Holy Mountain',
+        'producer':        'Holy Mountain',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Montmorency Table',
@@ -3723,7 +3723,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Holy Mountain',
+        'producer':        'Holy Mountain',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Phosphene',
@@ -3738,7 +3738,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Holy Mountain',
+        'producer':        'Holy Mountain',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Sacrament: Malbec',
@@ -3753,7 +3753,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Holy Mountain',
+        'producer':        'Holy Mountain',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Sacrament: Syrah',
@@ -3768,7 +3768,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Holy Mountain',
+        'producer':        'Holy Mountain',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Sudachi Table',
@@ -3783,7 +3783,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Holy Mountain',
+        'producer':        'Holy Mountain',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Vermouth Gin Table',
@@ -3798,7 +3798,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Horals',
+        'producer':        'Horals',
         'for_trade':      True,
         'location':       'Home & Wine Storage',
         'name':           'Mega Blend',
@@ -3813,7 +3813,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Horals',
+        'producer':        'Horals',
         'for_trade':      True,
         'location':       'Home & Wine Storage',
         'name':           'Mega Blend',
@@ -3828,7 +3828,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Horals',
+        'producer':        'Horals',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Mega Blend',
@@ -3843,7 +3843,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Horals',
+        'producer':        'Horals',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Mega Blend',
@@ -3858,7 +3858,7 @@ example_data = [
     {
         'batch':          1,
         'bottle_date':    '2013-03',
-        'brewery':        'Jester King',
+        'producer':        'Jester King',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Atrial Rubicite',
@@ -3873,7 +3873,7 @@ example_data = [
     {
         'batch':          2,
         'bottle_date':    '2013-08',
-        'brewery':        'Jester King',
+        'producer':        'Jester King',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Atrial Rubicite',
@@ -3888,7 +3888,7 @@ example_data = [
     {
         'batch':          6,
         'bottle_date':    '2016-06',
-        'brewery':        'Jester King',
+        'producer':        'Jester King',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Atrial Rubicite',
@@ -3903,7 +3903,7 @@ example_data = [
     {
         'batch':          7,
         'bottle_date':    '2017-06',
-        'brewery':        'Jester King',
+        'producer':        'Jester King',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Atrial Rubicite',
@@ -3918,7 +3918,7 @@ example_data = [
     {
         'batch':          8,
         'bottle_date':    '2018-06',
-        'brewery':        'Jester King',
+        'producer':        'Jester King',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Atrial Rubicite',
@@ -3933,7 +3933,7 @@ example_data = [
     {
         'batch':          3,
         'bottle_date':    '2015-08',
-        'brewery':        'Jester King',
+        'producer':        'Jester King',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Aurelian Lure',
@@ -3948,7 +3948,7 @@ example_data = [
     {
         'batch':          2,
         'bottle_date':    '2015-09',
-        'brewery':        'Jester King',
+        'producer':        'Jester King',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Biere de Blanc du Bois',
@@ -3963,7 +3963,7 @@ example_data = [
     {
         'batch':          3,
         'bottle_date':    '2016-09',
-        'brewery':        'Jester King',
+        'producer':        'Jester King',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Biere de Blanc du Bois',
@@ -3978,7 +3978,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Jester King',
+        'producer':        'Jester King',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Biere de Syrah',
@@ -3993,7 +3993,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Jester King',
+        'producer':        'Jester King',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Birra di Sangiovese',
@@ -4008,7 +4008,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Jester King',
+        'producer':        'Jester King',
         'for_trade':      True,
         'location':       'Home',
         'name':           "Buddha's Brew",
@@ -4023,7 +4023,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Jester King',
+        'producer':        'Jester King',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Enigmatic Taxa',
@@ -4038,7 +4038,7 @@ example_data = [
     {
         'batch':          2,
         'bottle_date':    '2015-11',
-        'brewery':        'Jester King',
+        'producer':        'Jester King',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Foudreweizen',
@@ -4053,7 +4053,7 @@ example_data = [
     {
         'batch':          3,
         'bottle_date':    '',
-        'brewery':        'Jester King',
+        'producer':        'Jester King',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Foudreweizen',
@@ -4068,7 +4068,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Jester King',
+        'producer':        'Jester King',
         'for_trade':      True,
         'location':       'Home',
         'name':           'La Vie en Rose',
@@ -4083,7 +4083,7 @@ example_data = [
     {
         'batch':          5,
         'bottle_date':    '2018-05',
-        'brewery':        'Jester King',
+        'producer':        'Jester King',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Omniscience & Proselytism',
@@ -4098,7 +4098,7 @@ example_data = [
     {
         'batch':          9,
         'bottle_date':    '',
-        'brewery':        'Jester King',
+        'producer':        'Jester King',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Petite Prince',
@@ -4113,7 +4113,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Jester King',
+        'producer':        'Jester King',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Repose',
@@ -4128,7 +4128,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Jester King',
+        'producer':        'Jester King',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Saison Americaine',
@@ -4143,7 +4143,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Jester King',
+        'producer':        'Jester King',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Sin Frontera',
@@ -4158,7 +4158,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Jester King',
+        'producer':        'Jester King',
         'for_trade':      True,
         'location':       'Home',
         'name':           'SPON (1)',
@@ -4173,7 +4173,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Jester King',
+        'producer':        'Jester King',
         'for_trade':      True,
         'location':       'Home',
         'name':           'SPON (2)',
@@ -4188,7 +4188,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Jester King',
+        'producer':        'Jester King',
         'for_trade':      True,
         'location':       'Home',
         'name':           'SPON (2)',
@@ -4203,7 +4203,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Jester King',
+        'producer':        'Jester King',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'SPON (3)',
@@ -4218,7 +4218,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Jester King',
+        'producer':        'Jester King',
         'for_trade':      True,
         'location':       'Home',
         'name':           'SPON (4)',
@@ -4233,7 +4233,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Jester King',
+        'producer':        'Jester King',
         'for_trade':      True,
         'location':       'Home & Wine Storage',
         'name':           'SPON (4)',
@@ -4248,7 +4248,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Jester King',
+        'producer':        'Jester King',
         'for_trade':      True,
         'location':       'Home',
         'name':           'SPON Albarino & Blanc du Bois',
@@ -4263,7 +4263,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Jester King',
+        'producer':        'Jester King',
         'for_trade':      True,
         'location':       'Home',
         'name':           'SPON Blueberry & Pitaya',
@@ -4278,7 +4278,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Jester King',
+        'producer':        'Jester King',
         'for_trade':      True,
         'location':       'Home',
         'name':           'SPON Peach & Apricot',
@@ -4293,7 +4293,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Jester King',
+        'producer':        'Jester King',
         'for_trade':      True,
         'location':       'Home',
         'name':           'SPON Syrah & Sangiovese',
@@ -4308,7 +4308,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Kuhnhenn',
+        'producer':        'Kuhnhenn',
         'for_trade':      True,
         'location':       'Home',
         'name':           'BB French Toast',
@@ -4323,7 +4323,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Kuhnhenn',
+        'producer':        'Kuhnhenn',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Chocolate Orange Port',
@@ -4338,7 +4338,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Kuhnhenn',
+        'producer':        'Kuhnhenn',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Chocolate Raspberry Pyment',
@@ -4353,7 +4353,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2011-05-17',
-        'brewery':        'Lindemans',
+        'producer':        'Lindemans',
         'for_trade':      True,
         'location':       'Home',
         'name':           'DHVL 20th Anniversary Blend',
@@ -4368,7 +4368,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Lost Abbey',
+        'producer':        'Lost Abbey',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Cable Car',
@@ -4383,7 +4383,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Lost Abbey',
+        'producer':        'Lost Abbey',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Duck Duck Gooze',
@@ -4398,7 +4398,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Lost Abbey',
+        'producer':        'Lost Abbey',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Duck Duck Gooze',
@@ -4413,7 +4413,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Mad Fritz',
+        'producer':        'Mad Fritz',
         'for_trade':      True,
         'location':       'Home',
         'name':           'The Bear and the Bees',
@@ -4428,7 +4428,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Monkish',
+        'producer':        'Monkish',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Same Tree',
@@ -4443,14 +4443,14 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'New Glarus',
+        'producer':        'New Glarus',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Serendipity',
         'note':           '',
         'qty':            1,
         'size':           '750 mL',
-        'specific_style': 'Fruit Beer',
+        'specific_style': 'Fruit Beverage',
         'style':          '',
         'untappd':        '',
         'year':           2015
@@ -4458,7 +4458,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Oddwood',
+        'producer':        'Oddwood',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Saison',
@@ -4473,7 +4473,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Olde Hickory',
+        'producer':        'Olde Hickory',
         'for_trade':      True,
         'location':       'Home',
         'name':           'The Event Horizon',
@@ -4488,7 +4488,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Olde Hickory',
+        'producer':        'Olde Hickory',
         'for_trade':      True,
         'location':       'Home',
         'name':           'The Event Horizon',
@@ -4503,7 +4503,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Oskar Blues',
+        'producer':        'Oskar Blues',
         'for_trade':      True,
         'location':       'Home',
         'name':           'BA Ten Fidy',
@@ -4518,7 +4518,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'OWA',
+        'producer':        'OWA',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Sakura Lambic',
@@ -4533,7 +4533,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Perennial',
+        'producer':        'Perennial',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Abraxas',
@@ -4548,7 +4548,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Perennial',
+        'producer':        'Perennial',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Abraxas (BA)',
@@ -4563,7 +4563,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Perennial',
+        'producer':        'Perennial',
         'for_trade':      True,
         'location':       'Home',
         'name':           '17 Mint Chocolate Stout (BA)',
@@ -4578,7 +4578,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Perennial',
+        'producer':        'Perennial',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Vermillion (BA)',
@@ -4593,7 +4593,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Perennial',
+        'producer':        'Perennial',
         'for_trade':      True,
         'location':       'Home',
         'name':           "Devil's Heart of Gold",
@@ -4608,7 +4608,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Perennial',
+        'producer':        'Perennial',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Edge World',
@@ -4623,7 +4623,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Perennial',
+        'producer':        'Perennial',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Fantastic Voyage',
@@ -4638,7 +4638,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Perennial',
+        'producer':        'Perennial',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Funky Wit',
@@ -4653,7 +4653,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Perennial',
+        'producer':        'Perennial',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Funky Wit Apricot',
@@ -4668,7 +4668,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Perennial',
+        'producer':        'Perennial',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Funky Wit Raspberry',
@@ -4683,7 +4683,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Perennial',
+        'producer':        'Perennial',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Maman',
@@ -4698,7 +4698,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Perennial',
+        'producer':        'Perennial',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Savant Beersel',
@@ -4713,7 +4713,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Perennial',
+        'producer':        'Perennial',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Sump',
@@ -4728,7 +4728,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Perennial',
+        'producer':        'Perennial',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Sump (BA)',
@@ -4743,7 +4743,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Prairie',
+        'producer':        'Prairie',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Bomb!',
@@ -4758,7 +4758,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Prairie',
+        'producer':        'Prairie',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Pirate Bomb',
@@ -4773,7 +4773,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        "Rev Nat's Cider",
+        'producer':        "Rev Nat's Cider",
         'for_trade':      True,
         'location':       'Home',
         'name':           'Bodhisattva of Compassion',
@@ -4788,7 +4788,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        "Rev Nat's Cider",
+        'producer':        "Rev Nat's Cider",
         'for_trade':      True,
         'location':       'Home',
         'name':           'Le Vin De Grand Jon',
@@ -4803,7 +4803,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        "Rev Nat's Cider",
+        'producer':        "Rev Nat's Cider",
         'for_trade':      True,
         'location':       'Home',
         'name':           "Sour Lorrie's Gold",
@@ -4818,7 +4818,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        "Rev Nat's Cider",
+        'producer':        "Rev Nat's Cider",
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'The Passion',
@@ -4833,7 +4833,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        "Rev Nat's Cider",
+        'producer':        "Rev Nat's Cider",
         'for_trade':      True,
         'location':       'Home & Wine Storage',
         'name':           'The Passion',
@@ -4848,7 +4848,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        "Rev Nat's Cider",
+        'producer':        "Rev Nat's Cider",
         'for_trade':      True,
         'location':       'Home',
         'name':           'Where Strawberry Rhubarb Pies Go when they Die',
@@ -4863,7 +4863,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        "Rev Nat's Cider",
+        'producer':        "Rev Nat's Cider",
         'for_trade':      True,
         'location':       'Home',
         'name':           'Whiskey Barrel Soured Newton Pippin with Makrut',
@@ -4878,7 +4878,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Revolution Brewing',
+        'producer':        'Revolution Brewing',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Straight Jacket',
@@ -4893,7 +4893,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Rivertown',
+        'producer':        'Rivertown',
         'for_trade':      True,
         'location':       'OH',
         'name':           'Triumvirate',
@@ -4908,7 +4908,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Saint Arnold',
+        'producer':        'Saint Arnold',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Pumpkinator',
@@ -4923,7 +4923,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Sam Adams',
+        'producer':        'Sam Adams',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Utopias',
@@ -4938,7 +4938,7 @@ example_data = [
     {
         'batch':          4,
         'bottle_date':    '',
-        'brewery':        'Sante Adairius',
+        'producer':        'Sante Adairius',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Cellarman',
@@ -4953,7 +4953,7 @@ example_data = [
     {
         'batch':          13,
         'bottle_date':    '',
-        'brewery':        'Sante Adairius',
+        'producer':        'Sante Adairius',
         'for_trade':      True,
         'location':       'Home',
         'name':           "Nonna's Blend",
@@ -4968,7 +4968,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Sante Adairius',
+        'producer':        'Sante Adairius',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Saison Bernice',
@@ -4983,7 +4983,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Sante Adairius',
+        'producer':        'Sante Adairius',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Saison Bernice',
@@ -4998,7 +4998,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2016-04',
-        'brewery':        'Sante Adairius',
+        'producer':        'Sante Adairius',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'West Ashley',
@@ -5013,7 +5013,7 @@ example_data = [
     {
         'batch':          4,
         'bottle_date':    '',
-        'brewery':        "Schramm's",
+        'producer':        "Schramm's",
         'for_trade':      True,
         'location':       'Home',
         'name':           'Black Agnes',
@@ -5028,7 +5028,7 @@ example_data = [
     {
         'batch':          6,
         'bottle_date':    '',
-        'brewery':        "Schramm's",
+        'producer':        "Schramm's",
         'for_trade':      True,
         'location':       'Home',
         'name':           'Black Agnes',
@@ -5043,7 +5043,7 @@ example_data = [
     {
         'batch':          8,
         'bottle_date':    '2017-10-25',
-        'brewery':        "Schramm's",
+        'producer':        "Schramm's",
         'for_trade':      True,
         'location':       'Home',
         'name':           'Black Agnes',
@@ -5058,7 +5058,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        "Schramm's",
+        'producer':        "Schramm's",
         'for_trade':      True,
         'location':       'Home',
         'name':           'Madeline',
@@ -5073,7 +5073,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        "Schramm's",
+        'producer':        "Schramm's",
         'for_trade':      True,
         'location':       'Home',
         'name':           'Nutmeg',
@@ -5088,7 +5088,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        "Schramm's",
+        'producer':        "Schramm's",
         'for_trade':      True,
         'location':       'Home',
         'name':           'Marionberry',
@@ -5103,7 +5103,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Shared',
+        'producer':        'Shared',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Coconut Vibes',
@@ -5118,7 +5118,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Shared',
+        'producer':        'Shared',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Coffee Shop Vibes (Mexico)',
@@ -5133,7 +5133,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Shared',
+        'producer':        'Shared',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Coffee Shop Vibes (Peru)',
@@ -5148,7 +5148,7 @@ example_data = [
     {
         'batch':          1,
         'bottle_date':    '',
-        'brewery':        'Side Project',
+        'producer':        'Side Project',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Balaton',
@@ -5163,7 +5163,7 @@ example_data = [
     {
         'batch':          2,
         'bottle_date':    '',
-        'brewery':        'Side Project',
+        'producer':        'Side Project',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Bluet du Fermier',
@@ -5178,7 +5178,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Side Project',
+        'producer':        'Side Project',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Burk',
@@ -5193,7 +5193,7 @@ example_data = [
     {
         'batch':          3,
         'bottle_date':    '',
-        'brewery':        'Side Project',
+        'producer':        'Side Project',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Fuzzy',
@@ -5208,7 +5208,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Side Project',
+        'producer':        'Side Project',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Oude Du Ble',
@@ -5223,7 +5223,7 @@ example_data = [
     {
         'batch':          1,
         'bottle_date':    '',
-        'brewery':        'Side Project',
+        'producer':        'Side Project',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Pitter Patter',
@@ -5238,7 +5238,7 @@ example_data = [
     {
         'batch':          8,
         'bottle_date':    '',
-        'brewery':        'Side Project',
+        'producer':        'Side Project',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Pulling Nails',
@@ -5253,7 +5253,7 @@ example_data = [
     {
         'batch':          2,
         'bottle_date':    '',
-        'brewery':        'Side Project',
+        'producer':        'Side Project',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Saison du Fermier',
@@ -5268,7 +5268,7 @@ example_data = [
     {
         'batch':          4,
         'bottle_date':    '',
-        'brewery':        'Superstition Meadery',
+        'producer':        'Superstition Meadery',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Berry White',
@@ -5283,7 +5283,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Superstition Meadery',
+        'producer':        'Superstition Meadery',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Black Berry White',
@@ -5298,7 +5298,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Superstition Meadery',
+        'producer':        'Superstition Meadery',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Blueberry Spaceship Box',
@@ -5313,7 +5313,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Superstition Meadery',
+        'producer':        'Superstition Meadery',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Straw Berry White',
@@ -5328,7 +5328,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'The Bruery',
+        'producer':        'The Bruery',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Black Tuesday',
@@ -5343,7 +5343,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'The Bruery',
+        'producer':        'The Bruery',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Bois (New American Oak BA)',
@@ -5358,7 +5358,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'The Bruery',
+        'producer':        'The Bruery',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Bois (Rye Whiskey BA)',
@@ -5373,7 +5373,7 @@ example_data = [
     {
         'batch':          4,
         'bottle_date':    '2013-12-05',
-        'brewery':        'The Bruery',
+        'producer':        'The Bruery',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Chocolate Rain',
@@ -5388,7 +5388,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'The Bruery',
+        'producer':        'The Bruery',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Mash + Coconut',
@@ -5403,7 +5403,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'The Bruery',
+        'producer':        'The Bruery',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Sucre (Port BA)',
@@ -5418,7 +5418,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'The Bruery',
+        'producer':        'The Bruery',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Wineification II',
@@ -5433,7 +5433,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2011-02-15',
-        'brewery':        'Tilquin',
+        'producer':        'Tilquin',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Gueuze',
@@ -5448,7 +5448,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2012-03-05',
-        'brewery':        'Tilquin',
+        'producer':        'Tilquin',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Gueuze',
@@ -5463,7 +5463,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2013-03-11',
-        'brewery':        'Tilquin',
+        'producer':        'Tilquin',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Gueuze',
@@ -5478,7 +5478,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2016-11-09',
-        'brewery':        'Tilquin',
+        'producer':        'Tilquin',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Gueuze',
@@ -5493,7 +5493,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2017-02-14',
-        'brewery':        'Tilquin',
+        'producer':        'Tilquin',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Gueuze',
@@ -5508,7 +5508,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2014-01-14',
-        'brewery':        'Tilquin',
+        'producer':        'Tilquin',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Gueuze^2',
@@ -5523,7 +5523,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2016-03-14',
-        'brewery':        'Tilquin',
+        'producer':        'Tilquin',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Gueuze^2',
@@ -5538,7 +5538,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2015-11-23',
-        'brewery':        'Tilquin',
+        'producer':        'Tilquin',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Mure',
@@ -5553,7 +5553,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2017-01-19',
-        'brewery':        'Tilquin',
+        'producer':        'Tilquin',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Mure',
@@ -5568,7 +5568,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2016-12-21',
-        'brewery':        'Tilquin',
+        'producer':        'Tilquin',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Pinot Noir',
@@ -5583,7 +5583,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2013-01-24',
-        'brewery':        'Tilquin',
+        'producer':        'Tilquin',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Quetsche',
@@ -5598,7 +5598,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2014-02-06',
-        'brewery':        'Tilquin',
+        'producer':        'Tilquin',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Quetsche',
@@ -5613,7 +5613,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '2014-02-12',
-        'brewery':        'Tilquin',
+        'producer':        'Tilquin',
         'for_trade':      True,
         'location':       'Wine Storage',
         'name':           'Quetsche',
@@ -5628,7 +5628,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Toolbox',
+        'producer':        'Toolbox',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Chene Sauvage',
@@ -5643,7 +5643,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Toolbox',
+        'producer':        'Toolbox',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Mackinaw',
@@ -5658,7 +5658,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Toolbox',
+        'producer':        'Toolbox',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Ruby',
@@ -5673,7 +5673,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Upright',
+        'producer':        'Upright',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Fantasia',
@@ -5688,7 +5688,7 @@ example_data = [
     {
         'batch':          '',
         'bottle_date':    '',
-        'brewery':        'Westbrook',
+        'producer':        'Westbrook',
         'for_trade':      True,
         'location':       'Home',
         'name':           'Mexican Cake',

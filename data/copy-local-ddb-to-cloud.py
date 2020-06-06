@@ -30,7 +30,7 @@ def create_cellar_table(provided_resource, table_name="Cellar"):
         ],
         ProvisionedThroughput={
             'ReadCapacityUnits':  5,
-            'WriteCapacityUnits': 5
+            'WriteCapacityUnits': 2
         }
     )
 
@@ -131,28 +131,12 @@ db_local_client = client('dynamodb',
                          aws_secret_access_key=aws_secret_access_key,
                          endpoint_url='http://localhost:8008')
 
-# Cloud connection (secondary)
-db_cloud_secondary = resource('dynamodb',
-                              region_name="us-east-2",
-                              aws_access_key_id=aws_access_key,
-                              aws_secret_access_key=aws_secret_access_key)
-db_cloud_secondary_client = client('dynamodb',
-                                   region_name="us-east-2",
-                                   aws_access_key_id=aws_access_key,
-                                   aws_secret_access_key=aws_secret_access_key)
-
 # Create tables, if necessary
-if 'Cellar' not in db_local_client.list_tables()['TableNames']:
-    create_cellar_table(db_local)
+if 'Cellar' not in db_cloud_primary.list_tables()['TableNames']:
+    create_cellar_table(db_cloud_primary)
 
-if 'CellarPicklists' not in db_local_client.list_tables()['TableNames']:
-    create_picklist_table(db_local)
-
-if 'Cellar' not in db_cloud_secondary_client.list_tables()['TableNames']:
-    create_cellar_table(db_cloud_secondary)
-
-if 'CellarPicklists' not in db_cloud_secondary_client.list_tables()['TableNames']:
-    create_picklist_table(db_cloud_secondary)
+if 'CellarPicklists' not in db_cloud_primary.list_tables()['TableNames']:
+    create_picklist_table(db_cloud_primary)
 
 # Define local tables
 cellar_table_local = db_local.Table('Cellar')
@@ -162,25 +146,16 @@ picklist_table_local = db_local.Table('CellarPicklists')
 cellar_table_cloud_primary = db_cloud_primary.Table('Cellar')
 picklist_table_cloud_primary = db_cloud_primary.Table('CellarPicklists')
 
-cellar_table_cloud_secondary = db_cloud_secondary.Table('Cellar')
-picklist_table_cloud_secondary = db_cloud_secondary.Table('CellarPicklists')
-
-# Clear local tables
-print("Clearing local tables")
-purge_all_table_data(cellar_table_local, 'beverage_id', 'location')
-purge_all_table_data(picklist_table_local, 'list_name')
+# Clear cloud primary tables
+print("Clearing cloud primary tables")
+purge_all_table_data(cellar_table_cloud_primary, 'beverage_id', 'location')
+purge_all_table_data(picklist_table_cloud_primary, 'list_name')
 print("Done clearing tables.")
 
-# Cloud primary --> local
-print("Writing to local tables")
-copy_all_table_data(cellar_table_cloud_primary, cellar_table_local)
-copy_all_table_data(picklist_table_cloud_primary, picklist_table_local)
+# Local --> cloud primary
+print("Writing to cloud primary tables")
+copy_all_table_data(cellar_table_local, cellar_table_cloud_primary)
+copy_all_table_data(picklist_table_local, picklist_table_cloud_primary)
 print("Primary done")
-
-# Cloud primary --> cloud secondary
-print("Writing to Cloud Secondary tables")
-copy_all_table_data(cellar_table_cloud_primary, cellar_table_cloud_secondary)
-copy_all_table_data(picklist_table_cloud_primary, picklist_table_cloud_secondary)
-print("Secondary done")
 
 print("Done writing to tables.")

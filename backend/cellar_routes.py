@@ -1,5 +1,5 @@
 from backend.global_logger import logger
-from backend.models import Beer
+from backend.models import Beverage
 from flask import request
 from flask_restful import Resource
 from pynamodb.exceptions import PynamoDBException
@@ -9,37 +9,34 @@ import json
 
 class CellarCollectionApi(Resource):
     """
-    For requesting the entire cellar inventory and submitting brand new beers.
+    For requesting the entire cellar inventory and submitting new beverages.
     Endpoint: /api/v1/cellar
     """
     def get(self) -> json:
-        """Return all beers in the database."""
+        """Return all beverages in the database."""
         logger.debug(f"Request: {request}")
 
         try:
             # Read from the database
-            logger.debug("Here goes nothing...")
-            beers = Beer.scan()
+            beverages = Beverage.scan()
 
             # Convert each record to a dictionary, compile into a list
             output = []
             count = 0
-            for beer in beers:
-                # print(f"Saving beer #{count}: {beer}")
-                # if count <= 60 and beer.brewery in ('Cantillon', 'De Garde', "Schramm's"):
-                output.append(beer.to_dict(dates_as_epoch=True))
+            for bev in beverages:
+                output.append(bev.to_dict(dates_as_epoch=True))
                 count += 1
 
             logger.debug(f"End of CellarCollectionApi.GET")
             return {'message': 'Success', 'data': output}, 200
 
         except PynamoDBException as e:
-            error_msg = f"Error attempting to retrieve beers from the database."
+            error_msg = f"Error attempting to retrieve beverages from the database."
             logger.debug(f"{error_msg}\n{e}")
             return {'message': 'Error', 'data': error_msg}, 500
 
     def post(self) -> json:
-        """Add a new beer to the database based on the provided JSON."""
+        """Add a new beverage to the database based on the provided JSON."""
         logger.debug(f"Request: {request}")
 
         # Ensure there's a body to accompany this request
@@ -49,7 +46,13 @@ class CellarCollectionApi(Resource):
         # Load the provided JSON
         try:
             data = json.loads(request.data.decode())
-            logger.debug(f"Data submitted: {data}")
+            logger.debug(f"Data submitted: {type(data)}, {data}")
+            # Replace empty strings with None
+            for key in data.keys():
+                if data[key] == "":
+                    data[key] = None
+
+            logger.debug(f"Data post-cleaning: {type(data)}, {data}")
 
         except json.JSONDecodeError as e:
             error_msg = f"Error attempting to decode the provided JSON."
@@ -60,60 +63,60 @@ class CellarCollectionApi(Resource):
             logger.debug(error_msg)
             return {'message': 'Error', 'data': error_msg}, 400
 
-        # Create a new Beer from the provided data
+        # Create a new Beverage from the provided data
         try:
-            new_beer = Beer(**data)
-            logger.debug(f"New Beer created: {new_beer}")
+            new_beverage = Beverage(**data)
+            logger.debug(f"New Beverage created: {new_beverage}")
 
         except PynamoDBException as e:
-            error_msg = f"Error attempting to create new Beer from: {data}."
+            error_msg = f"Error attempting to create new Beverage from: {data}."
             logger.debug(f"{error_msg}\nError: {e}.")
             return {'message': 'Error', 'data': error_msg}, 500
         except BaseException as e:
-            error_msg = f"Unknown error creating a new Beer from: {data}."
+            error_msg = f"Unknown error creating a new Beverage from: {data}."
             logger.debug(f"{error_msg}\n{e}.")
             return {'message': 'Error', 'data': error_msg}, 500
 
-        # Write this Beer to the database
+        # Write this Beverage to the database
         try:
-            logger.debug(f"Attempting to save Beer {new_beer} to the database.")
-            new_beer.save()
-            logger.info(f"Successfully saved {new_beer}.")
+            logger.debug(f"Attempting to save Beverage {new_beverage} to the database.")
+            new_beverage.save()
+            logger.info(f"Successfully saved {new_beverage}.")
             logger.debug(f"End of CellarCollectionApi.POST")
 
-            return {'message': 'Created', 'data': new_beer.to_dict(dates_as_epoch=True)}, 201
+            return {'message': 'Created', 'data': new_beverage.to_dict(dates_as_epoch=True)}, 201
         except PynamoDBException as e:
-            error_msg = f"Error attempting to save new beer."
-            logger.debug(f"{error_msg}\n{new_beer}: {e}.")
+            error_msg = f"Error attempting to save new beverage."
+            logger.debug(f"{error_msg}\n{new_beverage}: {e}.")
             return {'message': 'Error', 'data': error_msg}, 500
 
 
-class BeerApi(Resource):
+class BeverageApi(Resource):
     """
-    For requesting, updating, or deleting a single beer from the database.
-    Endpoint: /api/v1/cellar/<beer_id>
+    For requesting, updating, or deleting a single beverage from the database.
+    Endpoint: /api/v1/cellar/<beverage_id>
     """
-    def get(self, beer_id) -> json:
-        """Return the specified beer."""
-        logger.debug(f"Request: {request}, for id: {beer_id}.")
+    def get(self, beverage_id) -> json:
+        """Return the specified beverage."""
+        logger.debug(f"Request: {request}, for id: {beverage_id}.")
 
-        # Retrieve specified beer from the database
+        # Retrieve specified beverage from the database
         try:
-            beer = Beer.get(beer_id)
-            logger.debug(f"Retrieved beer: {beer}")
-            return {'message': 'Success', 'data': beer.to_dict(dates_as_epoch=True)}, 200
+            beverage = Beverage.get(beverage_id)
+            logger.debug(f"Retrieved beverage: {beverage}")
+            return {'message': 'Success', 'data': beverage.to_dict(dates_as_epoch=True)}, 200
 
-        except Beer.DoesNotExist:
-            logger.debug(f"Beer {beer_id} not found.")
-            return {'message': 'Not Found', 'data': f'Beer {beer_id} not found.'}, 404
+        except Beverage.DoesNotExist:
+            logger.debug(f"Beverage {beverage_id} not found.")
+            return {'message': 'Not Found', 'data': f'Beverage {beverage_id} not found.'}, 404
         except PynamoDBException as e:
-            error_msg = f"Error attempting to retrieve beer {beer_id}."
+            error_msg = f"Error attempting to retrieve beverage {beverage_id}."
             logger.debug(f"{error_msg}\n{e}")
             return {'message': 'Error', 'data': error_msg}, 500
 
-    def put(self, beer_id) -> json:
-        """Update the specified beer."""
-        logger.debug(f"Request: {request}, for id: {beer_id}.")
+    def put(self, beverage_id) -> json:
+        """Update the specified beverage."""
+        logger.debug(f"Request: {request}, for id: {beverage_id}.")
 
         # Ensure there's a body to accompany this request
         if not request.data:
@@ -133,65 +136,65 @@ class BeerApi(Resource):
             logger.debug(error_msg)
             return {'message': 'Error', 'data': error_msg}, 400
 
-        # Ensure the /<beer_id> provided to the endpoint matches the beer_id in the body.
-        if str(beer_id) != str(data['beer_id']):
-            error_msg = f"/beer_id provided to the endpoint ({beer_id}) " \
-                        f"doesn't match the beer_id from the body ({data['beer_id']})."
+        # Ensure the /<beverage_id> provided to the endpoint matches the beverage_id in the body.
+        if str(beverage_id) != str(data['beverage_id']):
+            error_msg = f"/beverage_id provided to the endpoint ({beverage_id}) " \
+                        f"doesn't match the beverage_id from the body ({data['beverage_id']})."
             logger.debug(f"{error_msg}")
             return {'message': 'Error', 'data': error_msg}, 400
 
-        # Create a Beer instance from the provided data
+        # Create a Beverage instance from the provided data
         try:
-            beer = Beer(**data)
-            beer.last_modified = datetime.utcnow()
-            logger.debug(f"Beer instance created: {beer}")
+            beverage = Beverage(**data)
+            beverage.last_modified = datetime.utcnow()
+            logger.debug(f"Beverage instance created: {beverage}")
 
         except PynamoDBException as e:
-            error_msg = f"Error parsing data into the Beer model."
+            error_msg = f"Error parsing data into the Beverage model."
             logger.debug(f"{error_msg}\n{e}")
             return {'message': 'Error', 'data': f'{error_msg}\n{e}'}, 500
 
         # Save to the database
         try:
-            logger.debug(f"Saving {beer} to the db...")
-            beer.save()
-            logger.info(f"Beer updated: {beer})")
-            logger.debug(f"End of BeerApi.PUT")
-            return {'message': 'Success', 'data': beer.to_dict(dates_as_epoch=True)}, 200
-        except Beer.DoesNotExist:
-            logger.debug(f"Beer {beer_id} not found.")
-            return {'message': 'Not Found', 'data': f'Beer {beer_id} not found.'}, 404
+            logger.debug(f"Saving {beverage} to the db...")
+            beverage.save()
+            logger.info(f"Beverage updated: {beverage})")
+            logger.debug(f"End of BeverageApi.PUT")
+            return {'message': 'Success', 'data': beverage.to_dict(dates_as_epoch=True)}, 200
+        except Beverage.DoesNotExist:
+            logger.debug(f"Beverage {beverage_id} not found.")
+            return {'message': 'Not Found', 'data': f'Beverage {beverage_id} not found.'}, 404
         except PynamoDBException as e:
-            error_msg = f"Error attempting to save beer {beer_id}."
+            error_msg = f"Error attempting to save beverage {beverage_id}."
             logger.debug(f"{error_msg}\n{e}")
             return {'message': 'Error', 'data': error_msg}, 500
 
-    def delete(self, beer_id) -> json:
-        """Delete the specified beer."""
-        logger.debug(f"Request: {request}, for id: {beer_id}.")
+    def delete(self, beverage_id) -> json:
+        """Delete the specified beverage."""
+        logger.debug(f"Request: {request}, for id: {beverage_id}.")
 
-        # Retrieve this beer from the database
+        # Retrieve this beverage from the database
         try:
-            beer = Beer.get(beer_id)
-            logger.debug(f"Retrieved beer: {beer}")
+            beverage = Beverage.get(beverage_id)
+            logger.debug(f"Retrieved beverage: {beverage}")
 
-        except Beer.DoesNotExist:
-            logger.debug(f"Beer {beer_id} not found.")
-            return {'message': 'Not Found', 'data': f'Beer {beer_id} not found.'}, 404
+        except Beverage.DoesNotExist:
+            logger.debug(f"Beverage {beverage_id} not found.")
+            return {'message': 'Not Found', 'data': f'Beverage {beverage_id} not found.'}, 404
         except PynamoDBException as e:
-            error_msg = f"Error attempting to retrieve beer {beer_id}."
+            error_msg = f"Error attempting to retrieve beverage {beverage_id}."
             logger.debug(f"{error_msg}\n{e}")
             return {'message': 'Error', 'data': error_msg}, 500
 
-        # Delete the specified beer
+        # Delete the specified beverage
         try:
-            footprint = f"{beer}"
-            beer.delete()
-            logger.info(f"Beer {footprint} deleted successfully.")
-            logger.debug("End of BeerApi.DELETE")
+            footprint = f"{beverage}"
+            beverage.delete()
+            logger.info(f"Beverage {footprint} deleted successfully.")
+            logger.debug("End of BeverageApi.DELETE")
             return {'message': 'Success', 'data': f'{footprint} deleted successfully.'}, 200
 
         except PynamoDBException as e:
-            error_msg = f"Error attempting to delete beer: {beer}."
+            error_msg = f"Error attempting to delete beverage: {beverage}."
             logger.debug(f"{error_msg}\n{e}")
             return {'message': 'Error', 'data': error_msg}, 500

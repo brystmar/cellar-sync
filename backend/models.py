@@ -6,7 +6,7 @@ from pynamodb.attributes import UnicodeAttribute, NumberAttribute, BooleanAttrib
     UTCDateTimeAttribute, ListAttribute, MapAttribute
 
 
-class Beer(Model):
+class Beverage(Model):
     class Meta:
         table_name = 'Cellar'
         region = Config.AWS_REGION
@@ -14,11 +14,11 @@ class Beer(Model):
             host = 'http://localhost:8008'
 
     # Primary Attributes
-    # `beer_id`: A concatenation of brewery, beer name, year, size, and {batch or bottle date}.
-    beer_id = UnicodeAttribute(hash_key=True)
+    # `beverage_id`: Concat of producer, beverage name, year, size, and {batch or bottle date}.
+    beverage_id = UnicodeAttribute(hash_key=True)
 
     # Required Attributes
-    brewery = UnicodeAttribute()
+    producer = UnicodeAttribute()
     name = UnicodeAttribute()
     year = NumberAttribute()
     size = UnicodeAttribute()
@@ -48,9 +48,9 @@ class Beer(Model):
         """
 
         output = {
-            "beer_id":         self.beer_id.__str__(),
+            "beverage_id":         self.beverage_id.__str__(),
             "name":            self.name.__str__(),
-            "brewery":         self.brewery.__str__(),
+            "producer":         self.producer.__str__(),
             "year":            int(self.year),
             "batch":           int(self.batch) if self.batch else None,
             "size":            self.size.__str__(),
@@ -77,30 +77,31 @@ class Beer(Model):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        # logger.debug(f"Initializing a new instance of the Beer model for {kwargs}.")
-        # Construct the concatenated beer_id when not provided:
-        #  brewery, beer name, year, size, {bottle date or batch}.  Bottle date preferred.
-        if 'beer_id' not in kwargs.keys():
-            # Need to create a beer_id for this beer
-            self.beer_id = f"{kwargs['brewery']}_{kwargs['name']}_{kwargs['year']}_{kwargs['size']}"
+        # logger.debug(f"Initializing a new instance of the Beverage model for {kwargs}.")
+        # Replace empty strings with None
+        # Construct the concatenated beverage_id when not provided:
+        #  producer, beverage name, year, size, {bottle date or batch}.  Bottle date preferred.
+        if 'beverage_id' not in kwargs.keys():
+            # Need to create a beverage_id for this beverage
+            self.beverage_id = f"{kwargs['producer']}_{kwargs['name']}_{kwargs['year']}_{kwargs['size']}"
             if 'batch' in kwargs.keys() and 'bottle_date' in kwargs.keys():
                 # If both bottle_date and batch are provided, prefer bottle_date
-                self.beer_id += f"_{kwargs['bottle_date']}"
+                self.beverage_id += f"_{kwargs['bottle_date']}"
 
             elif 'batch' not in kwargs.keys() or kwargs['batch'] == '':
                 # Batch is not provided
                 self.batch = None
                 if 'bottle_date' not in kwargs.keys() or kwargs['bottle_date'] == '':
                     # When no batch or bottle_date is provided, append "_None"
-                    self.beer_id += "_None"
+                    self.beverage_id += "_None"
                     self.bottle_date = None
                 else:
                     # Bottle_date is provided
-                    self.beer_id += f"_{kwargs['bottle_date']}"
+                    self.beverage_id += f"_{kwargs['bottle_date']}"
             else:
                 # Use batch when bottle_date isn't provided
-                self.beer_id += f"_{kwargs['batch']}"
-            logger.debug(f"Created a beer_id for this new Beer: {self.beer_id}.")
+                self.beverage_id += f"_{kwargs['batch']}"
+            logger.debug(f"Created a beverage_id for this new Beverage: {self.beverage_id}.")
 
         # Must provide a location
         if 'location' not in kwargs.keys() or kwargs['location'] is None:
@@ -179,7 +180,7 @@ class Beer(Model):
             # self.date_added = self.last_modified or datetime.utcnow()
 
     def __repr__(self) -> str:
-        return f'<Beer | beer_id: {self.beer_id}, qty: {self.qty} ({self.qty_cold}),' \
+        return f'<Beverage | beverage_id: {self.beverage_id}, qty: {self.qty} ({self.qty_cold}),' \
                f' location: {self.location}>'
 
 
@@ -250,8 +251,8 @@ class Picklist(Model):
 
         # Type check: last_modified
         # Accept `str` or an epoch (`float`, `int`) for last_modified
-        logger.debug(f"Type check for last_modified of picklist: {self.list_name}")
-        logger.debug(f"{type(self.last_modified)}, {self.last_modified}")
+        # logger.debug(f"Type check for last_modified of picklist: {self.list_name}")
+        # logger.debug(f"{type(self.last_modified)}, {self.last_modified}")
         # if !isinstance(self.last_modified, datetime):
         if isinstance(self.last_modified, (float, int)):
             self.last_modified = datetime.utcfromtimestamp(kwargs['last_modified'] / 1000)
@@ -264,5 +265,4 @@ class Picklist(Model):
                              f"{type(self.last_modified)} cannot be converted to datetime.")
                 raise ValueError(f"Value for last_modified must be an epoch (float/int) or "
                                  f"an iso-formatted string. {e}")
-        logger.debug(f"Picklist class initialized.")
-
+        # logger.debug(f"Picklist class initialized.")
