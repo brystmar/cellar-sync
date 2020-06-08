@@ -26,5 +26,5 @@ logger.info("Flask-RESTful API initialized.")
 
 # Define the functional endpoints
 api.add_resource(CellarCollectionApi, '/api/v1/cellar')
-api.add_resource(BeverageApi, '/api/v1/cellar/<beverage_id>')
+api.add_resource(BeverageApi, '/api/v1/cellar/<beverage_id>/<location>')
 api.add_resource(PicklistApi, '/api/v1/picklist-data')

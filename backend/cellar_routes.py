@@ -94,15 +94,15 @@ class CellarCollectionApi(Resource):
 class BeverageApi(Resource):
     """
     For requesting, updating, or deleting a single beverage from the database.
-    Endpoint: /api/v1/cellar/<beverage_id>
+    Endpoint: /api/v1/cellar/<beverage_id>/<location>
     """
-    def get(self, beverage_id) -> json:
+    def get(self, beverage_id, location) -> json:
         """Return the specified beverage."""
-        logger.debug(f"Request: {request}, for id: {beverage_id}.")
+        logger.debug(f"Request: {request}, for id: {beverage_id}, loc: {location}.")
 
         # Retrieve specified beverage from the database
         try:
-            beverage = Beverage.get(beverage_id)
+            beverage = Beverage.get(beverage_id, location)
             logger.debug(f"Retrieved beverage: {beverage}")
             return {'message': 'Success', 'data': beverage.to_dict(dates_as_epoch=True)}, 200
 
@@ -114,9 +114,9 @@ class BeverageApi(Resource):
             logger.debug(f"{error_msg}\n{e}")
             return {'message': 'Error', 'data': error_msg}, 500
 
-    def put(self, beverage_id) -> json:
+    def put(self, beverage_id, location) -> json:
         """Update the specified beverage."""
-        logger.debug(f"Request: {request}, for id: {beverage_id}.")
+        logger.debug(f"Request: {request}, for id: {beverage_id}, loc: {location}.")
 
         # Ensure there's a body to accompany this request
         if not request.data:
@@ -136,10 +136,15 @@ class BeverageApi(Resource):
             logger.debug(error_msg)
             return {'message': 'Error', 'data': error_msg}, 400
 
-        # Ensure the /<beverage_id> provided to the endpoint matches the beverage_id in the body.
+        # Ensure the variables provided to the endpoint match the body details.
         if str(beverage_id) != str(data['beverage_id']):
             error_msg = f"/beverage_id provided to the endpoint ({beverage_id}) " \
                         f"doesn't match the beverage_id from the body ({data['beverage_id']})."
+            logger.debug(f"{error_msg}")
+            return {'message': 'Error', 'data': error_msg}, 400
+        elif str(location) != str(data['location']):
+            error_msg = f"/location provided to the endpoint ({location}) " \
+                        f"doesn't match the location from the body ({data['location']})."
             logger.debug(f"{error_msg}")
             return {'message': 'Error', 'data': error_msg}, 400
 
@@ -169,13 +174,13 @@ class BeverageApi(Resource):
             logger.debug(f"{error_msg}\n{e}")
             return {'message': 'Error', 'data': error_msg}, 500
 
-    def delete(self, beverage_id) -> json:
+    def delete(self, beverage_id, location) -> json:
         """Delete the specified beverage."""
-        logger.debug(f"Request: {request}, for id: {beverage_id}.")
+        logger.debug(f"Request: {request}, for id: {beverage_id}, loc: {location}.")
 
         # Retrieve this beverage from the database
         try:
-            beverage = Beverage.get(beverage_id)
+            beverage = Beverage.get(beverage_id, location)
             logger.debug(f"Retrieved beverage: {beverage}")
 
         except Beverage.DoesNotExist:
