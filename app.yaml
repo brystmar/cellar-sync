@@ -4,11 +4,10 @@
 
 # https://yamlchecker.com/
 
-application: cellar-sync
-version: 1
 runtime: python38
-api_version: 1
-threadsafe: yes
+#version: 1
+#api_version: 1
+#threadsafe: yes
 
 includes:
   - env_variables.yaml
