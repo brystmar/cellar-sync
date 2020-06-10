@@ -12,6 +12,7 @@ __pycache__/
 *.csv
 env_variables.yaml
 gcp_creds.json
+cellar-creds.json
 .aws/*
 .boto
 .boto/*
