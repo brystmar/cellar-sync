@@ -19,7 +19,7 @@ error_handlers:
     file: templates/over_quota.html
 
 # Handlers define how to route requests to your application.
-handlers:
+#handlers:
 
 # App Engine serves and caches static files contained in the listed directories
 # (and subdirectories). Uncomment and set the directory as needed.
