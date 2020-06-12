@@ -27,7 +27,7 @@ logger.info("Applied config parameters to the app.")
 # Enable CORS for the app to ensure our UI can call the backend API
 import logging
 logging.getLogger('flask_cors').level = logging.DEBUG
-CORS(app, resources={r"/api/*": {"origins": Config.WHITELISTED_ORIGINS}})
+CORS(app, resources={r"/api/*": {"origins": Config.WHITELISTED_ORIGIN}})
 logger.info("CORS initialized.")
 
 api = Api(app)
