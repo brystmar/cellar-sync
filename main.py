@@ -8,7 +8,6 @@ except ImportError:
 # Logging & config
 from backend.global_logger import logger
 from backend.config import Config
-import logging
 
 # External packages
 from flask import Flask
@@ -26,8 +25,7 @@ app.config.from_object(Config)
 logger.info("Applied config parameters to the app.")
 
 # Enable CORS for the app to ensure our UI can call the backend API
-#   See: https://flask-cors.readthedocs.io/en/latest/
-logging.getLogger('flask_cors').level = logging.DEBUG
+# logging.getLogger('flask_cors').level = logging.DEBUG
 CORS(app, resources=r"/api/*")
 logger.info("CORS initialized.")
 

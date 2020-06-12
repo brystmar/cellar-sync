@@ -29,5 +29,5 @@ includes:
 # This handler tells App Engine how to route requests to a WSGI application.
 # The script value is in the format <path.to.module>.<wsgi_application>
 # where <wsgi_application> is a WSGI application object.
-#- url: .*  # This regex directs all routes to app.app
-#  script: app.app
+#- url: .*  # This regex directs all routes to main.app
+#  script: main.app
