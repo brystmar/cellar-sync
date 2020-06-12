@@ -1,3 +1,10 @@
+# Initialize Cloud Debugger
+try:
+  import googleclouddebugger
+  googleclouddebugger.enable()
+except ImportError:
+  pass
+
 # Logging & config
 from backend.global_logger import logger
 from backend.config import Config
