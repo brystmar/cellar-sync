@@ -25,7 +25,7 @@ class Config(object):
 
     # Load app-related credentials
     BOUND_PORT = 5000
-    # DOMAIN_URL = environ.get('DOMAIN_URL')
+    DOMAIN_URL = environ.get('DOMAIN_URL')
     WHITELISTED_ORIGINS = environ.get('WHITELISTED_ORIGINS')
     SECRET_KEY = environ.get('SECRET_KEY') or '0y4TJIyEjH8ZVkXPMGBiFEcHk8tdfe57kE1IJhvR1yb1cmWY'
 
