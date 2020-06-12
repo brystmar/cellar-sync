@@ -12,22 +12,22 @@ runtime: python38
 includes:
   - env_variables.yaml
 
-error_handlers:
-  - file: templates/default_error.html
-
-  - error_code: over_quota
-    file: templates/over_quota.html
+#error_handlers:
+#  - file: templates/default_error.html
+#
+#  - error_code: over_quota
+#    file: templates/over_quota.html
 
 # Handlers define how to route requests to your application.
 #handlers:
 
 # App Engine serves and caches static files contained in the listed directories
 # (and subdirectories). Uncomment and set the directory as needed.
-#- url: /client
-#  static_dir: client
+#- url: /templates
+#  static_dir: templates
 
-# This handler tells app engine how to route requests to a WSGI application.
+# This handler tells App Engine how to route requests to a WSGI application.
 # The script value is in the format <path.to.module>.<wsgi_application>
 # where <wsgi_application> is a WSGI application object.
-#- url: .*  # This regex directs all routes to main.app
-#  script: main.app
+#- url: .*  # This regex directs all routes to app.app
+#  script: app.app

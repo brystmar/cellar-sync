@@ -11,7 +11,7 @@ from flask_restful import Api
 from backend.cellar_routes import CellarCollectionApi, BeverageApi
 from backend.picklist_routes import PicklistApi
 
-app = Flask("cellar-sync-backend")
+app = Flask("cellarsync")
 logger.info(f"Flask app {app.name} created!")
 
 app.config.from_object(Config)
@@ -19,7 +19,8 @@ logger.info("Applied config parameters to the app.")
 
 # Enable CORS for the app to ensure our UI can call the backend API
 #   See: https://flask-cors.readthedocs.io/en/latest/
-CORS(app, resources={r"/api/*": {"origins": Config.WHITELISTED_ORIGINS}})
+CORS(app, resources=r"/api/*")
+logger.info("CORS initialized.")
 
 api = Api(app)
 logger.info("Flask-RESTful API initialized.")

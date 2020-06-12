@@ -1,25 +1,28 @@
 # Cellar Sync
-Basic cellar inventory management for bored tech workers with an unwieldy cellar.
+Basic cellar inventory management for bored tech workers with unwieldy cellars of adult beverages.
 
-This project only contains the backend.  UI here: https://github.com/brystmar/cellar-sync-ui/
+This project contains the backend.  See [cellar-sync-ui](http://https://github.com/brystmar/cellar-sync-ui/) for the front end.
 
 # Data Model
 Data is structured as a NoSQL document store.  Initially using AWS DynamoDB, though that may change.
 
 ### Attributes
-* `id` (`str`) - **Partition Key (aka Hash Key)**.  Concatenation of beer name, brewery, year, size, & bottle date.
-* `name` (`str`) *r
-* `brewery` (`str`)
-* `year` (`int`)
-* `size` (`str`)
-* `batch` (`int`)
-* `bottle_date` (`date`)
-* `date_added` (`date`)
-* `location` (`str`) - **Sort Key (aka Range Key)**
-* `style` (`str`)
-* `substyle` (`str`)
-* `qty` (`int`)
-* `untappd` (`str`) - Link to the beer in question on Untappd
-* `aging_potential` (`str`) - [Low, Medium, High]
-* `trade_value` (`str`) - [Low, Medium, High]
-* `for_trade` (`bool`)
+* `beverage_id` (`str`) - **Partition Key** (*hash key*).  Concatenation of beverage name, producer, year, size, & bottle date.
+* `name` (`str`) *r - Name of the beverage.
+* `producer` (`str`) *r - Brewery / winery / meadery / cidery who produced the beverage.
+* `year` (`int`) *r - Calendar year in YYYY format.  For seasonal beverages which cross years, this should be the most-recent year.  Ex: Lambic from the 2017-2018 season is considered 2018.
+* `size` (`str`) *r - Bottle size.  Picklist of the most common formats.
+* `bottle_date` (`date`) *r - Must provide either `batch` or `bottle_date`.  Date the beverage was bottled in **YYYY-MM-DD** format.
+* `batch` (`int`) *r - Must provide either `batch` or `bottle_date`.  Batch or blend number, from 1-9999.
+* `location` (`str`) *r - **Sort Key** (*range key*).  Picklist of unique storage locations.
+* `style` (`str`) - Overall style of the beverage.
+* `specific_style` (`str`) - Subset of `style` for more granular categorization.
+* `qty` (`int`) - *Default: 0.* - # of bottles at the current location.
+* `qty_cold` (`int`) - *Default: 0.* - Of the above qty, how many are currently chilled?
+* `for_trade` (`bool`) - *Default: Yes.* - Is this beverage available for trade?
+* `trade_value` (`str`) - [Low, Medium, High] - Basic indication of value in the current trading marketplace.
+* `aging_potential` (`str`) - [Poor, Moderate, Strong] - What's the aging potential for this beverage? 
+* `untappd` (`str`) - Link to the beverage in question on [Untappd](https://untappd.com/).
+* `note` (`str`) - Text field for any additional notes about this beverage. 
+* `date_added` (`str`) - System field, created automatically.  Stored as an [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string in UTC.
+* `last_modified` (`str`) - System field, updated automatically.  Stored as an [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string in UTC.
