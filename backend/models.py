@@ -31,10 +31,10 @@ class Beverage(Model):
     qty_cold = NumberAttribute(null=True, default=0)
     style = UnicodeAttribute(null=True)
     specific_style = UnicodeAttribute(null=True)
-    untappd = UnicodeAttribute(null=True)
-    aging_potential = NumberAttribute(null=True, default=2)
+    for_trade = BooleanAttribute(null=True, default=True)
     trade_value = NumberAttribute(null=True, default=0)
-    for_trade = BooleanAttribute(null=True)
+    aging_potential = NumberAttribute(null=True, default=2)
+    untappd = UnicodeAttribute(null=True)
     note = UnicodeAttribute(null=True)
 
     # date_added should always be <= last_modified
@@ -118,8 +118,10 @@ class Beverage(Model):
         # Type check: Batch
         if 'batch' in kwargs.keys():
             try:
-                if self.batch:
+                if self.batch and self.batch != "":
                     self.batch = int(kwargs['batch'])
+                if self.batch == "":
+                    self.batch = None
             except ValueError as e:
                 logger.debug(f"Batch number must be an integer.\n{e}")
                 raise ValueError(f"Batch number must be an integer.\n{e}")
