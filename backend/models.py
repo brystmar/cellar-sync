@@ -5,127 +5,60 @@ from pynamodb.models import Model
 from pynamodb.attributes import UnicodeAttribute, NumberAttribute, BooleanAttribute, \
     UTCDateTimeAttribute, ListAttribute, MapAttribute
 
+# === REFACTOR PLAN ===
+# Structure: beverage > vintage (<-> location)
+#
+# beverage
+# - beverage_id
+# - producer
+# - name
+# - aging potential
+# - trade value
+# - date added
+# - last modified
+#
+# location
+# - name ==> defaults to Home, user can add more locations
+# - qty
+# - qty cold
+#
+# vintage
+# --> defaults to an unnamed vintage, user can add more vintages
+# - bottle date (accepts YYYY, YYYY-MM, YYYY-MM-DD)
+# - size
+# - for trade
+# - location (select created locations only)
+# - untappd link
+# - note
+# - date added
+# - last modified
 
-class Beverage(Model):
-    class Meta:
-        table_name = 'Cellar'
-        region = Config.AWS_REGION
-        if local:  # Use the local DynamoDB instance when running locally
-            host = 'http://localhost:8008'
 
-    # Primary Attributes
-    # `beverage_id`: Concat of producer, beverage name, year, size, and {batch or bottle date}.
-    beverage_id = UnicodeAttribute(hash_key=True)
-
-    # Required Attributes
-    producer = UnicodeAttribute()
-    name = UnicodeAttribute()
-    year = NumberAttribute()
-    size = UnicodeAttribute()
-    location = UnicodeAttribute(range_key=True)
-    batch = NumberAttribute(null=True)
-    bottle_date = UnicodeAttribute(null=True)
-
-    # Optional Attributes
+class Location(MapAttribute):
+    """
+    Each vintage of a beverage can be segmented by its location.
+    Quantity is set at this level.
+    """
+    name = UnicodeAttribute(null=False, default="Home")
     qty = NumberAttribute(null=True, default=0)
     qty_cold = NumberAttribute(null=True, default=0)
-    style = UnicodeAttribute(null=True)
-    specific_style = UnicodeAttribute(null=True)
-    for_trade = BooleanAttribute(null=True, default=True)
-    trade_value = NumberAttribute(null=True, default=0)
-    aging_potential = NumberAttribute(null=True, default=2)
-    untappd = UnicodeAttribute(null=True)
     note = UnicodeAttribute(null=True)
+    display_order = NumberAttribute(null=False, default=0)
 
-    # date_added should always be <= last_modified
-    date_added = UTCDateTimeAttribute(default=datetime.utcnow())
-    last_modified = UTCDateTimeAttribute(default=datetime.utcnow())
-
-    def to_dict(self, dates_as_epoch=False) -> dict:
+    def to_dict(self) -> dict:
         """
-        Return a dictionary with all attributes.
-        Dates return as epoch (default) or in ISO format.
+        Convert this location to a dictionary.
         """
-
-        output = {
-            "beverage_id":         self.beverage_id.__str__(),
-            "name":            self.name.__str__(),
-            "producer":         self.producer.__str__(),
-            "year":            int(self.year),
-            "batch":           int(self.batch) if self.batch else None,
-            "size":            self.size.__str__(),
-            "bottle_date":     self.bottle_date.__str__() if self.bottle_date else None,
-            "location":        self.location.__str__(),
-            "style":           self.style.__str__() if self.style else None,
-            "specific_style":  self.specific_style.__str__() if self.specific_style else None,
-            "qty":             int(self.qty) if self.qty else 0,
-            "qty_cold":        int(self.qty_cold) if self.qty_cold else 0,
-            "untappd":         self.untappd.__str__() if self.untappd else None,
-            "aging_potential": int(self.aging_potential) if self.aging_potential else None,
-            "trade_value":     int(self.trade_value) if self.trade_value else None,
-            "for_trade":       self.for_trade,
-            "note":            self.note.__str__() if self.note else None,
-            "date_added":      self.date_added.timestamp() * 1000,  # JS timestamps are in ms
-            "last_modified":   self.last_modified.timestamp() * 1000
+        return {
+            "name":          self.name.__str__(),
+            "qty":           int(self.qty) if self.qty else 0,
+            "qty_cold":      int(self.qty_cold) if self.qty_cold else 0,
+            "note":          self.note.__str__() if self.note else None,
+            "display_order": int(self.display_order) if self.display_order else 0
         }
-
-        if not dates_as_epoch:
-            output['date_added'] = self.date_added.__str__()
-            output['last_modified'] = self.last_modified.__str__()
-
-        return output
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        # logger.debug(f"Initializing a new instance of the Beverage model for {kwargs}.")
-        # Replace empty strings with None
-        # Construct the concatenated beverage_id when not provided:
-        #  producer, beverage name, year, size, {bottle date or batch}.  Bottle date preferred.
-        if 'beverage_id' not in kwargs.keys():
-            # Need to create a beverage_id for this beverage
-            self.beverage_id = f"{kwargs['producer']}_{kwargs['name']}_{kwargs['year']}_{kwargs['size']}"
-            if 'batch' in kwargs.keys() and 'bottle_date' in kwargs.keys():
-                # If both bottle_date and batch are provided, prefer bottle_date
-                self.beverage_id += f"_{kwargs['bottle_date']}"
-
-            elif 'batch' not in kwargs.keys() or kwargs['batch'] == '':
-                # Batch is not provided
-                self.batch = None
-                if 'bottle_date' not in kwargs.keys() or kwargs['bottle_date'] == '':
-                    # When no batch or bottle_date is provided, append "_None"
-                    self.beverage_id += "_None"
-                    self.bottle_date = None
-                else:
-                    # Bottle_date is provided
-                    self.beverage_id += f"_{kwargs['bottle_date']}"
-            else:
-                # Use batch when bottle_date isn't provided
-                self.beverage_id += f"_{kwargs['batch']}"
-            logger.debug(f"Created a beverage_id for this new Beverage: {self.beverage_id}.")
-
-        # Must provide a location
-        if 'location' not in kwargs.keys() or kwargs['location'] is None:
-            logger.debug(f"No value for location provided, raising KeyError.")
-            raise KeyError("Location is required.")
-
-        # Type check: Year
-        try:
-            self.year = int(kwargs['year'])
-        except ValueError as e:
-            logger.debug(f"Year must be an integer.\n{e}")
-            raise ValueError(f"Year must be an integer.\n{e}")
-
-        # Type check: Batch
-        if 'batch' in kwargs.keys():
-            try:
-                if self.batch and self.batch != "":
-                    self.batch = int(kwargs['batch'])
-                if self.batch == "":
-                    self.batch = None
-            except ValueError as e:
-                logger.debug(f"Batch number must be an integer.\n{e}")
-                raise ValueError(f"Batch number must be an integer.\n{e}")
-
         # Type check: qty
         if 'qty' in kwargs.keys():
             try:
@@ -141,6 +74,162 @@ class Beverage(Model):
             except ValueError as e:
                 logger.debug(f"Qty_cold must be an integer.\n{e}")
                 raise ValueError(f"Qty_cold must be an integer.\n{e}")
+
+    def __repr__(self) -> str:
+        return f'<Location name: {self.name}, qty: {self.qty}, qty_cold: {self.qty_cold}' \
+               f'added: {self.date_added}>'
+
+
+class Vintage(MapAttribute):
+    """
+    Details about a specific vintage for a particular Beverage.
+    Beverages contain a list of Vintages.  One unnamed Vintage is created by default.
+    """
+    bottle_date = UnicodeAttribute(null=True)
+    batch = NumberAttribute(null=True)
+    size = UnicodeAttribute(null=True)
+    for_trade = BooleanAttribute(null=True, default=True)
+    locations = ListAttribute(of=Location, null=False)
+
+    # Reference attributes
+    untappd = UnicodeAttribute(null=True)
+    note = UnicodeAttribute(null=True)
+    display_order = NumberAttribute(null=False, default=0)
+    date_added = UTCDateTimeAttribute(default=datetime.utcnow())
+    last_modified = UTCDateTimeAttribute(default=datetime.utcnow())
+
+    def to_dict(self, dates_as_epoch=False) -> dict:
+        """
+        Convert this vintage (including any locations) to a python dictionary.
+        """
+        # Convert all associated locations to a dictionary
+        vintage_locations = []
+        for location in self.locations:
+            if isinstance(location, dict):
+                # logger.debug(f"Step: {step}, type: {type(step)}")
+                vintage_locations.append(location)
+            elif isinstance(location, Location):
+                vintage_locations.append(location.to_dict())
+            else:
+                raise TypeError(f"Invalid type for provided location: {location} "
+                                f"(type {type(location)}).")
+
+        output = {
+            "bottle_date":   self.bottle_date.__str__() if self.bottle_date else None,
+            "batch":         int(self.batch) if self.batch else None,
+            "size":          self.size.__str__() if self.size else None,
+            "for_trade":     self.for_trade,
+            "locations":     vintage_locations,
+            "untappd":       self.untappd.__str__() if self.untappd else None,
+            "note":  self.note.__str__() if self.note else None,
+            "display_order": int(self.display_order) if self.display_order else 0,
+            "date_added":    self.date_added.timestamp() * 1000,  # JS timestamps are in ms
+            "last_modified": self.last_modified.timestamp() * 1000
+        }
+
+        if not dates_as_epoch:
+            output['date_added'] = self.date_added.__str__()
+            output['last_modified'] = self.last_modified.__str__()
+
+        return output
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        # Type check: batch
+        if 'batch' in kwargs.keys():
+            try:
+                if self.batch and self.batch != "":
+                    self.batch = int(kwargs['batch'])
+                if self.batch == "":
+                    self.batch = None
+            except ValueError as e:
+                logger.debug(f"Batch number must be an integer.\n{e}")
+                raise ValueError(f"Batch number must be an integer.\n{e}")
+
+    def __repr__(self) -> str:
+        vintage_locations = []
+        for location in self.locations:
+            vintage_locations.append(location.__repr__())
+
+        return f'<Vintage bottled: {self.bottle_date}, batch: {self.batch}, ' \
+               f'added: {self.date_added}, locations: {vintage_locations}>'
+
+
+class Beverage(Model):
+    class Meta:
+        table_name = 'Cellar'
+        region = Config.AWS_REGION
+        if local:  # Use the local DynamoDB instance when running locally
+            host = 'http://localhost:8008'
+
+    # Primary Attributes
+    # `beverage_id`: Lowercase concatenation of producer & beverage
+    #  *** Examples ***
+    #   Cantillon: Lou Pepe Framboise
+    #   Goose Island: Bourbon County Brand Stout
+    beverage_id = UnicodeAttribute(hash_key=True)
+
+    # Required Attributes
+    producer = UnicodeAttribute(null=False, range_key=True)
+    name = UnicodeAttribute(null=False)
+    vintages = ListAttribute(null=False, of=Vintage)
+
+    # Optional Attributes
+    style = UnicodeAttribute(null=True)
+    specific_style = UnicodeAttribute(null=True)
+    trade_value = NumberAttribute(null=True, default=0)
+    aging_potential = NumberAttribute(null=True, default=2)
+
+    # Reference Attributes
+    note = UnicodeAttribute(null=True)
+    date_added = UTCDateTimeAttribute(default=datetime.utcnow())
+    last_modified = UTCDateTimeAttribute(default=datetime.utcnow())
+
+    def to_dict(self, dates_as_epoch=False) -> dict:
+        """
+        Return a dictionary with all attributes.
+        Dates return as epoch (default) or in ISO format.
+        """
+        # Convert all associated vintages to a dictionary
+        beverage_vintages = []
+        for vintage in self.vintages:
+            if isinstance(vintage, dict):
+                # logger.debug(f"Step: {step}, type: {type(step)}")
+                beverage_vintages.append(vintage)
+            elif isinstance(vintage, Vintage):
+                beverage_vintages.append(vintage.to_dict(dates_as_epoch=dates_as_epoch))
+            else:
+                raise TypeError(f"Invalid type for provided vintage: {vintage} "
+                                f"(type {type(vintage)}).")
+
+        output = {
+            "beverage_id":     self.beverage_id.__str__(),
+            "producer":        self.producer.__str__(),
+            "name":            self.name.__str__(),
+            "vintages":        beverage_vintages,
+            "style":           self.style.__str__() if self.style else None,
+            "specific_style":  self.specific_style.__str__() if self.specific_style else None,
+            "aging_potential": int(self.aging_potential) if self.aging_potential else None,
+            "trade_value":     int(self.trade_value) if self.trade_value else None,
+            "note":            self.note.__str__() if self.note else None,
+            "date_added":      self.date_added.timestamp() * 1000,  # JS timestamps are in ms
+            "last_modified":   self.last_modified.timestamp() * 1000
+        }
+
+        if not dates_as_epoch:
+            output['date_added'] = self.date_added.__str__()
+            output['last_modified'] = self.last_modified.__str__()
+
+        return output
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        # Replace empty strings with None
+        # Construct the concatenated beverage_id when not provided
+        if 'beverage_id' not in kwargs.keys():
+            # Need to create a beverage_id for this beverage
+            self.beverage_id = f"{kwargs['producer']}: {kwargs['name']}"
+            logger.debug(f"Created a beverage_id for this new Beverage: {self.beverage_id}.")
 
         # Adjust last_modified due to JS working in milliseconds
         if 'last_modified' in kwargs.keys():
@@ -177,13 +266,13 @@ class Beverage(Model):
             # Ensure date_added is always <= last_modified
             if self.date_added > self.last_modified:
                 self.last_modified = self.date_added
-        # else:
-            # When date_added is not provided
-            # self.date_added = self.last_modified or datetime.utcnow()
 
     def __repr__(self) -> str:
-        return f'<Beverage | beverage_id: {self.beverage_id}, qty: {self.qty} ({self.qty_cold}),' \
-               f' location: {self.location}>'
+        beverage_vintages = []
+        for vintage in self.vintages:
+            beverage_vintages.append(vintage.__repr__())
+
+        return f'<Beverage | bev_id: {self.beverage_id}, added: {self.date_added}>'
 
 
 class PicklistValue(MapAttribute):
