@@ -12,24 +12,31 @@ from pynamodb.attributes import UnicodeAttribute, NumberAttribute, BooleanAttrib
 # - beverage_id
 # - producer
 # - name
-# - aging potential
+# - style
+# - specific style
 # - trade value
+# - aging potential
+# - vintages
 # - date added
 # - last modified
-#
+
 # location
 # - name ==> defaults to Home, user can add more locations
 # - qty
 # - qty cold
-#
+# - note
+# - display order
+
 # vintage
 # --> defaults to an unnamed vintage, user can add more vintages
 # - bottle date (accepts YYYY, YYYY-MM, YYYY-MM-DD)
+# - batch (optional)
 # - size
 # - for trade
-# - location (select created locations only)
+# - locations (select created locations only)
 # - untappd link
 # - note
+# - display order
 # - date added
 # - last modified
 
@@ -89,7 +96,7 @@ class Vintage(MapAttribute):
     batch = NumberAttribute(null=True)
     size = UnicodeAttribute(null=True)
     for_trade = BooleanAttribute(null=True, default=True)
-    locations = ListAttribute(of=Location, null=False)
+    locations = ListAttribute(null=False, of=Location)
 
     # Reference attributes
     untappd = UnicodeAttribute(null=True)
