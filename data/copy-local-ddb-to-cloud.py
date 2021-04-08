@@ -1,4 +1,4 @@
-"""Replaces all data in local DynamoDB tables with data from the cloud database."""
+"""Replaces all data in the cloud DynamoDB tables with data from the local DDB database."""
 from boto3 import resource, client
 from os import environ
 from env_tools import apply_env
