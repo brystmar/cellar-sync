@@ -180,9 +180,11 @@ class TestBeverageModel:
         assert isinstance(beverage.last_modified, datetime)
 
         # Since neither value was provided, both should be generated immediately
-        #  Difference between `now` and those values should be much less than 1s
+        #  Difference between `now` and those values should be well below 1s
         assert (now - beverage.date_added).total_seconds() < 1
-        assert beverage.date_added == beverage.last_modified
+
+        # Difference between date_added and last_modified should be well below 1s
+        assert (beverage.last_modified - beverage.date_added).total_seconds() < 1
 
         # TDA2: Specify date_added as string
         now = datetime.utcnow()
@@ -246,7 +248,9 @@ class TestBeverageModel:
 
         # Model should ignore the last_modified value and yield the same result as TDA1 above
         assert (now - beverage.date_added).total_seconds() < 1
-        assert beverage.date_added == beverage.last_modified
+
+        # Difference between date_added and last_modified should be well below 1s
+        assert (beverage.last_modified - beverage.date_added).total_seconds() < 1
 
     def test_boolean_attributes(self):
         # Create without specifying a bool value
@@ -257,18 +261,19 @@ class TestBeverageModel:
                             location="Home",
                             bottle_date="2013-06-24")
 
-        assert beverage.for_trade is None
-        assert beverage.to_dict()['for_trade'] == 'None'
+        # The for_trade attribute should be True by default
+        assert beverage.for_trade is True
+        assert beverage.to_dict()['for_trade'] is True
 
         # Set the bool
         beverage.for_trade = True
         assert beverage.for_trade is True
-        assert beverage.to_dict()['for_trade'] == 'True'
+        assert beverage.to_dict()['for_trade'] is True
 
         # Flip the bool
         beverage.for_trade = False
         assert beverage.for_trade is False
-        assert beverage.to_dict()['for_trade'] == 'False'
+        assert beverage.to_dict()['for_trade'] is False
 
         # Create w/bool = True
         beverage = Beverage(producer="Westbrook",
@@ -280,7 +285,7 @@ class TestBeverageModel:
                             for_trade=True)
 
         assert beverage.for_trade is True
-        assert beverage.to_dict()['for_trade'] == 'True'
+        assert beverage.to_dict()['for_trade'] is True
 
         # Create w/bool = False
         beverage = Beverage(producer="Westbrook",
@@ -292,7 +297,7 @@ class TestBeverageModel:
                             for_trade=False)
 
         assert beverage.for_trade is False
-        assert beverage.to_dict()['for_trade'] == 'False'
+        assert beverage.to_dict()['for_trade'] is False
 
     def test_attribute_changes(self):
         # Create with all available attributes
@@ -347,7 +352,7 @@ class TestBeverageModel:
         assert beverage.for_trade is True
         assert beverage.note == "My go-to when mowing the lawn."
         assert beverage.date_added == datetime.fromisoformat("2020-04-10")
-        assert (datetime.utcnow() - beverage.last_modified).total_seconds() < 1
+        assert (beverage.last_modified - datetime.utcnow()).total_seconds() < 1
 
         # Same test, but created by parsing a dictionary
         beverage = Beverage(**default_beverage)
@@ -370,7 +375,7 @@ class TestBeverageModel:
         assert beverage.for_trade is True
         assert beverage.note == "My go-to when mowing the lawn."
         assert beverage.date_added == datetime.fromisoformat("2020-04-10")
-        assert (datetime.utcnow() - beverage.last_modified).total_seconds() < 1
+        assert (beverage.last_modified - datetime.utcnow()).total_seconds() < 1
 
     def test_to_dict(self):
         # Full default beverage converted to a dictionary
@@ -393,11 +398,11 @@ class TestBeverageModel:
         assert beverage_dict['untappd'] == "https://untappd.com/b/westbrook-brewing-co-gose/155824"
         assert beverage_dict['aging_potential'] == 3
         assert beverage_dict['trade_value'] == 3
-        assert beverage_dict['for_trade'] == "True"
+        assert beverage_dict['for_trade'] is True
         assert beverage_dict['note'] == "My go-to when mowing the lawn."
 
-        # The .to_dict() method returns the datetime fields as a `float` epoch
-        assert beverage_dict['date_added'] == datetime.fromisoformat("2020-04-10")
+        # By default, the .to_dict() method returns the datetime fields as a `float` epoch
+        assert beverage_dict['date_added'] == datetime.fromisoformat("2020-04-10").timestamp() * 1000
         assert isinstance(beverage_dict['last_modified'], float)
 
         # When providing the minimum required fields, the optional fields return as None
@@ -416,13 +421,13 @@ class TestBeverageModel:
         assert beverage_dict['location'] == "Home"
         assert beverage_dict['batch'] is None
         assert beverage_dict['bottle_date'] is None
-        assert beverage_dict['qty'] is None
-        assert beverage_dict['qty_cold'] is None
+        assert beverage_dict['qty'] == 0
+        assert beverage_dict['qty_cold'] == 0
         assert beverage_dict['style'] is None
         assert beverage_dict['specific_style'] is None
         assert beverage_dict['untappd'] is None
-        assert beverage_dict['aging_potential'] == 0
-        assert beverage_dict['trade_value'] == 0
+        assert beverage_dict['aging_potential'] == 2  # Defaults to 2
+        assert beverage_dict['trade_value'] is None
         assert beverage_dict['for_trade'] is True  # Defaults to True
         assert beverage_dict['note'] is None
 

@@ -41,7 +41,7 @@ class Beverage(Model):
     date_added = UTCDateTimeAttribute(default=datetime.utcnow())
     last_modified = UTCDateTimeAttribute(default=datetime.utcnow())
 
-    def to_dict(self, dates_as_epoch=False) -> dict:
+    def to_dict(self, dates_as_epoch=True) -> dict:
         """
         Return a dictionary with all attributes.
         Dates return as epoch (default) or in ISO format.
