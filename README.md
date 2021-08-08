@@ -1,5 +1,5 @@
 # Cellar Sync
-Basic cellar inventory management for bored tech workers with unwieldy cellars of adult beverages.
+A basic cellar inventory system for my unwieldy cellar of adult beverages.
 
 This project contains the backend.  See [cellar-sync-ui](http://https://github.com/brystmar/cellar-sync-ui/) for the front end.
 
@@ -10,11 +10,11 @@ Data is structured as a NoSQL document store.  Initially using AWS DynamoDB, tho
 * `beverage_id` (`str`) - **Partition Key** (*hash key*).  Concatenation of beverage name, producer, year, size, & bottle date.
 * `name` (`str`) *r - Name of the beverage.
 * `producer` (`str`) *r - Brewery / winery / meadery / cidery who produced the beverage.
-* `year` (`int`) *r - Calendar year in YYYY format.  For seasonal beverages which cross years, this should be the most-recent year.  Ex: Lambic from the 2017-2018 season is considered 2018.
-* `size` (`str`) *r - Bottle size.  Picklist of the most common formats.
-* `bottle_date` (`date`) *r - Must provide either `batch` or `bottle_date`.  Date the beverage was bottled in **YYYY-MM-DD** format.
-* `batch` (`int`) *r - Must provide either `batch` or `bottle_date`.  Batch or blend number, from 1-9999.
-* `location` (`str`) *r - **Sort Key** (*range key*).  Picklist of unique storage locations.
+* `year` (`int`) - Calendar year in YYYY format.  For seasonal beverages which cross years, this should be the most-recent year.  Ex: Lambic from the 2017-2018 season is considered 2018.
+* `size` (`str`) - Bottle size.  Picklist of the most common formats.
+* `bottle_date` (`date`) - Date the beverage was bottled in **YYYY-MM-DD** format.
+* `batch` (`str`) - Batch or blend number, from 1-9999.
+* `location` (`str`) - Picklist of unique storage locations.
 * `style` (`str`) - Overall style of the beverage.
 * `specific_style` (`str`) - Subset of `style` for more granular categorization.
 * `qty` (`int`) - *Default: 0.* - # of bottles at the current location.
