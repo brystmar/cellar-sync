@@ -37,6 +37,6 @@ six==1.16.0
 testfixtures==6.17.1
 tini==3.0.1
 toml==0.10.2
-urllib3==1.26.6
+urllib3==1.26.17
 wcwidth==0.2.5
 Werkzeug==2.0.1
