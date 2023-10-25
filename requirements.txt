@@ -39,4 +39,4 @@ tini==3.0.1
 toml==0.10.2
 urllib3==1.26.6
 wcwidth==0.2.5
-Werkzeug==2.0.1
+Werkzeug==3.0.1
